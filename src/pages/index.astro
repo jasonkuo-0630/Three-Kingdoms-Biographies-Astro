@@ -1,17 +1,188 @@
 ---
+import "../styles/style.css";
+import indexData from "../data/index.json";
+import { FACTION_PORTAL_META, FACTION_PORTAL_ORDER } from "../data/factionPortalMeta";
 
+interface IndexEntry {
+  id: string;
+  published: boolean;
+  name: string;
+  courtesyName?: string;
+  searchTerms: string[];
+  avatar: string;
+  filterGroup: string;
+}
+
+const people = (indexData as IndexEntry[]).filter((p) => p.published);
+
+// 跟原本 portal.js 的邏輯一致：依 filterGroup 分組計數，這裡在 build 階段就算好
+const counts = new Map<string, number>();
+people.forEach((p) => counts.set(p.filterGroup, (counts.get(p.filterGroup) || 0) + 1));
+
+// 給下面的快速搜尋 <script> 用，內嵌進頁面、不用再額外發一次網路請求
+const searchDataJson = JSON.stringify(
+  people.map((p) => ({
+    id: p.id,
+    name: p.name,
+    courtesyName: p.courtesyName || null,
+    searchTerms: p.searchTerms || [],
+    avatar: p.avatar,
+  }))
+);
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<link rel="icon" href="/favicon.ico" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>三國人物誌</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@600;700;900&family=Noto+Sans+TC:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body class="home-page">
+    <main>
+      <header class="topbar">
+        <div class="topbar-inner">
+          <a class="brand" href="/" aria-label="回到三國人物誌卷首">
+            <span class="brand-seal" aria-hidden="true">誌</span>
+            <span class="brand-copy">
+              <strong>三國人物誌</strong>
+              <small>史實與演義並陳的三國人物資料庫</small>
+            </span>
+          </a>
+
+          <div class="quick-search">
+            <label class="sr-only" for="quick-search-input">搜尋姓名、字或其他稱呼</label>
+            <div class="topbar-search">
+              <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <circle cx="11" cy="11" r="7"></circle>
+                <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+              </svg>
+              <input type="text" id="quick-search-input" placeholder="搜尋人物，直接跳轉…" autocomplete="off" />
+            </div>
+            <ul class="quick-search-results" id="quick-search-results" hidden></ul>
+          </div>
+        </div>
+      </header>
+
+      <section class="portal-hero" aria-label="三國人物誌卷首">
+        <img class="portal-bg-image" src="/images/ink-wash-bg.jpg" alt="" aria-hidden="true" />
+
+        <nav class="portal-factions" aria-label="選擇勢力入口">
+          <div class="homepage-factions">
+            {
+              FACTION_PORTAL_ORDER.map((id) => {
+                const meta = FACTION_PORTAL_META[id];
+                const count = counts.get(id) || 0;
+                const countLabel = count > 0 ? `${count} 位人物` : "尚無收錄人物";
+                return (
+                  <a class={`portal-faction portal-faction--${id}`} href={`/faction/${id}`} aria-label={`進入${meta.label}人物入口`}>
+                    <span class="portal-mark" aria-hidden="true">{meta.mark}</span>
+                    {meta.portrait ? (
+                      <span class="portal-portrait">
+                        <img class="portal-portrait-img" src={`/${meta.portrait}`} alt={meta.ruler ? `${meta.ruler}肖像` : ""} loading="lazy" />
+                      </span>
+                    ) : (
+                      <span class="portal-portrait-placeholder" aria-hidden="true">君主圖<br />預留</span>
+                    )}
+                    <span class="portal-copy">
+                      <strong class="portal-label">{meta.label}</strong>
+                      <span class="portal-count">{countLabel}</span>
+                    </span>
+                  </a>
+                );
+              })
+            }
+          </div>
+        </nav>
+
+        <aside class="portal-storyteller-panel" aria-label="卷首說書人">
+          <img class="portal-storyteller-cutout" src="/images/storyteller-cutout.png" alt="無名說書客，本站虛構的引路人" />
+          <div class="storyteller-copy-overlay">
+            <blockquote class="storyteller-quote">亂世烽煙分鼎足，<br />一卷山河記群英。</blockquote>
+            <p class="storyteller-caption">
+              <span class="storyteller-eyebrow">卷首引路人</span>
+              <strong>無名說書客</strong>
+            </p>
+          </div>
+        </aside>
+      </section>
+    </main>
+
+    <script type="application/json" id="quick-search-data" set:html={searchDataJson} is:inline />
+
+    <script>
+      interface SearchPerson {
+        id: string;
+        name: string;
+        courtesyName: string | null;
+        searchTerms: string[];
+        avatar: string;
+      }
+
+      const dataEl = document.getElementById("quick-search-data");
+      const people: SearchPerson[] = JSON.parse(dataEl?.textContent || "[]");
+
+      const input = document.getElementById("quick-search-input") as HTMLInputElement;
+      const results = document.getElementById("quick-search-results") as HTMLUListElement;
+
+      function escapeHtml(str: string) {
+        return str
+          .replace(/&/g, "&amp;")
+          .replace(/</g, "&lt;")
+          .replace(/>/g, "&gt;")
+          .replace(/"/g, "&quot;");
+      }
+
+      function renderResults(query: string) {
+        const q = query.trim().toLowerCase();
+        if (!q) {
+          results.innerHTML = "";
+          results.hidden = true;
+          return;
+        }
+        const matches = people
+          .filter((p) => {
+            const terms = [p.name, p.courtesyName, ...p.searchTerms].filter(Boolean) as string[];
+            return terms.some((t) => t.toLowerCase().includes(q));
+          })
+          .slice(0, 8);
+
+        if (!matches.length) {
+          results.innerHTML = `<li class="quick-search-empty">沒有符合的人物</li>`;
+          results.hidden = false;
+          return;
+        }
+
+        results.innerHTML = matches
+          .map(
+            (p) => `
+            <li>
+              <a href="/character/${encodeURIComponent(p.id)}">
+                <span class="qs-avatar"><img src="/${p.avatar}" alt="" loading="lazy" /></span>
+                <span class="qs-name">${escapeHtml(p.name)}</span>
+                ${p.courtesyName ? `<span class="qs-courtesy">字 ${escapeHtml(p.courtesyName)}</span>` : ""}
+              </a>
+            </li>
+          `
+          )
+          .join("");
+        results.hidden = false;
+      }
+
+      input.addEventListener("input", () => renderResults(input.value));
+      input.addEventListener("focus", () => {
+        if (input.value.trim()) renderResults(input.value);
+      });
+      document.addEventListener("click", (e) => {
+        if (!(e.target as HTMLElement).closest(".quick-search")) {
+          results.hidden = true;
+        }
+      });
+    </script>
+  </body>
 </html>
