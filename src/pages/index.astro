@@ -15,6 +15,11 @@ interface IndexEntry {
 
 const people = (indexData as IndexEntry[]).filter((p) => p.published);
 
+// GitHub Pages 這種「網站放在子路徑底下」的部署方式，所有圖片路徑都要加上
+// 這個前綴才抓得到。import.meta.env.BASE_URL 會自動對應 astro.config.mjs
+// 裡設定的 base 值，不用手動維護，改設定檔的話這裡不用跟著改。
+const base = import.meta.env.BASE_URL.replace(/\/?$/, "/"); // 確保結尾一定有一條斜線，BASE_URL 本身不保證
+
 // 跟原本 portal.js 的邏輯一致：依 filterGroup 分組計數，這裡在 build 階段就算好
 const counts = new Map<string, number>();
 people.forEach((p) => counts.set(p.filterGroup, (counts.get(p.filterGroup) || 0) + 1));
@@ -47,7 +52,7 @@ const searchDataJson = JSON.stringify(
     <main>
       <header class="topbar">
         <div class="topbar-inner">
-          <a class="brand" href="/" aria-label="回到三國人物誌卷首">
+          <a class="brand" href={base} aria-label="回到三國人物誌卷首">
             <span class="brand-seal" aria-hidden="true">誌</span>
             <span class="brand-copy">
               <strong>三國人物誌</strong>
@@ -70,7 +75,7 @@ const searchDataJson = JSON.stringify(
       </header>
 
       <section class="portal-hero" aria-label="三國人物誌卷首">
-        <img class="portal-bg-image" src="/images/ink-wash-bg.jpg" alt="" aria-hidden="true" />
+        <img class="portal-bg-image" src={`${base}images/ink-wash-bg.jpg`} alt="" aria-hidden="true" />
 
         <nav class="portal-factions" aria-label="選擇勢力入口">
           <div class="homepage-factions">
@@ -80,11 +85,11 @@ const searchDataJson = JSON.stringify(
                 const count = counts.get(id) || 0;
                 const countLabel = count > 0 ? `${count} 位人物` : "尚無收錄人物";
                 return (
-                  <a class={`portal-faction portal-faction--${id}`} href={`/faction/${id}`} aria-label={`進入${meta.label}人物入口`}>
+                  <a class={`portal-faction portal-faction--${id}`} href={`${base}faction/${id}`} aria-label={`進入${meta.label}人物入口`}>
                     <span class="portal-mark" aria-hidden="true">{meta.mark}</span>
                     {meta.portrait ? (
                       <span class="portal-portrait">
-                        <img class="portal-portrait-img" src={`/${meta.portrait}`} alt={meta.ruler ? `${meta.ruler}肖像` : ""} loading="lazy" />
+                        <img class="portal-portrait-img" src={`${base}${meta.portrait}`} alt={meta.ruler ? `${meta.ruler}肖像` : ""} loading="lazy" />
                       </span>
                     ) : (
                       <span class="portal-portrait-placeholder" aria-hidden="true">君主圖<br />預留</span>
@@ -101,7 +106,7 @@ const searchDataJson = JSON.stringify(
         </nav>
 
         <aside class="portal-storyteller-panel" aria-label="卷首說書人">
-          <img class="portal-storyteller-cutout" src="/images/storyteller-cutout.png" alt="無名說書客，本站虛構的引路人" />
+          <img class="portal-storyteller-cutout" src={`${base}images/storyteller-cutout.png`} alt="無名說書客，本站虛構的引路人" />
           <div class="storyteller-copy-overlay">
             <blockquote class="storyteller-quote">亂世烽煙分鼎足，<br />一卷山河記群英。</blockquote>
             <p class="storyteller-caption">
@@ -116,6 +121,9 @@ const searchDataJson = JSON.stringify(
     <script type="application/json" id="quick-search-data" set:html={searchDataJson} is:inline />
 
     <script>
+      // 快速搜尋是唯一需要瀏覽器互動的部分，其餘全部在 build 階段就算好了。
+      // 資料直接從上面內嵌的 <script type="application/json"> 讀，不用再發
+      // 一次 fetch("data/index.json") —— 這是比原本 portal.js 更省一步的地方。
       interface SearchPerson {
         id: string;
         name: string;
@@ -126,6 +134,10 @@ const searchDataJson = JSON.stringify(
 
       const dataEl = document.getElementById("quick-search-data");
       const people: SearchPerson[] = JSON.parse(dataEl?.textContent || "[]");
+
+      // Vite（Astro 底層的建置工具）在 <script> 標籤裡也會處理 import.meta.env，
+      // 不限於 frontmatter，所以這裡可以直接用，不需要另外透過 meta 標籤傳遞。
+      const base = import.meta.env.BASE_URL.replace(/\/?$/, "/"); // 確保結尾一定有一條斜線，BASE_URL 本身不保證
 
       const input = document.getElementById("quick-search-input") as HTMLInputElement;
       const results = document.getElementById("quick-search-results") as HTMLUListElement;
@@ -162,8 +174,8 @@ const searchDataJson = JSON.stringify(
           .map(
             (p) => `
             <li>
-              <a href="/character/${encodeURIComponent(p.id)}">
-                <span class="qs-avatar"><img src="/${p.avatar}" alt="" loading="lazy" /></span>
+              <a href="${base}character/${encodeURIComponent(p.id)}">
+                <span class="qs-avatar"><img src="${base}${p.avatar}" alt="" loading="lazy" /></span>
                 <span class="qs-name">${escapeHtml(p.name)}</span>
                 ${p.courtesyName ? `<span class="qs-courtesy">字 ${escapeHtml(p.courtesyName)}</span>` : ""}
               </a>
