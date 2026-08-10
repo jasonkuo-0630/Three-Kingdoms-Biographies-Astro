@@ -26,6 +26,7 @@ export function getStaticPaths() {
 }
 
 const { character: c } = Astro.props;
+const base = import.meta.env.BASE_URL.replace(/\/?$/, "/"); // 確保結尾一定有一條斜線，BASE_URL 本身不保證
 
 const sourceMap = new Map(sourcesData.map((s: any) => [s.id, s]));
 const actualFactionsMap = new Map((factionsData.actualFactions || []).map((f: any) => [f.id, f]));
@@ -43,10 +44,11 @@ function escapeHtml(str: any) {
 }
 
 function avatarImgHtml(src: string | null | undefined, alt: string, className: string) {
-  const safeSrc = src ? `/${src}` : "/images/_placeholder.svg";
+  const placeholder = `${base}images/_placeholder.svg`;
+  const safeSrc = src ? `${base}${src}` : placeholder;
   return `<img class="${className || ""}" src="${escapeHtml(safeSrc)}" alt="${escapeHtml(
     alt
-  )}" loading="lazy" onerror="this.onerror=null;this.src='/images/_placeholder.svg';" />`;
+  )}" loading="lazy" onerror="this.onerror=null;this.src='${placeholder}';" />`;
 }
 
 function citationChipHtml(citation: any) {
@@ -110,7 +112,7 @@ function contentBlockHtml(contentBlock: any, uncertaintyNote?: string) {
 
 function personLinkOrPlain(personId: string | null, innerHtml: string, extraClass: string) {
   if (personId) {
-    return `<a class="${extraClass || ""} is-link" href="/character/${encodeURIComponent(personId)}">${innerHtml}</a>`;
+    return `<a class="${extraClass || ""} is-link" href="${base}character/${encodeURIComponent(personId)}">${innerHtml}</a>`;
   }
   return `<div class="${extraClass || ""}">${innerHtml}</div>`;
 }
@@ -476,7 +478,7 @@ const panelHtml = {
   works: hasWorks ? worksTabHtml() : "",
 };
 
-const backHref = personIndexMap.get(c.id)?.filterGroup ? `/faction/${personIndexMap.get(c.id)!.filterGroup}` : "/";
+const backHref = personIndexMap.get(c.id)?.filterGroup ? `${base}faction/${personIndexMap.get(c.id)!.filterGroup}` : base;
 ---
 <html lang="zh-Hant">
   <head>
@@ -526,6 +528,8 @@ const backHref = personIndexMap.get(c.id)?.filterGroup ? `/faction/${personIndex
     </div>
 
     <script>
+      // 頁籤切換：跟原本 character.js 一樣支援網址 hash（#historical 這種），
+      // 重新整理或分享連結時能停在同一個頁籤。點擊／hash 改變都會同步。
       function getTabFromHash(availableKeys: string[]) {
         const key = window.location.hash.replace("#", "");
         return availableKeys.includes(key) ? key : availableKeys[0];
