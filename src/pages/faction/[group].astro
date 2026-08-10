@@ -1,0 +1,243 @@
+---
+import "../../styles/style.css";
+import indexData from "../../data/index.json";
+import { FACTION_PORTAL_META } from "../../data/factionPortalMeta";
+
+// 只幫 FACTION_PORTAL_META 裡有定義敘事資料的勢力生成頁面（跟原本網站的
+// 實際行為一致——「西晉」目前沒有敘事資料，原本網站打開會被導回首頁，
+// 這裡就乾脆不生成這個頁面，而不是生成一個半殘的頁面）
+export function getStaticPaths() {
+  return Object.keys(FACTION_PORTAL_META).map((group) => ({
+    params: { group },
+  }));
+}
+
+const { group } = Astro.params;
+const meta = FACTION_PORTAL_META[group as string];
+
+interface IndexEntry {
+  id: string;
+  published: boolean;
+  name: string;
+  courtesyName?: string;
+  searchTerms: string[];
+  avatar: string;
+  filterGroup: string;
+}
+
+const allPeople = indexData as IndexEntry[];
+const people = allPeople.filter((p) => p.published && p.filterGroup === group);
+
+// 依筆畫排序，跟原本 listing.js 的 Intl.Collator 邏輯一致
+const collator = new Intl.Collator("zh-Hant-u-co-stroke");
+people.sort((a, b) => collator.compare(a.name, b.name));
+
+// 標籤在這裡（build 階段）直接算好，不用像原本那樣客戶端逐一非同步 fetch
+// 每個人的 JSON 才補標籤——這是搬過程中順便撿到的效能改善
+const characterModules = import.meta.glob<{ default: any }>("../../data/characters/*.json", { eager: true });
+const tagsById = new Map<string, string[]>();
+for (const path in characterModules) {
+  const data = characterModules[path].default;
+  const tags: string[] = [];
+  if (data.historicalBio?.length) tags.push("史實記載");
+  if (data.romanceBio?.length) tags.push("後世文學");
+  tagsById.set(data.id, tags);
+}
+
+const peopleDataJson = JSON.stringify(
+  people.map((p) => ({
+    id: p.id,
+    name: p.name,
+    courtesyName: p.courtesyName || null,
+    searchTerms: p.searchTerms || [],
+    avatar: p.avatar,
+    tags: tagsById.get(p.id) || [],
+    mark: meta.mark,
+  }))
+);
+---
+
+<html lang="zh-Hant">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>三國人物誌・{meta.label}</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@600;700;900&family=Noto+Sans+TC:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body class={`faction-page faction-page--${group}`}>
+    <header class="topbar">
+      <div class="topbar-inner">
+        <a class="brand" href="/" aria-label="回到三國人物誌卷首">
+          <span class="brand-seal" aria-hidden="true">誌</span>
+          <span class="brand-copy">
+            <strong>三國人物誌</strong>
+            <small>返回卷首・{meta.label}人物總覽</small>
+          </span>
+        </a>
+        <a class="top-link" href="/">← 回卷首</a>
+      </div>
+    </header>
+
+    <section class="faction-banner">
+      <span class="banner-mark" aria-hidden="true">{meta.mark}</span>
+      <div class="banner-copy">
+        {meta.ruler && <p class="banner-eyebrow">{meta.ruler}</p>}
+        <h1>{meta.label}</h1>
+        <p>{meta.motto}</p>
+      </div>
+      <span class="banner-count">{people.length > 0 ? `${people.length} 位人物` : "尚無收錄人物"}</span>
+    </section>
+
+    <div class="filter-bar">
+      <div class="search-box">
+        <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <circle cx="11" cy="11" r="7"></circle>
+          <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+        </svg>
+        <label class="sr-only" for="search-input">搜尋姓名或字號</label>
+        <input type="text" id="search-input" placeholder="在這個陣營裡搜尋姓名、字或其他稱呼…" autocomplete="off" />
+      </div>
+      <button type="button" class="clear-btn" id="clear-btn">清除搜尋</button>
+    </div>
+
+    <p class="result-count" id="result-count" aria-live="polite">共 {people.length} 位人物</p>
+
+    <main class="slip-panel" aria-label="人物列表">
+      <div class="slip-list" id="slip-list">
+        {
+          people.map((p) => (
+            <a class={`slip slip--${group}`} data-id={p.id} href={`/character/${p.id}`} aria-label={`查看${p.name}的介紹`}>
+              <span class="slip-accent" aria-hidden="true"></span>
+              <span class="slip-mark" aria-hidden="true">{meta.mark}</span>
+              <span class="slip-avatar">
+                <img src={`/${p.avatar}`} alt={`${p.name}的頭像`} loading="lazy" />
+              </span>
+              <span class="slip-main">
+                <span class="slip-name">{p.name}</span>
+                {p.courtesyName ? (
+                  <span class="slip-courtesy">字 {p.courtesyName}</span>
+                ) : (
+                  <span class="slip-courtesy slip-courtesy--muted">字號未載</span>
+                )}
+              </span>
+              <span class="slip-extra">
+                <span class="slip-tags">
+                  {tagsById.get(p.id)?.map((t) => (
+                    <span class={`slip-tag slip-tag--${t === "史實記載" ? "hist" : "romance"}`}>{t}</span>
+                  ))}
+                </span>
+                <span class="slip-enter">
+                  入卷 <b aria-hidden="true">→</b>
+                </span>
+              </span>
+            </a>
+          ))
+        }
+      </div>
+    </main>
+
+    <p class="empty-state" id="empty-state" hidden>沒有符合條件的人物，換個關鍵字或勢力篩選看看吧。</p>
+
+    <script type="application/json" id="people-data" set:html={peopleDataJson} is:inline />
+
+    <script>
+      interface SlipPerson {
+        id: string;
+        name: string;
+        courtesyName: string | null;
+        searchTerms: string[];
+        avatar: string;
+        tags: string[];
+        mark: string;
+      }
+
+      const dataEl = document.getElementById("people-data");
+      const allPeople: SlipPerson[] = JSON.parse(dataEl?.textContent || "[]");
+
+      function escapeHtml(str: string) {
+        return str
+          .replace(/&/g, "&amp;")
+          .replace(/</g, "&lt;")
+          .replace(/>/g, "&gt;")
+          .replace(/"/g, "&quot;");
+      }
+
+      function slipTemplate(p: SlipPerson) {
+        const bodyClass = document.body.className.match(/faction-page--(\w+)/);
+        const group = bodyClass ? bodyClass[1] : "";
+        return `
+          <a class="slip slip--${group}" data-id="${escapeHtml(p.id)}" href="/character/${encodeURIComponent(p.id)}" aria-label="查看${escapeHtml(p.name)}的介紹">
+            <span class="slip-accent" aria-hidden="true"></span>
+            <span class="slip-mark" aria-hidden="true">${escapeHtml(p.mark)}</span>
+            <span class="slip-avatar"><img src="/${p.avatar}" alt="${escapeHtml(p.name)}的頭像" loading="lazy" /></span>
+            <span class="slip-main">
+              <span class="slip-name">${escapeHtml(p.name)}</span>
+              ${p.courtesyName ? `<span class="slip-courtesy">字 ${escapeHtml(p.courtesyName)}</span>` : `<span class="slip-courtesy slip-courtesy--muted">字號未載</span>`}
+            </span>
+            <span class="slip-extra">
+              <span class="slip-tags">${p.tags.map((t) => `<span class="slip-tag slip-tag--${t === "史實記載" ? "hist" : "romance"}">${t}</span>`).join("")}</span>
+              <span class="slip-enter">入卷 <b aria-hidden="true">→</b></span>
+            </span>
+          </a>
+        `;
+      }
+
+      const listEl = document.getElementById("slip-list") as HTMLDivElement;
+      const emptyStateEl = document.getElementById("empty-state") as HTMLParagraphElement;
+      const resultCountEl = document.getElementById("result-count") as HTMLParagraphElement;
+      const searchInput = document.getElementById("search-input") as HTMLInputElement;
+      const clearBtn = document.getElementById("clear-btn") as HTMLButtonElement;
+
+      function renderList(query: string) {
+        const q = query.trim().toLowerCase();
+        const filtered = q
+          ? allPeople.filter((p) => {
+              const terms = [p.name, p.courtesyName, ...p.searchTerms].filter(Boolean) as string[];
+              return terms.some((t) => t.toLowerCase().includes(q));
+            })
+          : allPeople;
+
+        listEl.innerHTML = filtered.map(slipTemplate).join("");
+        emptyStateEl.hidden = filtered.length > 0;
+        listEl.hidden = filtered.length === 0;
+        resultCountEl.textContent = `共 ${filtered.length} 位人物`;
+      }
+
+      searchInput.addEventListener("input", () => renderList(searchInput.value));
+      clearBtn.addEventListener("click", () => {
+        searchInput.value = "";
+        renderList("");
+        searchInput.focus();
+      });
+
+      let lastX: number | null = null;
+      let lastY: number | null = null;
+      listEl.addEventListener("mousemove", (e) => {
+        lastX = e.clientX;
+        lastY = e.clientY;
+        document.querySelectorAll(".slip.is-hovered").forEach((s) => s.classList.remove("is-hovered"));
+      });
+      listEl.addEventListener("scroll", () => {
+        window.requestAnimationFrame(() => {
+          if (lastX === null || lastY === null) return;
+          const el = document.elementFromPoint(lastX, lastY);
+          const slip = el ? el.closest(".slip") : null;
+          document.querySelectorAll(".slip.is-hovered").forEach((s) => {
+            if (s !== slip) s.classList.remove("is-hovered");
+          });
+          if (slip) slip.classList.add("is-hovered");
+        });
+      });
+      listEl.addEventListener("mouseleave", () => {
+        document.querySelectorAll(".slip.is-hovered").forEach((s) => s.classList.remove("is-hovered"));
+        lastX = null;
+        lastY = null;
+      });
+    </script>
+  </body>
+</html>
