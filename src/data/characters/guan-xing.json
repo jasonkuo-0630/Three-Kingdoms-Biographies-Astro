@@ -74,6 +74,5 @@
     { "chapter": "第九十八回", "eventName": "奉密計先取陳倉", "content": { "paragraphs": [ { "text": "小說寫諸葛亮得知郝昭病重後，表面命魏延、姜維三日內攻陳倉，實際暗令關興、張苞提前出漢中，自己藏於軍中倍道趕路，趁守軍無備先取城池。", "citations": [{ "sourceId": "sanguo-yanyi", "locator": "第九十八回" }] } ] }, "historicalDifference": { "paragraphs": [ { "text": "關興、張苞參與奇襲陳倉不見《三國志》。正史所載陳倉戰以郝昭守城拒諸葛亮著名，也沒有郝昭病重、蜀軍趁亂一舉奪城的結果。", "citations": [{ "sourceId": "sgz-zhuge-main", "locator": "卷三十五・北伐相關記載" }] } ] } },
     { "chapter": "第一百零二回", "eventName": "出師前病亡，諸葛亮痛哭昏倒", "content": { "paragraphs": [ { "text": "小說在諸葛亮青龍二年再出祁山前，忽報關興病亡；諸葛亮放聲大哭、昏倒，醒後感嘆忠義之人不得長壽，軍中又少一員大將。", "citations": [{ "sourceId": "sanguo-yanyi", "locator": "第一百零二回" }] } ] }, "historicalDifference": { "paragraphs": [ { "text": "正史只說關興弱冠任官、數年後去世，沒有病因、卒年、死亡地點或諸葛亮哭倒的記載。小說把他的死亡繫於青龍二年（234年）出師前，不能據此確定歷史卒年。", "citations": [{ "sourceId": "sgz-guanyu-main", "locator": "卷三十六・『數歲卒』" }] } ] } }
   ],
-  "works": [],
-  "worksNote": "現存史籍沒有保存可確定為關興所作的奏表、書信或其他文字。"
+  "works": []
 }
