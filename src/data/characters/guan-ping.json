@@ -56,6 +56,5 @@
     { "chapter": "第七十六至七十七回", "eventName": "隨父退守麥城、斷後救父而被擒", "content": { "paragraphs": [ { "text": "小說讓關平全程隨關羽退至麥城，突圍時報告趙累戰死並奉命斷後；關羽被長鉤套索擒獲後，關平回身救父，遭潘璋、朱然軍包圍，力盡被擒。", "citations": [{ "sourceId": "sanguo-yanyi", "locator": "第七十六至七十七回" }] } ] }, "historicalDifference": { "paragraphs": [ { "text": "正史只記孫權遣將迎擊，關羽與子關平在臨沮被殺，沒有麥城突圍時關平斷後、回救父親或力盡被擒的細節。潘璋部司馬馬忠擒關羽見於《吳書・潘璋傳》，但關平的被擒者與過程仍不詳。", "citations": [{ "sourceId": "sgz-guanyu-main", "locator": "卷三十六・關羽傳末" }] } ] } },
     { "chapter": "第七十七回", "eventName": "與關羽同拒降遇害", "content": { "paragraphs": [ { "text": "小說寫孫權在帳中勸降關羽，關羽厲聲拒絕；經左咸勸孫權不可留患後，關羽父子一同被推出殺害，並明繫於建安二十四年冬十二月。", "citations": [{ "sourceId": "sanguo-yanyi", "locator": "第七十七回" }] } ] }, "historicalDifference": { "paragraphs": [ { "text": "父子同死於建安二十四年及臨沮地區具有正史核心，但帳前勸降、左咸進言與父子同時受刑的完整場面屬小說敘事。《三國志》未保存關平臨死前的言行。", "citations": [{ "sourceId": "sgz-guanyu-main", "locator": "卷三十六・『斬羽及子平於臨沮』" }] } ] } }
   ],
-  "works": [],
-  "worksNote": "現存史籍沒有保存可確定為關平所作的書信、奏表或其他文字。"
+  "works": []
 }
