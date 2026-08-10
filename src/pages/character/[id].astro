@@ -1,0 +1,570 @@
+---
+import "../../styles/style.css";
+import indexData from "../../data/index.json";
+import factionsData from "../../data/factions.json";
+import sourcesData from "../../data/sources.json";
+
+interface IndexEntry {
+  id: string;
+  published: boolean;
+  name: string;
+  courtesyName?: string;
+  avatar: string;
+  filterGroup: string;
+}
+
+export function getStaticPaths() {
+  const characterModules = import.meta.glob<{ default: any }>("../../data/characters/*.json", { eager: true });
+  const published = (indexData as IndexEntry[]).filter((p) => p.published);
+  return published.map((p) => {
+    const mod = Object.values(characterModules).find((m: any) => m.default.id === p.id);
+    return {
+      params: { id: p.id },
+      props: { character: mod?.default },
+    };
+  });
+}
+
+const { character: c } = Astro.props;
+
+const sourceMap = new Map(sourcesData.map((s: any) => [s.id, s]));
+const actualFactionsMap = new Map((factionsData.actualFactions || []).map((f: any) => [f.id, f]));
+const personIndexMap = new Map((indexData as IndexEntry[]).map((p) => [p.id, p]));
+
+/* ---------- 共用小工具（跟原本 common.js 邏輯相同） ---------- */
+
+function escapeHtml(str: any) {
+  if (str === null || str === undefined) return "";
+  return String(str)
+    .replace(/&/g, "&amp;")
+    .replace(/</g, "&lt;")
+    .replace(/>/g, "&gt;")
+    .replace(/"/g, "&quot;");
+}
+
+function avatarImgHtml(src: string | null | undefined, alt: string, className: string) {
+  const safeSrc = src ? `/${src}` : "/images/_placeholder.svg";
+  return `<img class="${className || ""}" src="${escapeHtml(safeSrc)}" alt="${escapeHtml(
+    alt
+  )}" loading="lazy" onerror="this.onerror=null;this.src='/images/_placeholder.svg';" />`;
+}
+
+function citationChipHtml(citation: any) {
+  if (!citation) return "";
+  const src = sourceMap.get(citation.sourceId);
+  if (!src) {
+    return `<span class="source-chip source-chip--missing">來源目錄缺漏：${escapeHtml(citation.sourceId || "未知")}</span>`;
+  }
+  const kind = `<span class="source-kind">${escapeHtml(src.kind)}</span>`;
+  const locator = citation.locator ? `<span class="source-locator">${escapeHtml(citation.locator)}</span>` : "";
+  const note = citation.note ? `<span class="source-note">${escapeHtml(citation.note)}</span>` : "";
+  return `<span class="source-chip">${kind}<span class="source-title">${escapeHtml(src.title)}</span>${locator}${note}</span>`;
+}
+
+function citationsHtml(citations: any[] | undefined) {
+  if (!citations || !citations.length) return "";
+  return `<span class="citations">${citations.map(citationChipHtml).join("")}</span>`;
+}
+
+function contentBlockHtml(contentBlock: any, uncertaintyNote?: string) {
+  if (!contentBlock || !contentBlock.paragraphs) return "";
+  const paragraphs = contentBlock.paragraphs
+    .map(
+      (p: any) => `
+      <p class="paraphrase-text">${escapeHtml(p.text)}</p>
+      ${citationsHtml(p.citations)}
+    `
+    )
+    .join("");
+  const originalTexts =
+    contentBlock.originalTexts && contentBlock.originalTexts.length
+      ? `
+      <details class="original-text-toggle">
+        <summary>查看史料原文</summary>
+        ${contentBlock.originalTexts
+          .map((o: any) => {
+            const src = sourceMap.get(o.sourceId);
+            const kindLabel = src ? escapeHtml(src.kind) : "來源目錄缺漏";
+            const titleLabel = src ? escapeHtml(src.title) : escapeHtml(o.sourceId || "未知");
+            const locatorHtml = o.locator ? `<span class="source-locator">${escapeHtml(o.locator)}</span>` : "";
+            return `
+              <blockquote class="original-text">${escapeHtml(o.text)}</blockquote>
+              <div class="original-text-source">
+                <span class="source-kind">${kindLabel}</span>
+                <span class="source-title">${titleLabel}</span>
+                ${locatorHtml}
+              </div>
+            `;
+          })
+          .join("")}
+      </details>
+    `
+      : "";
+  const uncertainty = uncertaintyNote
+    ? `<div class="uncertainty-note"><span class="uncertainty-label">年代／記載說明</span><p>${escapeHtml(
+        uncertaintyNote
+      )}</p></div>`
+    : "";
+  return `${paragraphs}${originalTexts}${uncertainty}`;
+}
+
+function personLinkOrPlain(personId: string | null, innerHtml: string, extraClass: string) {
+  if (personId) {
+    return `<a class="${extraClass || ""} is-link" href="/character/${encodeURIComponent(personId)}">${innerHtml}</a>`;
+  }
+  return `<div class="${extraClass || ""}">${innerHtml}</div>`;
+}
+
+function resolvePerson(personId: string | null | undefined) {
+  if (!personId) return null;
+  const p = personIndexMap.get(personId);
+  if (!p || !p.published) return null;
+  return p;
+}
+
+function resolvePersonRef(personId: string | null | undefined, fallbackName: string, fallbackAvatar: string | undefined, avatarClass: string) {
+  const resolved = resolvePerson(personId);
+  if (resolved) {
+    return { name: resolved.name, avatarHtml: avatarImgHtml(resolved.avatar, `${resolved.name}的頭像`, avatarClass), linkedId: resolved.id };
+  }
+  if (fallbackName === c.name) {
+    return { name: fallbackName, avatarHtml: avatarImgHtml(c.avatar, `${fallbackName}的頭像`, avatarClass), linkedId: null };
+  }
+  return { name: fallbackName, avatarHtml: avatarImgHtml(fallbackAvatar || null, `${fallbackName}的頭像`, avatarClass), linkedId: null };
+}
+
+/* ---------- 頁首 ---------- */
+
+function headerFieldHtml(label: string, value: any) {
+  if (!value) return "";
+  return `<div class="meta-field"><span class="meta-label">${escapeHtml(label)}</span><span class="meta-value">${escapeHtml(value)}</span></div>`;
+}
+
+function demoBadgeLabel() {
+  if (c.dataStatus === "reviewed-draft") return "示範資料 — 內容已逐條核對原文，仍可能有疏漏，歡迎指正";
+  if (c.dataStatus) return `示範資料（狀態：${c.dataStatus}）`;
+  return "示範資料 — 尚未完整核校，僅供測試版面";
+}
+
+function renderHero() {
+  const otherNames = (c.otherNames || []).join("、");
+  const metaFields = [
+    headerFieldHtml("字", c.courtesyName),
+    headerFieldHtml("小字", c.childhoodName),
+    headerFieldHtml("號", c.artName),
+    headerFieldHtml("其他名稱", otherNames),
+    headerFieldHtml("生卒年", c.lifespan),
+    headerFieldHtml("籍貫", c.birthplace),
+    headerFieldHtml("主要身分", c.primaryIdentity),
+  ]
+    .filter(Boolean)
+    .join("");
+  const demoBadge = c.dataStatus ? `<div class="demo-badge">${escapeHtml(demoBadgeLabel())}</div>` : "";
+  const aliasHtml = c.commonAlias ? `<p class="char-alias">又稱${escapeHtml(c.commonAlias)}</p>` : "";
+  const summaryHtml = c.summary ? `<p class="char-summary">${escapeHtml(c.summary)}</p>` : "";
+  return `
+    ${demoBadge}
+    <section class="char-hero">
+      <span class="avatar-ring avatar-ring--lg">${avatarImgHtml(c.avatar, `${c.name}的頭像`, "")}</span>
+      <div class="char-hero-info">
+        <h1 class="char-hero-name">${escapeHtml(c.name)}</h1>
+        ${aliasHtml}
+        ${summaryHtml}
+        <div class="meta-grid">${metaFields}</div>
+      </div>
+    </section>
+  `;
+}
+
+/* ---------- 總覽頁籤 ---------- */
+
+function groupFactionStages(entries: any[]) {
+  const groups: any[] = [];
+  entries.forEach((f) => {
+    const last = groups[groups.length - 1];
+    if (last && last.personName === f.personName) {
+      last.segments.push(f);
+    } else {
+      groups.push({ personName: f.personName, personId: f.personId, avatar: f.avatar, hideAvatar: f.hideAvatar, segments: [f] });
+    }
+  });
+  return groups;
+}
+
+function renderFactionTimeline(entries: any[] | undefined) {
+  if (!entries || !entries.length) return "";
+  const groups = groupFactionStages(entries);
+  const items = groups
+    .map((g) => {
+      const ref = resolvePersonRef(g.personId, g.personName, g.avatar, "faction-stage-avatar");
+      const avatarBlock = g.hideAvatar ? "" : `<span class="avatar-ring avatar-ring--sm">${ref.avatarHtml}</span>`;
+      const segmentsHtml = g.segments
+        .map((f: any, i: number) => {
+          const actualFaction = actualFactionsMap.get(f.actualFactionId);
+          const factionLabel = f.stageName || (actualFaction ? actualFaction.name : "");
+          const uncertainFlag = f.periodUncertain
+            ? `<span class="uncertain-flag" title="年代為推定，非確定記載">年代推定</span>`
+            : "";
+          const dividerClass = i > 0 ? " has-divider" : "";
+          return `
+            <div class="faction-stage-segment${dividerClass}">
+              <div class="faction-stage-faction">${escapeHtml(factionLabel)}</div>
+              <div class="faction-stage-period">${escapeHtml(f.period)}${uncertainFlag}</div>
+            </div>
+          `;
+        })
+        .join("");
+      const inner = `${avatarBlock}<div class="faction-stage-body"><div class="faction-stage-person">${escapeHtml(g.personName)}</div>${segmentsHtml}</div>`;
+      return `<li>${personLinkOrPlain(ref.linkedId, inner, "faction-stage")}</li>`;
+    })
+    .join("");
+  return `<div class="section-block"><h2 class="section-title">所屬勢力與效力歷程</h2><ol class="faction-stage-list">${items}</ol></div>`;
+}
+
+const RELATION_GROUP_TIER: Record<string, number> = { ancestor: 1, sibling: 2, spouse: 3, child: 4, grandchild: 5, other: 6 };
+
+function relativeSortRank(r: any) {
+  const relation = r.relation || "";
+  const group = r.relationGroup;
+  const primary = relation.split(/[、，（]/)[0];
+  const genderGuess = () => {
+    if (/兄子|弟子|姪|侄/.test(primary)) return /女/.test(primary) ? 1 : 0;
+    if (/媳/.test(primary)) return 1;
+    if (/婿|夫(?!人)/.test(primary)) return 0;
+    if (/妻|夫人|皇后|王后|妃|元配|繼室|配偶|妾/.test(primary)) return 1;
+    if (/父|祖|叔|伯|舅|兄|弟/.test(primary)) return 0;
+    if (/母|姑|姊|姐|妹/.test(primary)) return 1;
+    if (/孫/.test(primary)) return /女/.test(primary) ? 1 : 0;
+    if (/女/.test(primary) && !/子/.test(primary)) return 1;
+    return 0;
+  };
+  if (group && RELATION_GROUP_TIER[group]) return { tier: RELATION_GROUP_TIER[group], gender: genderGuess() };
+  if (/兄子|弟子|姪|侄/.test(primary)) return { tier: 4, gender: /女/.test(primary) ? 1 : 0 };
+  if (/媳|婿/.test(primary)) return { tier: 4, gender: /媳/.test(primary) ? 1 : 0 };
+  if (/妻|夫人|皇后|王后|妃|元配|繼室|配偶|妾/.test(primary)) return { tier: 3, gender: 1 };
+  if (/夫/.test(primary)) return { tier: 3, gender: 0 };
+  if (/父|祖|叔|伯|舅/.test(primary)) return { tier: 1, gender: 0 };
+  if (/母|姑/.test(primary)) return { tier: 1, gender: 1 };
+  if (/兄|弟/.test(primary)) return { tier: 2, gender: 0 };
+  if (/姊|姐|妹/.test(primary)) return { tier: 2, gender: 1 };
+  if (/孫/.test(primary)) return { tier: 5, gender: /女/.test(primary) ? 1 : 0 };
+  if (/子|女|甥|姪/.test(primary)) return { tier: 4, gender: /女/.test(primary) && !/子/.test(primary) ? 1 : 0 };
+  return { tier: 6, gender: 1 };
+}
+
+function relativeBirthOrderRank(relation: string) {
+  const order: Record<string, number> = { 長: 0, 次: 1, 三: 2, 四: 3, 五: 4, 六: 5 };
+  for (const k in order) {
+    if ((relation || "").includes(k)) return order[k];
+  }
+  return 50;
+}
+
+function sortRelatives(list: any[]) {
+  return list
+    .map((r, i) => ({ r, i, rank: relativeSortRank(r), order: relativeBirthOrderRank(r.relation) }))
+    .sort((a, b) => {
+      if (a.rank.tier !== b.rank.tier) return a.rank.tier - b.rank.tier;
+      if (a.rank.gender !== b.rank.gender) return a.rank.gender - b.rank.gender;
+      if (a.order !== b.order) return a.order - b.order;
+      return a.i - b.i;
+    })
+    .map((x) => x.r);
+}
+
+function renderRelatives(list: any[] | undefined) {
+  if (!list || !list.length) return "";
+  const rows = sortRelatives(list)
+    .map((r) => {
+      let personCell;
+      if (r.hideAvatar) {
+        personCell = `<span class="rel-person-cell rel-person-cell--no-avatar">${escapeHtml(r.personName)}</span>`;
+      } else {
+        const ref = resolvePersonRef(r.personId, r.personName, r.avatar, "");
+        personCell = personLinkOrPlain(
+          ref.linkedId,
+          `<span class="avatar-ring avatar-ring--sm">${ref.avatarHtml}</span><span class="rel-name-text">${escapeHtml(ref.name)}</span>`,
+          "rel-person-cell"
+        );
+      }
+      const legacyIsFictionType = (text: string) => /^(演義|後世文學|後世傳說|小說)/.test(text || "");
+      const isFiction = (category: string | undefined, text: string) => (category ? category === "literary" : legacyIsFictionType(text));
+      const natureBadgeHtml = (text: string, category: string | undefined) =>
+        `<span class="nature-badge" data-nature="${isFiction(category, text) ? "fiction" : "record"}">${escapeHtml(text)}</span>`;
+
+      const relationHtml = r.fictionalRelation
+        ? `<div class="rel-relation-line">${escapeHtml(r.relation)}</div><div class="rel-relation-line rel-relation-line--fiction">${escapeHtml(r.fictionalRelation.label)}</div>`
+        : escapeHtml(r.relation);
+
+      const natureHtml = r.fictionalRelation
+        ? `<div>${natureBadgeHtml(r.natureType, r.natureCategory)}</div><div>${natureBadgeHtml(r.fictionalRelation.natureType, r.fictionalRelation.natureCategory)}</div>`
+        : natureBadgeHtml(r.natureType, r.natureCategory);
+
+      const supplementHtml = r.fictionalRelation
+        ? `${escapeHtml(r.note || "")}${citationsHtml(r.citations)}${citationsHtml(r.fictionalRelation.citations)}`
+        : `${escapeHtml(r.note || "")}${citationsHtml(r.citations)}`;
+
+      return `<tr><td class="person-cell">${personCell}</td><td data-label="關係">${relationHtml}</td><td data-label="資料性質">${natureHtml}</td><td data-label="補充">${supplementHtml}</td></tr>`;
+    })
+    .join("");
+  return `<div class="section-block"><h2 class="section-title">親屬</h2><div class="table-scroll"><table class="relative-table"><thead><tr><th>人物</th><th>關係</th><th>資料性質</th><th>補充</th></tr></thead><tbody>${rows}</tbody></table></div></div>`;
+}
+
+function renderTitlesAndRanks(list: any[] | undefined) {
+  if (!list || !list.length) return "";
+  const rows = list
+    .map((t) => `<li class="rank-item"><span class="rank-title">${escapeHtml(t.title)}</span><span class="rank-period">${escapeHtml(t.period)}</span>${citationsHtml(t.citations)}</li>`)
+    .join("");
+  return `<div class="section-block"><h2 class="section-title">官職與爵位</h2><ul class="rank-list">${rows}</ul></div>`;
+}
+
+function renderPosthumousTitle(pt: any) {
+  if (!pt || !pt.title) return "";
+  const paragraphsHtml = pt.paragraphs ? contentBlockHtml({ paragraphs: pt.paragraphs }) : "";
+  return `<div class="section-block"><h2 class="section-title">諡號</h2><div class="plain-card"><p><strong>${escapeHtml(pt.title)}</strong>${pt.grantedBy ? ` — ${escapeHtml(pt.grantedBy)}` : ""}</p>${citationsHtml(pt.citations)}${paragraphsHtml}</div></div>`;
+}
+
+function renderEvaluationEntry(e: any) {
+  const originalHtml = e.originalText ? `<blockquote class="original-text">${escapeHtml(e.originalText)}</blockquote>` : "";
+  const paraphraseHtml = e.paraphrase ? `<p class="paraphrase-text">${escapeHtml(e.paraphrase)}</p>` : "";
+  return `<div class="quote-card"><div class="quote-meta"><span class="quote-evaluator">${escapeHtml(e.evaluatorName)}</span>${e.evaluatorEra ? `<span class="quote-era">${escapeHtml(e.evaluatorEra)}</span>` : ""}</div>${e.context ? `<p class="quote-context">${escapeHtml(e.context)}</p>` : ""}${originalHtml}${paraphraseHtml}${citationsHtml(e.citations)}</div>`;
+}
+
+function renderEvaluations(title: string, list: any[] | undefined) {
+  if (!list || !list.length) return "";
+  return `<div class="section-block"><h2 class="section-title">${escapeHtml(title)}</h2>${list.map(renderEvaluationEntry).join("")}</div>`;
+}
+
+function renderOverviewTab() {
+  const ov = c.overview || {};
+  let html = "";
+  if (ov.intro) {
+    html += `<div class="section-block"><h2 class="section-title">人物簡介</h2>${contentBlockHtml(ov.intro, ov.intro.uncertaintyNote)}</div>`;
+  }
+  html += renderFactionTimeline(ov.factionTimeline);
+  html += renderRelatives(ov.relatives);
+  html += renderTitlesAndRanks(ov.titlesAndRanks);
+  html += renderPosthumousTitle(ov.posthumousTitle);
+  const evals = ov.evaluations || {};
+  html += renderEvaluations("當世評價", evals.contemporary);
+  html += renderEvaluations("後世評價", evals.later);
+  return html || `<p class="paraphrase-text">尚無總覽資料。</p>`;
+}
+
+/* ---------- 史實／演義生平 ---------- */
+
+function historicalTimelineHtml(entries: any[] | undefined) {
+  if (!entries || !entries.length) return `<p class="paraphrase-text">尚無史實生平資料。</p>`;
+  const items = entries
+    .map(
+      (e) => `
+      <li class="timeline-item timeline-item--historical">
+        <div class="timeline-period-col" data-period-type="${e.periodType || ""}">${escapeHtml(e.period)}</div>
+        <div class="timeline-track"><span class="timeline-dot"></span></div>
+        <div class="timeline-content">
+          <span class="timeline-period-inline">${escapeHtml(e.period)}</span>
+          <h3 class="timeline-title">${escapeHtml(e.title)}</h3>
+          ${contentBlockHtml(e.content, e.uncertaintyNote)}
+        </div>
+      </li>`
+    )
+    .join("");
+  return `<ol class="timeline-list">${items}</ol>`;
+}
+
+function diffNoteHtml(contentBlock: any) {
+  if (!contentBlock) return "";
+  return contentBlockHtml(contentBlock, contentBlock.uncertaintyNote);
+}
+
+function romanceTimelineHtml(entries: any[] | undefined) {
+  if (!entries || !entries.length) return `<p class="paraphrase-text">尚無演義生平資料。</p>`;
+  const items = entries
+    .map((e) => {
+      const diffHtml = e.historicalDifference
+        ? `<div class="diff-note"><span class="diff-label">史實差異</span>${diffNoteHtml(e.historicalDifference)}</div>`
+        : "";
+      return `
+      <li class="timeline-item timeline-item--romance">
+        <div class="timeline-period-col">${escapeHtml(e.chapter)}</div>
+        <div class="timeline-track"><span class="timeline-dot"></span></div>
+        <div class="timeline-content">
+          <span class="timeline-period-inline">${escapeHtml(e.chapter)}</span>
+          <h3 class="timeline-title">${escapeHtml(e.eventName)}</h3>
+          ${contentBlockHtml(e.content, e.uncertaintyNote)}
+          ${diffHtml}
+        </div>
+      </li>`;
+    })
+    .join("");
+  return `<ol class="timeline-list">${items}</ol>`;
+}
+
+/* ---------- 著作 ---------- */
+
+function worksNoteHtml(worksNote: any) {
+  if (!worksNote) return "";
+  if (typeof worksNote === "string") return `<p class="worksnote-text">${escapeHtml(worksNote)}</p>`;
+  if (worksNote.paragraphs) return contentBlockHtml({ paragraphs: worksNote.paragraphs });
+  return "";
+}
+
+function workFullTextHtml(w: any) {
+  if (!w.fullText || !w.fullText.length) return "";
+  return `<div class="work-subsection"><span class="work-subsection-label">全文</span>${w.fullText
+    .map((line: string) => `<p class="original-text-line">${escapeHtml(line)}</p>`)
+    .join("")}</div>`;
+}
+
+function workMetaFieldHtml(label: string, value: any) {
+  if (!value) return "";
+  return `<div class="work-meta-field"><span class="work-meta-label">${escapeHtml(label)}</span><span class="work-meta-value">${escapeHtml(value)}</span></div>`;
+}
+
+function worksTabHtml() {
+  const works = c.works;
+  const worksNote = c.worksNote;
+  const noteHtml = worksNoteHtml(worksNote);
+  const noteBlock = noteHtml ? `<div class="plain-card worksnote-block">${noteHtml}</div>` : "";
+  if (!works || !works.length) return noteBlock;
+  return (
+    noteBlock +
+    works
+      .map((w: any) => {
+        const metaFields = [workMetaFieldHtml("類型", w.type), workMetaFieldHtml("現存狀況", w.extant), workMetaFieldHtml("歸屬", w.attribution)]
+          .filter(Boolean)
+          .join("");
+        const metaFieldsHtml = metaFields ? `<div class="work-meta-grid">${metaFields}</div>` : "";
+        const summaryHtml = w.summary ? `<p class="paraphrase-text">${escapeHtml(w.summary)}</p>` : "";
+        const anthologyHtml = w.anthology
+          ? `<div class="work-subsection"><span class="work-subsection-label">收錄文獻</span><p class="work-anthology">${escapeHtml(w.anthology)}</p></div>`
+          : "";
+        const excerptHtml = w.excerpt
+          ? `<div class="work-subsection"><span class="work-subsection-label">原文摘錄</span><blockquote class="original-text">${escapeHtml(w.excerpt)}</blockquote></div>`
+          : "";
+        return `
+        <div class="work-entry">
+          <h3 class="work-title">${escapeHtml(w.title)}</h3>
+          ${metaFieldsHtml}
+          ${summaryHtml}
+          ${anthologyHtml}
+          ${excerptHtml}
+          ${workFullTextHtml(w)}
+          ${citationsHtml(w.citations)}
+        </div>
+      `;
+      })
+      .join("")
+  );
+}
+
+/* ---------- 組出四個頁籤內容，交給下面的模板渲染 ---------- */
+
+const hasWorks = Boolean(c.works && c.works.length > 0);
+const tabs = [
+  { key: "overview", label: "總覽" },
+  { key: "historical", label: "史實生平" },
+  { key: "romance", label: "演義生平" },
+  ...(hasWorks ? [{ key: "works", label: "著作" }] : []),
+];
+
+const heroHtml = renderHero();
+const panelHtml = {
+  overview: renderOverviewTab(),
+  historical: historicalTimelineHtml(c.historicalBio),
+  romance: romanceTimelineHtml(c.romanceBio),
+  works: hasWorks ? worksTabHtml() : "",
+};
+
+const backHref = personIndexMap.get(c.id)?.filterGroup ? `/faction/${personIndexMap.get(c.id)!.filterGroup}` : "/";
+---
+<html lang="zh-Hant">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{c.name} - 三國人物誌</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@600;700;900&family=Noto+Sans+TC:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body class="char-page">
+    <div class="page">
+      <a class="back-link" href={backHref}>← 返回人物列表</a>
+
+      <div id="char-root">
+        <Fragment set:html={heroHtml} />
+
+        <nav class="tabs-nav" id="tabs-nav" role="tablist">
+          {
+            tabs.map((t, i) => (
+              <button
+                type="button"
+                class="tab-btn"
+                data-tab-key={t.key}
+                role="tab"
+                aria-selected={i === 0 ? "true" : "false"}
+              >
+                {t.label}
+              </button>
+            ))
+          }
+        </nav>
+
+        <div id="tabs-content">
+          {
+            tabs.map((t, i) => (
+              <div class="tab-panel" data-panel-key={t.key} hidden={i !== 0}>
+                <Fragment set:html={panelHtml[t.key as keyof typeof panelHtml]} />
+              </div>
+            ))
+          }
+        </div>
+      </div>
+    </div>
+
+    <script>
+      function getTabFromHash(availableKeys: string[]) {
+        const key = window.location.hash.replace("#", "");
+        return availableKeys.includes(key) ? key : availableKeys[0];
+      }
+
+      function initTabs() {
+        const nav = document.getElementById("tabs-nav");
+        if (!nav) return;
+        const buttons = Array.from(nav.querySelectorAll<HTMLButtonElement>(".tab-btn"));
+        const panels = Array.from(document.querySelectorAll<HTMLDivElement>(".tab-panel"));
+        const availableKeys = buttons.map((b) => b.dataset.tabKey!);
+
+        function paint(activeKey: string) {
+          buttons.forEach((b) => {
+            const isActive = b.dataset.tabKey === activeKey;
+            b.setAttribute("aria-selected", isActive ? "true" : "false");
+            b.classList.toggle("is-active", isActive);
+          });
+          panels.forEach((p) => {
+            p.hidden = p.dataset.panelKey !== activeKey;
+          });
+        }
+
+        buttons.forEach((b) => {
+          b.addEventListener("click", () => {
+            const key = b.dataset.tabKey!;
+            window.location.hash = key;
+            paint(key);
+          });
+        });
+
+        window.addEventListener("hashchange", () => {
+          paint(getTabFromHash(availableKeys));
+        });
+
+        paint(getTabFromHash(availableKeys));
+      }
+
+      initTabs();
+    </script>
+  </body>
+</html>
