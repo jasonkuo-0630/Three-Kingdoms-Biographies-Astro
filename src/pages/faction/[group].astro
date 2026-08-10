@@ -14,6 +14,7 @@ export function getStaticPaths() {
 
 const { group } = Astro.params;
 const meta = FACTION_PORTAL_META[group as string];
+const base = import.meta.env.BASE_URL.replace(/\/?$/, "/"); // 確保結尾一定有一條斜線，BASE_URL 本身不保證
 
 interface IndexEntry {
   id: string;
@@ -72,14 +73,14 @@ const peopleDataJson = JSON.stringify(
   <body class={`faction-page faction-page--${group}`}>
     <header class="topbar">
       <div class="topbar-inner">
-        <a class="brand" href="/" aria-label="回到三國人物誌卷首">
+        <a class="brand" href={base} aria-label="回到三國人物誌卷首">
           <span class="brand-seal" aria-hidden="true">誌</span>
           <span class="brand-copy">
             <strong>三國人物誌</strong>
             <small>返回卷首・{meta.label}人物總覽</small>
           </span>
         </a>
-        <a class="top-link" href="/">← 回卷首</a>
+        <a class="top-link" href={base}>← 回卷首</a>
       </div>
     </header>
 
@@ -111,11 +112,11 @@ const peopleDataJson = JSON.stringify(
       <div class="slip-list" id="slip-list">
         {
           people.map((p) => (
-            <a class={`slip slip--${group}`} data-id={p.id} href={`/character/${p.id}`} aria-label={`查看${p.name}的介紹`}>
+            <a class={`slip slip--${group}`} data-id={p.id} href={`${base}character/${p.id}`} aria-label={`查看${p.name}的介紹`}>
               <span class="slip-accent" aria-hidden="true"></span>
               <span class="slip-mark" aria-hidden="true">{meta.mark}</span>
               <span class="slip-avatar">
-                <img src={`/${p.avatar}`} alt={`${p.name}的頭像`} loading="lazy" />
+                <img src={`${base}${p.avatar}`} alt={`${p.name}的頭像`} loading="lazy" />
               </span>
               <span class="slip-main">
                 <span class="slip-name">{p.name}</span>
@@ -158,6 +159,7 @@ const peopleDataJson = JSON.stringify(
 
       const dataEl = document.getElementById("people-data");
       const allPeople: SlipPerson[] = JSON.parse(dataEl?.textContent || "[]");
+      const base = import.meta.env.BASE_URL.replace(/\/?$/, "/"); // 確保結尾一定有一條斜線，BASE_URL 本身不保證
 
       function escapeHtml(str: string) {
         return str
@@ -171,10 +173,10 @@ const peopleDataJson = JSON.stringify(
         const bodyClass = document.body.className.match(/faction-page--(\w+)/);
         const group = bodyClass ? bodyClass[1] : "";
         return `
-          <a class="slip slip--${group}" data-id="${escapeHtml(p.id)}" href="/character/${encodeURIComponent(p.id)}" aria-label="查看${escapeHtml(p.name)}的介紹">
+          <a class="slip slip--${group}" data-id="${escapeHtml(p.id)}" href="${base}character/${encodeURIComponent(p.id)}" aria-label="查看${escapeHtml(p.name)}的介紹">
             <span class="slip-accent" aria-hidden="true"></span>
             <span class="slip-mark" aria-hidden="true">${escapeHtml(p.mark)}</span>
-            <span class="slip-avatar"><img src="/${p.avatar}" alt="${escapeHtml(p.name)}的頭像" loading="lazy" /></span>
+            <span class="slip-avatar"><img src="${base}${p.avatar}" alt="${escapeHtml(p.name)}的頭像" loading="lazy" /></span>
             <span class="slip-main">
               <span class="slip-name">${escapeHtml(p.name)}</span>
               ${p.courtesyName ? `<span class="slip-courtesy">字 ${escapeHtml(p.courtesyName)}</span>` : `<span class="slip-courtesy slip-courtesy--muted">字號未載</span>`}
@@ -215,6 +217,7 @@ const peopleDataJson = JSON.stringify(
         searchInput.focus();
       });
 
+      // 滾動時讓 hover 效果跟著滑鼠停留位置走（原本 listing.js 的行為）
       let lastX: number | null = null;
       let lastY: number | null = null;
       listEl.addEventListener("mousemove", (e) => {
