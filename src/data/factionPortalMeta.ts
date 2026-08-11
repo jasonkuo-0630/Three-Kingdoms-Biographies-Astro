@@ -46,7 +46,7 @@ export const FACTION_PORTAL_META: Record<string, FactionPortalMeta> = {
     label: "群雄",
     ruler: "",
     motto: "逐鹿天下無常主，虎嘯龍吟各一方。",
-    portrait: null,
+    portrait: "images/yuan_shao_main.png",
   },
 };
 
