@@ -269,5 +269,18 @@
     ],
     "avatar": "images/yuan_shao.png",
     "filterGroup": "qunxiong"
+  },
+  {
+  "id": "lu-bu",
+  "published": true,
+  "name": "呂布",
+  "courtesyName": "奉先",
+  "searchTerms": [
+    "呂布",
+    "奉先",
+    "lu bu"
+  ],
+  "avatar": "images/lu_bu.png",
+  "filterGroup": "qunxiong"
   }
 ]
