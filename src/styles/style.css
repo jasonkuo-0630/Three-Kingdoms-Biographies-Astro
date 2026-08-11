@@ -1113,8 +1113,17 @@ summary:focus-visible {
 }
 
 .avatar-ring--lg {
-  width: 128px;
-  height: 128px;
+  width: 168px;
+  height: 168px;
+}
+
+/* 頭像放大只套用在桌面版；手機版維持原本 128px，原本的比例在小螢幕上
+   已經是剛好的大小，不需要跟著放大 */
+@media (max-width: 640px) {
+  .avatar-ring--lg {
+    width: 128px;
+    height: 128px;
+  }
 }
 
 .avatar-ring--lg img {
