@@ -1941,6 +1941,23 @@ td[data-label="資料性質"] > div:last-child {
   backdrop-filter: blur(6px);
   -webkit-backdrop-filter: blur(6px);
   z-index: 20;
+  /* 瀏覽器預設捲軸通常是淺灰／白色系，在這種深色半透明面板上會很突兀，
+     這裡改成細窄、軌道透明、拉桿用網站赭紅色系，融入整體視覺語言 */
+  scrollbar-width: thin;
+  scrollbar-color: var(--accent) transparent;
+}
+
+.toc-panel::-webkit-scrollbar {
+  width: 6px;
+}
+
+.toc-panel::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.toc-panel::-webkit-scrollbar-thumb {
+  background: var(--accent);
+  border-radius: 999px;
 }
 
 .toc-panel[hidden] {
