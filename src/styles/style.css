@@ -1932,6 +1932,11 @@ td[data-label="資料性質"] > div:last-child {
    不要定位後標題整個貼在最頂端。這裡的 96px 要跟 [id].astro 裡
    JS 判斷「目前捲到哪個區塊」用的 SCROLL_OFFSET 保持一致，兩邊
    算的是同一件事，數字對不上的話點擊定位跟捲動高亮會不同步。 */
+/* 給「回到頂端」目錄項目用的捲動目標，跟其他區塊留一樣的呼吸空間 */
+#char-root {
+  scroll-margin-top: 96px;
+}
+
 .section-block,
 .timeline-item,
 .work-entry {
@@ -2002,6 +2007,23 @@ td[data-label="資料性質"] > div:last-child {
   font-weight: 700;
   border-left-color: var(--accent);
   background: var(--accent-soft);
+}
+
+/* 「回到頂端」是導覽捷徑，不是內容區塊標題，用分隔線跟較淡的顏色
+   跟下面真正的內容項目做出區隔 */
+.toc-top-link {
+  padding-bottom: 6px;
+  margin-bottom: 6px;
+  border-bottom: 1px solid var(--line);
+}
+
+.toc-top-link a {
+  color: var(--text-faint);
+  font-size: 0.8rem;
+}
+
+.toc-top-link a:hover {
+  color: var(--text-muted);
 }
 
 /* ---------- 手機／中等寬度視窗：收合選單 ---------- */
