@@ -193,7 +193,7 @@ function groupFactionStages(entries: any[]) {
   return groups;
 }
 
-function renderFactionTimeline(entries: any[] | undefined) {
+function renderFactionTimeline(entries: any[] | undefined, sectionId: string) {
   if (!entries || !entries.length) return "";
   const groups = groupFactionStages(entries);
   const items = groups
@@ -220,7 +220,7 @@ function renderFactionTimeline(entries: any[] | undefined) {
       return `<li>${personLinkOrPlain(ref.linkedId, inner, "faction-stage")}</li>`;
     })
     .join("");
-  return `<div class="section-block"><h2 class="section-title">所屬勢力與效力歷程</h2><ol class="faction-stage-list">${items}</ol></div>`;
+  return `<div class="section-block" id="${sectionId}"><h2 class="section-title">所屬勢力與效力歷程</h2><ol class="faction-stage-list">${items}</ol></div>`;
 }
 
 const RELATION_GROUP_TIER: Record<string, number> = { ancestor: 1, sibling: 2, spouse: 3, child: 4, grandchild: 5, other: 6 };
@@ -274,7 +274,7 @@ function sortRelatives(list: any[]) {
     .map((x) => x.r);
 }
 
-function renderRelatives(list: any[] | undefined) {
+function renderRelatives(list: any[] | undefined, sectionId: string) {
   if (!list || !list.length) return "";
   const rows = sortRelatives(list)
     .map((r) => {
@@ -309,21 +309,21 @@ function renderRelatives(list: any[] | undefined) {
       return `<tr><td class="person-cell">${personCell}</td><td data-label="關係">${relationHtml}</td><td data-label="資料性質">${natureHtml}</td><td data-label="補充">${supplementHtml}</td></tr>`;
     })
     .join("");
-  return `<div class="section-block"><h2 class="section-title">親屬</h2><div class="table-scroll"><table class="relative-table"><thead><tr><th>人物</th><th>關係</th><th>資料性質</th><th>補充</th></tr></thead><tbody>${rows}</tbody></table></div></div>`;
+  return `<div class="section-block" id="${sectionId}"><h2 class="section-title">親屬</h2><div class="table-scroll"><table class="relative-table"><thead><tr><th>人物</th><th>關係</th><th>資料性質</th><th>補充</th></tr></thead><tbody>${rows}</tbody></table></div></div>`;
 }
 
-function renderTitlesAndRanks(list: any[] | undefined) {
+function renderTitlesAndRanks(list: any[] | undefined, sectionId: string) {
   if (!list || !list.length) return "";
   const rows = list
     .map((t) => `<li class="rank-item"><span class="rank-title">${escapeHtml(t.title)}</span><span class="rank-period">${escapeHtml(t.period)}</span>${citationsHtml(t.citations)}</li>`)
     .join("");
-  return `<div class="section-block"><h2 class="section-title">官職與爵位</h2><ul class="rank-list">${rows}</ul></div>`;
+  return `<div class="section-block" id="${sectionId}"><h2 class="section-title">官職與爵位</h2><ul class="rank-list">${rows}</ul></div>`;
 }
 
-function renderPosthumousTitle(pt: any) {
+function renderPosthumousTitle(pt: any, sectionId: string) {
   if (!pt || !pt.title) return "";
   const paragraphsHtml = pt.paragraphs ? contentBlockHtml({ paragraphs: pt.paragraphs }) : "";
-  return `<div class="section-block"><h2 class="section-title">諡號</h2><div class="plain-card"><p><strong>${escapeHtml(pt.title)}</strong>${pt.grantedBy ? ` — ${escapeHtml(pt.grantedBy)}` : ""}</p>${citationsHtml(pt.citations)}${paragraphsHtml}</div></div>`;
+  return `<div class="section-block" id="${sectionId}"><h2 class="section-title">諡號</h2><div class="plain-card"><p><strong>${escapeHtml(pt.title)}</strong>${pt.grantedBy ? ` — ${escapeHtml(pt.grantedBy)}` : ""}</p>${citationsHtml(pt.citations)}${paragraphsHtml}</div></div>`;
 }
 
 function renderEvaluationEntry(e: any) {
@@ -332,35 +332,59 @@ function renderEvaluationEntry(e: any) {
   return `<div class="quote-card"><div class="quote-meta"><span class="quote-evaluator">${escapeHtml(e.evaluatorName)}</span>${e.evaluatorEra ? `<span class="quote-era">${escapeHtml(e.evaluatorEra)}</span>` : ""}</div>${e.context ? `<p class="quote-context">${escapeHtml(e.context)}</p>` : ""}${originalHtml}${paraphraseHtml}${citationsHtml(e.citations)}</div>`;
 }
 
-function renderEvaluations(title: string, list: any[] | undefined) {
+function renderEvaluations(title: string, list: any[] | undefined, sectionId: string) {
   if (!list || !list.length) return "";
-  return `<div class="section-block"><h2 class="section-title">${escapeHtml(title)}</h2>${list.map(renderEvaluationEntry).join("")}</div>`;
+  return `<div class="section-block" id="${sectionId}"><h2 class="section-title">${escapeHtml(title)}</h2>${list.map(renderEvaluationEntry).join("")}</div>`;
 }
 
-function renderOverviewTab() {
+function renderOverviewTab(): { html: string; toc: { id: string; label: string }[] } {
   const ov = c.overview || {};
   let html = "";
+  const toc: { id: string; label: string }[] = [];
+
   if (ov.intro) {
-    html += `<div class="section-block"><h2 class="section-title">人物簡介</h2>${contentBlockHtml(ov.intro, ov.intro.uncertaintyNote)}</div>`;
+    html += `<div class="section-block" id="sec-intro"><h2 class="section-title">人物簡介</h2>${contentBlockHtml(ov.intro, ov.intro.uncertaintyNote)}</div>`;
+    toc.push({ id: "sec-intro", label: "人物簡介" });
   }
-  html += renderFactionTimeline(ov.factionTimeline);
-  html += renderRelatives(ov.relatives);
-  html += renderTitlesAndRanks(ov.titlesAndRanks);
-  html += renderPosthumousTitle(ov.posthumousTitle);
+  if (ov.factionTimeline && ov.factionTimeline.length) {
+    html += renderFactionTimeline(ov.factionTimeline, "sec-factions");
+    toc.push({ id: "sec-factions", label: "所屬勢力與效力歷程" });
+  }
+  if (ov.relatives && ov.relatives.length) {
+    html += renderRelatives(ov.relatives, "sec-relatives");
+    toc.push({ id: "sec-relatives", label: "親屬" });
+  }
+  if (ov.titlesAndRanks && ov.titlesAndRanks.length) {
+    html += renderTitlesAndRanks(ov.titlesAndRanks, "sec-titles");
+    toc.push({ id: "sec-titles", label: "官職與爵位" });
+  }
+  if (ov.posthumousTitle && ov.posthumousTitle.title) {
+    html += renderPosthumousTitle(ov.posthumousTitle, "sec-posthumous");
+    toc.push({ id: "sec-posthumous", label: "諡號" });
+  }
   const evals = ov.evaluations || {};
-  html += renderEvaluations("當世評價", evals.contemporary);
-  html += renderEvaluations("後世評價", evals.later);
-  return html || `<p class="paraphrase-text">尚無總覽資料。</p>`;
+  if (evals.contemporary && evals.contemporary.length) {
+    html += renderEvaluations("當世評價", evals.contemporary, "sec-eval-contemporary");
+    toc.push({ id: "sec-eval-contemporary", label: "當世評價" });
+  }
+  if (evals.later && evals.later.length) {
+    html += renderEvaluations("後世評價", evals.later, "sec-eval-later");
+    toc.push({ id: "sec-eval-later", label: "後世評價" });
+  }
+  return { html: html || `<p class="paraphrase-text">尚無總覽資料。</p>`, toc };
 }
 
 /* ---------- 史實／演義生平 ---------- */
 
-function historicalTimelineHtml(entries: any[] | undefined) {
-  if (!entries || !entries.length) return `<p class="paraphrase-text">尚無史實生平資料。</p>`;
+function historicalTimelineHtml(entries: any[] | undefined): { html: string; toc: { id: string; label: string }[] } {
+  if (!entries || !entries.length) {
+    return { html: `<p class="paraphrase-text">尚無史實生平資料。</p>`, toc: [] };
+  }
+  const toc = entries.map((e, i) => ({ id: `hist-${i}`, label: e.title || e.period || `事件 ${i + 1}` }));
   const items = entries
     .map(
-      (e) => `
-      <li class="timeline-item timeline-item--historical">
+      (e, i) => `
+      <li class="timeline-item timeline-item--historical" id="hist-${i}">
         <div class="timeline-period-col" data-period-type="${e.periodType || ""}">${escapeHtml(e.period)}</div>
         <div class="timeline-track"><span class="timeline-dot"></span></div>
         <div class="timeline-content">
@@ -371,7 +395,7 @@ function historicalTimelineHtml(entries: any[] | undefined) {
       </li>`
     )
     .join("");
-  return `<ol class="timeline-list">${items}</ol>`;
+  return { html: `<ol class="timeline-list">${items}</ol>`, toc };
 }
 
 function diffNoteHtml(contentBlock: any) {
@@ -379,15 +403,18 @@ function diffNoteHtml(contentBlock: any) {
   return contentBlockHtml(contentBlock, contentBlock.uncertaintyNote);
 }
 
-function romanceTimelineHtml(entries: any[] | undefined) {
-  if (!entries || !entries.length) return `<p class="paraphrase-text">尚無演義生平資料。</p>`;
+function romanceTimelineHtml(entries: any[] | undefined): { html: string; toc: { id: string; label: string }[] } {
+  if (!entries || !entries.length) {
+    return { html: `<p class="paraphrase-text">尚無演義生平資料。</p>`, toc: [] };
+  }
+  const toc = entries.map((e, i) => ({ id: `rom-${i}`, label: e.eventName || e.chapter || `事件 ${i + 1}` }));
   const items = entries
-    .map((e) => {
+    .map((e, i) => {
       const diffHtml = e.historicalDifference
         ? `<div class="diff-note"><span class="diff-label">史實差異</span>${diffNoteHtml(e.historicalDifference)}</div>`
         : "";
       return `
-      <li class="timeline-item timeline-item--romance">
+      <li class="timeline-item timeline-item--romance" id="rom-${i}">
         <div class="timeline-period-col">${escapeHtml(e.chapter)}</div>
         <div class="timeline-track"><span class="timeline-dot"></span></div>
         <div class="timeline-content">
@@ -399,7 +426,7 @@ function romanceTimelineHtml(entries: any[] | undefined) {
       </li>`;
     })
     .join("");
-  return `<ol class="timeline-list">${items}</ol>`;
+  return { html: `<ol class="timeline-list">${items}</ol>`, toc };
 }
 
 /* ---------- 著作 ---------- */
@@ -423,16 +450,17 @@ function workMetaFieldHtml(label: string, value: any) {
   return `<div class="work-meta-field"><span class="work-meta-label">${escapeHtml(label)}</span><span class="work-meta-value">${escapeHtml(value)}</span></div>`;
 }
 
-function worksTabHtml() {
+function worksTabHtml(): { html: string; toc: { id: string; label: string }[] } {
   const works = c.works;
   const worksNote = c.worksNote;
   const noteHtml = worksNoteHtml(worksNote);
   const noteBlock = noteHtml ? `<div class="plain-card worksnote-block">${noteHtml}</div>` : "";
-  if (!works || !works.length) return noteBlock;
-  return (
+  if (!works || !works.length) return { html: noteBlock, toc: [] };
+  const toc = works.map((w: any, i: number) => ({ id: `work-${i}`, label: w.title || `作品 ${i + 1}` }));
+  const html =
     noteBlock +
     works
-      .map((w: any) => {
+      .map((w: any, i: number) => {
         const metaFields = [workMetaFieldHtml("類型", w.type), workMetaFieldHtml("現存狀況", w.extant), workMetaFieldHtml("歸屬", w.attribution)]
           .filter(Boolean)
           .join("");
@@ -445,7 +473,7 @@ function worksTabHtml() {
           ? `<div class="work-subsection"><span class="work-subsection-label">原文摘錄</span><blockquote class="original-text">${escapeHtml(w.excerpt)}</blockquote></div>`
           : "";
         return `
-        <div class="work-entry">
+        <div class="work-entry" id="work-${i}">
           <h3 class="work-title">${escapeHtml(w.title)}</h3>
           ${metaFieldsHtml}
           ${summaryHtml}
@@ -456,8 +484,8 @@ function worksTabHtml() {
         </div>
       `;
       })
-      .join("")
-  );
+      .join("");
+  return { html, toc };
 }
 
 /* ---------- 組出四個頁籤內容，交給下面的模板渲染 ---------- */
@@ -471,12 +499,18 @@ const tabs = [
 ];
 
 const heroHtml = renderHero();
-const panelHtml = {
+const panels = {
   overview: renderOverviewTab(),
   historical: historicalTimelineHtml(c.historicalBio),
   romance: romanceTimelineHtml(c.romanceBio),
-  works: hasWorks ? worksTabHtml() : "",
+  works: hasWorks ? worksTabHtml() : { html: "", toc: [] },
 };
+
+// 給頁內導覽（桌面懸浮面板／手機收合選單）用：每個頁籤各自的目錄清單，
+// 只包含這位人物真的有的區塊／事件，不會出現點了沒反應的空項目。
+const tocDataJson = JSON.stringify(
+  Object.fromEntries(tabs.map((t) => [t.key, panels[t.key as keyof typeof panels].toc]))
+);
 
 const backHref = personIndexMap.get(c.id)?.filterGroup ? `${base}faction/${personIndexMap.get(c.id)!.filterGroup}` : base;
 ---
@@ -521,13 +555,38 @@ const backHref = personIndexMap.get(c.id)?.filterGroup ? `${base}faction/${perso
           {
             tabs.map((t, i) => (
               <div class="tab-panel" data-panel-key={t.key} hidden={i !== 0}>
-                <Fragment set:html={panelHtml[t.key as keyof typeof panelHtml]} />
+                <Fragment set:html={panels[t.key as keyof typeof panels].html} />
               </div>
             ))
           }
         </div>
       </div>
     </div>
+
+    <!-- 頁內導覽：桌面版固定在右側的半透明懸浮面板，內容跟著目前作用中的
+         頁籤換、跟著捲動位置自動標示目前所在區塊。窄螢幕（含中等寬度的
+         桌面視窗，避免跟置中內容重疊）改成右下角的按鈕，點開後用底部彈出
+         選單呈現同一份目錄。 -->
+    <aside class="toc-panel" id="toc-panel" aria-label="本頁內容導覽">
+      <p class="toc-panel-title">本頁導覽</p>
+      <ul class="toc-list" id="toc-list"></ul>
+    </aside>
+
+    <button type="button" class="toc-toggle" id="toc-toggle" aria-expanded="false" aria-controls="toc-overlay">
+      目錄
+    </button>
+
+    <div class="toc-overlay" id="toc-overlay" hidden>
+      <div class="toc-overlay-panel">
+        <div class="toc-overlay-header">
+          <p class="toc-panel-title">本頁導覽</p>
+          <button type="button" class="toc-overlay-close" id="toc-overlay-close" aria-label="關閉目錄">✕</button>
+        </div>
+        <ul class="toc-list" id="toc-list-mobile"></ul>
+      </div>
+    </div>
+
+    <script type="application/json" id="toc-data" set:html={tocDataJson} is:inline />
 
     <script>
       // 頁籤切換：跟原本 character.js 一樣支援網址 hash（#historical 這種），
@@ -541,7 +600,7 @@ const backHref = personIndexMap.get(c.id)?.filterGroup ? `${base}faction/${perso
         const nav = document.getElementById("tabs-nav");
         if (!nav) return;
         const buttons = Array.from(nav.querySelectorAll<HTMLButtonElement>(".tab-btn"));
-        const panels = Array.from(document.querySelectorAll<HTMLDivElement>(".tab-panel"));
+        const tabPanels = Array.from(document.querySelectorAll<HTMLDivElement>(".tab-panel"));
         const availableKeys = buttons.map((b) => b.dataset.tabKey!);
 
         function paint(activeKey: string) {
@@ -550,9 +609,12 @@ const backHref = personIndexMap.get(c.id)?.filterGroup ? `${base}faction/${perso
             b.setAttribute("aria-selected", isActive ? "true" : "false");
             b.classList.toggle("is-active", isActive);
           });
-          panels.forEach((p) => {
+          tabPanels.forEach((p) => {
             p.hidden = p.dataset.panelKey !== activeKey;
           });
+          // 頁內導覽的內容要跟著目前作用中的頁籤換，用自訂事件通知
+          // initToc()，兩邊邏輯不用互相知道對方內部怎麼實作。
+          window.dispatchEvent(new CustomEvent("charpage:tabchange", { detail: { key: activeKey } }));
         }
 
         buttons.forEach((b) => {
@@ -570,7 +632,152 @@ const backHref = personIndexMap.get(c.id)?.filterGroup ? `${base}faction/${perso
         paint(getTabFromHash(availableKeys));
       }
 
+      // 頁內導覽：桌面懸浮面板 + 手機收合選單共用同一份目錄資料跟邏輯，
+      // 只是渲染進兩個不同的容器（.toc-list / .toc-list-mobile），哪一個
+      // 實際看得到由 CSS media query 決定，這裡不用判斷目前是哪種尺寸。
+      function initToc() {
+        const dataEl = document.getElementById("toc-data");
+        const tocData: Record<string, { id: string; label: string }[]> = JSON.parse(dataEl?.textContent || "{}");
+
+        const tocPanel = document.getElementById("toc-panel");
+        const tocListDesktop = document.getElementById("toc-list");
+        const tocListMobile = document.getElementById("toc-list-mobile");
+        const tocToggle = document.getElementById("toc-toggle");
+        const tocOverlay = document.getElementById("toc-overlay");
+        const tocOverlayClose = document.getElementById("toc-overlay-close");
+
+        // 跟畫面上緣保持的呼吸空間：點擊定位、以及判斷「目前捲到哪個區塊」
+        // 用同一個數值，行為才會一致（定位停在哪、就用哪個位置判斷 active）。
+        // CSS 那邊的 scroll-margin-top 也要用同一個值，見 style.css。
+        const SCROLL_OFFSET = 96;
+
+        let currentIds: string[] = [];
+        let scrollHandlerBound = false;
+
+        function escapeHtml(str: string) {
+          return str
+            .replace(/&/g, "&amp;")
+            .replace(/</g, "&lt;")
+            .replace(/>/g, "&gt;")
+            .replace(/"/g, "&quot;");
+        }
+
+        function closeMobileOverlay() {
+          if (tocOverlay) tocOverlay.hidden = true;
+          tocToggle?.setAttribute("aria-expanded", "false");
+        }
+
+        function openMobileOverlay() {
+          if (tocOverlay) tocOverlay.hidden = false;
+          tocToggle?.setAttribute("aria-expanded", "true");
+        }
+
+        function setActiveItem(id: string | null) {
+          document.querySelectorAll<HTMLElement>("[data-toc-target]").forEach((a) => {
+            a.classList.toggle("is-active", id !== null && a.dataset.tocTarget === id);
+          });
+        }
+
+        // 判斷「目前捲到哪個區塊」：依文件順序找「標題已經捲過上緣標記線的
+        // 最後一個」，不是「畫面上看得到的第一個」。用意圖判斷位置而不是可
+        // 見範圍判斷，短區塊（例如「親屬」內容不多）也不會被跳過——原本用
+        // IntersectionObserver 的寫法在區塊很短、一次捲動就整個劃出偵測範圍
+        // 時會誤判成下一個區塊，這裡換一種不受區塊長短影響的演算法。
+        function updateActiveFromScroll() {
+          // 特殊情況：頁面已經捲到底、物理上沒有更多空間可以再捲動時，
+          // 最後幾個區塊的標題可能永遠不會通過上面那條判定線（因為捲動
+          // 距離不夠把它們推過線），單靠調整判定範圍解決不了這個問題，
+          // 需要一條特殊規則：捲到底了，就直接判定成目錄最後一項，這樣
+          // 才符合使用者視覺上「已經在看最後一段內容」的直覺。
+          const atBottom = window.innerHeight + window.scrollY >= document.documentElement.scrollHeight - 2;
+          if (atBottom && currentIds.length) {
+            setActiveItem(currentIds[currentIds.length - 1]);
+            return;
+          }
+
+          let current: string | null = null;
+          for (const id of currentIds) {
+            const el = document.getElementById(id);
+            if (!el) continue;
+            const top = el.getBoundingClientRect().top;
+            if (top - SCROLL_OFFSET <= 1) {
+              current = id;
+            } else {
+              break; // currentIds 依文件順序排列，後面的只會更晚捲到，可以提前結束
+            }
+          }
+          if (!current && currentIds.length) current = currentIds[0];
+          setActiveItem(current);
+        }
+
+        function ensureScrollHandler() {
+          if (scrollHandlerBound) return;
+          scrollHandlerBound = true;
+          let ticking = false;
+          window.addEventListener(
+            "scroll",
+            () => {
+              if (ticking) return;
+              ticking = true;
+              window.requestAnimationFrame(() => {
+                updateActiveFromScroll();
+                ticking = false;
+              });
+            },
+            { passive: true }
+          );
+        }
+
+        function bindClickHandlers() {
+          document.querySelectorAll<HTMLAnchorElement>("[data-toc-target]").forEach((a) => {
+            a.addEventListener("click", (e) => {
+              e.preventDefault();
+              const targetId = a.dataset.tocTarget!;
+              const target = document.getElementById(targetId);
+              if (target) target.scrollIntoView({ behavior: "smooth", block: "start" });
+              closeMobileOverlay();
+            });
+          });
+        }
+
+        function renderList(key: string) {
+          const items = tocData[key] || [];
+          const html = items
+            .map((it) => `<li><a href="#${escapeHtml(it.id)}" data-toc-target="${escapeHtml(it.id)}">${escapeHtml(it.label)}</a></li>`)
+            .join("");
+          if (tocListDesktop) tocListDesktop.innerHTML = html;
+          if (tocListMobile) tocListMobile.innerHTML = html;
+          const hasItems = items.length > 0;
+          if (tocPanel) tocPanel.hidden = !hasItems;
+          if (tocToggle) tocToggle.hidden = !hasItems;
+          if (!hasItems) closeMobileOverlay();
+          bindClickHandlers();
+          currentIds = items.map((it) => it.id);
+          ensureScrollHandler();
+          updateActiveFromScroll();
+        }
+
+        window.addEventListener("charpage:tabchange", ((e: CustomEvent<{ key: string }>) => {
+          closeMobileOverlay();
+          renderList(e.detail.key);
+        }) as EventListener);
+
+        tocToggle?.addEventListener("click", () => {
+          const isOpen = tocOverlay ? !tocOverlay.hidden : false;
+          if (isOpen) closeMobileOverlay();
+          else openMobileOverlay();
+        });
+        tocOverlayClose?.addEventListener("click", closeMobileOverlay);
+        tocOverlay?.addEventListener("click", (e) => {
+          if (e.target === tocOverlay) closeMobileOverlay();
+        });
+
+        const initialTab = document.querySelector<HTMLButtonElement>('.tab-btn[aria-selected="true"]');
+        renderList(initialTab?.dataset.tabKey || Object.keys(tocData)[0] || "overview");
+      }
+
       initTabs();
+      initToc();
     </script>
   </body>
 </html>
