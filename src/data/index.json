@@ -256,5 +256,18 @@
     ],
     "avatar": "images/xiahou_yuan.png",
     "filterGroup": "wei"
+  },
+  {
+    "id": "yuan-shao",
+    "published": true,
+    "name": "袁紹",
+    "courtesyName": "本初",
+    "searchTerms": [
+      "袁紹",
+      "本初",
+      "yuan shao"
+    ],
+    "avatar": "images/yuan_shao.png",
+    "filterGroup": "qunxiong"
   }
 ]
