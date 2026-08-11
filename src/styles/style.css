@@ -1919,3 +1919,170 @@ td[data-label="資料性質"] > div:last-child {
   font-size: 0.78rem;
   padding: 40px 0 10px;
 }
+/* ============================================================
+   頁內導覽（人物詳細頁）
+   桌面：固定在右側的半透明懸浮面板，內容跟著目前頁籤換、捲動時
+   自動標示所在區塊。中等寬度視窗（含許多桌面瀏覽器常見的視窗
+   大小）會跟置中內容（.page 最大寬度 1080px）重疊，所以只在
+   確定兩側留白足夠的寬螢幕顯示；較窄的視窗一律改用手機收合選單，
+   不做「有時候浮動、有時候不浮動」這種中間狀態。
+   ============================================================ */
+
+/* 所有頁內導覽可能連結過去的區塊，都留一點跟畫面上緣的呼吸空間，
+   不要定位後標題整個貼在最頂端。這裡的 96px 要跟 [id].astro 裡
+   JS 判斷「目前捲到哪個區塊」用的 SCROLL_OFFSET 保持一致，兩邊
+   算的是同一件事，數字對不上的話點擊定位跟捲動高亮會不同步。 */
+.section-block,
+.timeline-item,
+.work-entry {
+  scroll-margin-top: 96px;
+}
+
+.toc-panel {
+  position: fixed;
+  top: 120px;
+  right: 32px;
+  width: 220px;
+  max-height: calc(100vh - 160px);
+  overflow-y: auto;
+  background: rgba(41, 34, 28, 0.72);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 16px;
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  z-index: 20;
+}
+
+.toc-panel[hidden] {
+  display: none;
+}
+
+@media (max-width: 1399px) {
+  .toc-panel {
+    display: none;
+  }
+}
+
+.toc-panel-title {
+  font-family: var(--font-display);
+  font-size: 0.82rem;
+  color: var(--text-faint);
+  letter-spacing: 0.06em;
+  margin: 0 0 10px;
+}
+
+.toc-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.toc-list a {
+  display: block;
+  padding: 6px 10px;
+  border-radius: 6px;
+  font-size: 0.85rem;
+  line-height: 1.45;
+  color: var(--text-muted);
+  text-decoration: none;
+  border-left: 2px solid transparent;
+}
+
+.toc-list a:hover {
+  color: var(--text);
+  background: rgba(236, 228, 211, 0.05);
+}
+
+.toc-list a.is-active {
+  color: var(--text);
+  font-weight: 700;
+  border-left-color: var(--accent);
+  background: var(--accent-soft);
+}
+
+/* ---------- 手機／中等寬度視窗：收合選單 ---------- */
+.toc-toggle {
+  display: none;
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  z-index: 30;
+  background: var(--accent);
+  color: var(--parchment);
+  border: none;
+  border-radius: 999px;
+  padding: 12px 20px;
+  font-family: var(--font-display);
+  font-size: 0.9rem;
+  box-shadow: var(--shadow);
+  cursor: pointer;
+}
+
+.toc-toggle[hidden] {
+  display: none !important;
+}
+
+.toc-overlay {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 40;
+  align-items: flex-end;
+}
+
+.toc-overlay[hidden] {
+  display: none !important;
+}
+
+.toc-overlay-panel {
+  width: 100%;
+  max-height: 70vh;
+  overflow-y: auto;
+  background: var(--bg-2);
+  border-top: 1px solid var(--line);
+  border-radius: 16px 16px 0 0;
+  padding: 20px;
+}
+
+.toc-overlay .toc-list a {
+  font-size: 0.95rem;
+  padding: 10px 12px;
+}
+
+.toc-overlay-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 12px;
+}
+
+.toc-overlay-close {
+  background: transparent;
+  border: none;
+  color: var(--text-muted);
+  font-size: 1.1rem;
+  line-height: 1;
+  padding: 6px 8px;
+  cursor: pointer;
+}
+
+.toc-overlay-close:hover {
+  color: var(--text);
+}
+
+/* 1400px 以下（含中等寬度桌面視窗跟平板、手機）都用收合選單，
+   跟上面 .toc-panel 的 1399px 斷點對齊，確保任何寬度下永遠只有
+   「懸浮面板」或「收合選單」其中一種出現，不會兩個同時顯示 */
+@media (max-width: 1399px) {
+  .toc-toggle {
+    display: block;
+  }
+  .toc-overlay:not([hidden]) {
+    display: flex;
+  }
+}
