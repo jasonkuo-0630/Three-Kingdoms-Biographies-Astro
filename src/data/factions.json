@@ -78,7 +78,7 @@
       "id": "yuan-shao-faction",
       "name": "袁紹勢力",
       "filterGroup": "qunxiong",
-      "description": "劉備二度背曹後北投袁紹，並數次於汝南一帶活動的階段。"
+      "description": "袁紹自初平二年（191年）取得冀州後建立的河北割據勢力，先後與公孫瓚爭奪北方，至建安四年（199年）兼有冀、青、幽、并四州；官渡敗後仍控制河北，至袁紹死後因諸子內爭而瓦解。劉備等人物曾短暫依附此勢力。"
     },
     {
       "id": "liu-biao-faction",
@@ -229,6 +229,18 @@
       "name": "孫吳・大帝政權",
       "filterGroup": "wu",
       "description": "黃龍元年四月（229年）孫權在武昌稱帝、正式建立孫吳帝國後，至太元二年四月（252年）去世為止的政權階段；同年九月遷都建業。"
+    },
+    {
+      "id": "yuan-shao-late-han-service",
+      "name": "袁紹・東漢中央任官期",
+      "filterGroup": "donghan",
+      "description": "袁紹早年任郎、濮陽長，後入何進幕府並任侍御史、虎賁中郎將、西園校尉及司隸校尉的階段；此時仍屬東漢中央軍政體系，尚未形成獨立割據勢力。"
+    },
+    {
+      "id": "yuan-shao-anti-dong-force",
+      "name": "袁紹・渤海討董聯軍",
+      "filterGroup": "qunxiong",
+      "description": "袁紹出奔後受遙授渤海太守，以渤海為基礎起兵討董、被推為關東聯軍盟主並自號車騎將軍的階段；屬袁紹獨立軍事勢力形成期。"
     }
   ]
 }
