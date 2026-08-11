@@ -63,8 +63,6 @@ const peopleDataJson = JSON.stringify(
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>三國人物誌・{meta.label}</title>
-    <link rel="icon" type="image/svg+xml" href={`${base}favicon.svg`} />
-    <link rel="icon" href={`${base}favicon.ico`} />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -146,6 +144,10 @@ const peopleDataJson = JSON.stringify(
 
     <p class="empty-state" id="empty-state" hidden>沒有符合條件的人物，換個關鍵字或勢力篩選看看吧。</p>
 
+    <button type="button" class="back-to-top" id="back-to-top" aria-label="回到頂端與搜尋框" hidden>
+      <span class="back-to-top-label">回到頂端</span>
+    </button>
+
     <script type="application/json" id="people-data" set:html={peopleDataJson} is:inline />
 
     <script>
@@ -219,7 +221,9 @@ const peopleDataJson = JSON.stringify(
         searchInput.focus();
       });
 
-      // 滾動時讓 hover 效果跟著滑鼠停留位置走（原本 listing.js 的行為）
+      // 捲動時讓 hover 效果跟著滑鼠停留位置走（原本 listing.js 的行為）。
+      // 監聽對象是 window，不是 listEl 自己——現在整個頁面一起捲動，不再有
+      // 列表框自己獨立的捲動區域。
       let lastX: number | null = null;
       let lastY: number | null = null;
       listEl.addEventListener("mousemove", (e) => {
@@ -227,21 +231,33 @@ const peopleDataJson = JSON.stringify(
         lastY = e.clientY;
         document.querySelectorAll(".slip.is-hovered").forEach((s) => s.classList.remove("is-hovered"));
       });
-      listEl.addEventListener("scroll", () => {
+
+      const backToTopBtn = document.getElementById("back-to-top") as HTMLButtonElement;
+      const BACK_TO_TOP_THRESHOLD = 400; // 捲過這個距離才顯示按鈕，剛打開頁面不用多一個按鈕擋畫面
+
+      window.addEventListener("scroll", () => {
         window.requestAnimationFrame(() => {
-          if (lastX === null || lastY === null) return;
-          const el = document.elementFromPoint(lastX, lastY);
-          const slip = el ? el.closest(".slip") : null;
-          document.querySelectorAll(".slip.is-hovered").forEach((s) => {
-            if (s !== slip) s.classList.remove("is-hovered");
-          });
-          if (slip) slip.classList.add("is-hovered");
+          // hover 跟隨邏輯
+          if (lastX !== null && lastY !== null) {
+            const el = document.elementFromPoint(lastX, lastY);
+            const slip = el ? el.closest(".slip") : null;
+            document.querySelectorAll(".slip.is-hovered").forEach((s) => {
+              if (s !== slip) s.classList.remove("is-hovered");
+            });
+            if (slip) slip.classList.add("is-hovered");
+          }
+          // 回到頂端按鈕的顯示／隱藏
+          backToTopBtn.hidden = window.scrollY < BACK_TO_TOP_THRESHOLD;
         });
       });
       listEl.addEventListener("mouseleave", () => {
         document.querySelectorAll(".slip.is-hovered").forEach((s) => s.classList.remove("is-hovered"));
         lastX = null;
         lastY = null;
+      });
+
+      backToTopBtn.addEventListener("click", () => {
+        window.scrollTo({ top: 0, behavior: "smooth" });
       });
     </script>
   </body>
