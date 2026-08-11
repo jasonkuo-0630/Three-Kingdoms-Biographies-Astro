@@ -438,11 +438,23 @@ function worksNoteHtml(worksNote: any) {
   return "";
 }
 
+// 只要有 fullText，不論字數一律用收合／展開的形式呈現（沿用網站既有的
+// 「查看史料原文」收合元件樣式，視覺跟互動邏輯保持一致，不必另外寫一套
+// JS），讓著作區塊的呈現方式維持統一，不會有的展開、有的收合。字數還是
+// 算出來顯示在摘要文字上，方便讀者判斷值不值得點開。
 function workFullTextHtml(w: any) {
   if (!w.fullText || !w.fullText.length) return "";
-  return `<div class="work-subsection"><span class="work-subsection-label">全文</span>${w.fullText
+  const paragraphsHtml = w.fullText
     .map((line: string) => `<p class="original-text-line">${escapeHtml(line)}</p>`)
-    .join("")}</div>`;
+    .join("");
+  const totalChars = w.fullText.reduce((sum: number, line: string) => sum + line.length, 0);
+
+  return `<div class="work-subsection">
+    <details class="original-text-toggle">
+      <summary>查看全文（約 ${totalChars} 字）</summary>
+      ${paragraphsHtml}
+    </details>
+  </div>`;
 }
 
 function workMetaFieldHtml(label: string, value: any) {
