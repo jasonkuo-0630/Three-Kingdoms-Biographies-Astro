@@ -750,9 +750,12 @@ const backHref = personIndexMap.get(c.id)?.filterGroup ? `${base}faction/${perso
 
         function renderList(key: string) {
           const items = tocData[key] || [];
-          const html = items
-            .map((it) => `<li><a href="#${escapeHtml(it.id)}" data-toc-target="${escapeHtml(it.id)}">${escapeHtml(it.label)}</a></li>`)
-            .join("");
+          const topLinkHtml = `<li class="toc-top-link"><a href="#char-root" data-toc-target="char-root">↑ 回到頂端</a></li>`;
+          const html =
+            topLinkHtml +
+            items
+              .map((it) => `<li><a href="#${escapeHtml(it.id)}" data-toc-target="${escapeHtml(it.id)}">${escapeHtml(it.label)}</a></li>`)
+              .join("");
           if (tocListDesktop) tocListDesktop.innerHTML = html;
           if (tocListMobile) tocListMobile.innerHTML = html;
           const hasItems = items.length > 0;
@@ -760,6 +763,10 @@ const backHref = personIndexMap.get(c.id)?.filterGroup ? `${base}faction/${perso
           if (tocToggle) tocToggle.hidden = !hasItems;
           if (!hasItems) closeMobileOverlay();
           bindClickHandlers();
+          // 「回到頂端」不算進 currentIds——它是導覽捷徑，不是內容區塊，
+          // 不該參與「目前捲到哪個區塊」的位置判斷（不然捲動判斷邏輯會
+          // 一直被它干擾）。點擊後仍會如常被短暫標記為使用中（見
+          // bindClickHandlers），緩衝期結束後會自然交還給正常的區塊偵測。
           currentIds = items.map((it) => it.id);
           ensureScrollHandler();
           updateActiveFromScroll();
