@@ -653,6 +653,7 @@ const backHref = personIndexMap.get(c.id)?.filterGroup ? `${base}faction/${perso
 
         let currentIds: string[] = [];
         let scrollHandlerBound = false;
+        let suppressAutoUpdateUntil = 0; // 點擊目錄後，這段時間內不讓自動偵測搶回控制權
 
         function escapeHtml(str: string) {
           return str
@@ -684,6 +685,8 @@ const backHref = personIndexMap.get(c.id)?.filterGroup ? `${base}faction/${perso
         // IntersectionObserver 的寫法在區塊很短、一次捲動就整個劃出偵測範圍
         // 時會誤判成下一個區塊，這裡換一種不受區塊長短影響的演算法。
         function updateActiveFromScroll() {
+          if (Date.now() < suppressAutoUpdateUntil) return; // 使用者剛點過目錄，先讓那個選擇維持一下，不要立刻被蓋掉
+
           // 特殊情況：頁面已經捲到底、物理上沒有更多空間可以再捲動時，
           // 最後幾個區塊的標題可能永遠不會通過上面那條判定線（因為捲動
           // 距離不夠把它們推過線），單靠調整判定範圍解決不了這個問題，
@@ -734,6 +737,11 @@ const backHref = personIndexMap.get(c.id)?.filterGroup ? `${base}faction/${perso
               e.preventDefault();
               const targetId = a.dataset.tocTarget!;
               const target = document.getElementById(targetId);
+              // 立即標記使用者點的這一項，不等捲動自然發生、也不等自動偵測
+              // 慢慢確認——尤其頁面已經捲到底、實際上沒有空間可以再捲動時，
+              // 完全不靠捲動事件也能正確反應使用者的選擇。
+              setActiveItem(targetId);
+              suppressAutoUpdateUntil = Date.now() + 700; // 約略涵蓋平滑捲動動畫的時間
               if (target) target.scrollIntoView({ behavior: "smooth", block: "start" });
               closeMobileOverlay();
             });
