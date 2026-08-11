@@ -142,12 +142,6 @@ function headerFieldHtml(label: string, value: any) {
   return `<div class="meta-field"><span class="meta-label">${escapeHtml(label)}</span><span class="meta-value">${escapeHtml(value)}</span></div>`;
 }
 
-function demoBadgeLabel() {
-  if (c.dataStatus === "reviewed-draft") return "示範資料 — 內容已逐條核對原文，仍可能有疏漏，歡迎指正";
-  if (c.dataStatus) return `示範資料（狀態：${c.dataStatus}）`;
-  return "示範資料 — 尚未完整核校，僅供測試版面";
-}
-
 function renderHero() {
   const otherNames = (c.otherNames || []).join("、");
   const metaFields = [
@@ -161,11 +155,9 @@ function renderHero() {
   ]
     .filter(Boolean)
     .join("");
-  const demoBadge = c.dataStatus ? `<div class="demo-badge">${escapeHtml(demoBadgeLabel())}</div>` : "";
   const aliasHtml = c.commonAlias ? `<p class="char-alias">又稱${escapeHtml(c.commonAlias)}</p>` : "";
   const summaryHtml = c.summary ? `<p class="char-summary">${escapeHtml(c.summary)}</p>` : "";
   return `
-    ${demoBadge}
     <section class="char-hero">
       <span class="avatar-ring avatar-ring--lg">${avatarImgHtml(c.avatar, `${c.name}的頭像`, "")}</span>
       <div class="char-hero-info">
