@@ -119,8 +119,7 @@
         "personId": null,
         "actualFactionId": "lu-bu-faction",
         "period": "初平三年至興平元年（192—194年）",
-        "periodUncertain": true,
-        "hideAvatar": true
+        "periodUncertain": true
       },
       {
         "stageName": "受迎為兗州牧・與曹操爭奪兗州",
@@ -128,8 +127,7 @@
         "personId": null,
         "actualFactionId": "lu-bu-faction",
         "period": "興平元年至二年（194—195年）",
-        "periodUncertain": false,
-        "hideAvatar": true
+        "periodUncertain": false
       },
       {
         "stageName": "敗投劉備・寄寓徐州",
@@ -145,8 +143,7 @@
         "personId": null,
         "actualFactionId": "lu-bu-faction",
         "period": "建安元年至建安三年十二月（196年—199年2月）",
-        "periodUncertain": false,
-        "hideAvatar": true
+        "periodUncertain": false
       }
     ],
     "relatives": [
@@ -885,6 +882,7 @@
       "attribution": "呂布名義上書，實際執筆者未載",
       "summary": "漢廷曾以手筆版書召呂布迎駕，呂布因軍中缺乏糧畜而不能親往，只遣使上書；曹操迎獻帝至許後，呂布又上書說明自己曾與曹操交戰，如今曹操輔政，自己身為外將，若率兵前往恐遭疑忌，因此留在徐州待罪。現存文字由《英雄記》保存，不應宣稱原始表章的題署與套語一字不缺。",
       "anthology": "《三國志》卷七呂布傳裴注引《英雄記》",
+      "excerpt": "臣前與操交兵，今操保傅陛下，臣為外將，欲以兵自隨，恐有嫌疑。",
       "citations": [
         {
           "sourceId": "yingxiongji-xuzhou",
@@ -902,6 +900,7 @@
       "attribution": "呂布名義致曹操，實際執筆者未載",
       "summary": "曹操以親筆書信慰勞呂布，並轉送朝廷追捕袁術等人的詔書；呂布回信自稱本應被誅，感謝曹操慰勞褒獎，表示願奉命對付袁術等人。文字雖短而文意完整，但仍只宜定位為裴注保存的現存書信。",
       "anthology": "《三國志》卷七呂布傳裴注引《英雄記》",
+      "excerpt": "布獲罪之人，分為誅首，手命慰勞，厚見褒獎。",
       "citations": [
         {
           "sourceId": "yingxiongji-xuzhou",
@@ -919,6 +918,7 @@
       "attribution": "呂布名義致韓暹、楊奉，實際執筆者未載",
       "summary": "袁術聯合韓暹、楊奉等進攻徐州時，呂布以二人護送獻帝東歸之功與自己誅董之功相提並論，勸他們不應協助僭號的袁術，應轉而共同討伐。韓暹、楊奉接受勸說並倒戈，使袁術軍大敗。",
       "anthology": "《三國志》卷七呂布傳裴注引司馬彪《九州春秋》",
+      "excerpt": "布有殺董卓之功，與二將軍俱為功臣，可因今共擊破術，建功於天下。",
       "citations": [
         {
           "sourceId": "jiuzhou-chunqiu-lubu-peizhu",
@@ -936,6 +936,7 @@
       "attribution": "呂布名義致袁術，實際執筆者未載",
       "summary": "呂布與韓暹、楊奉擊敗袁術軍後，又進兵淮南、渡淮北還，在信中譏諷袁術自誇兵強將猛，實際卻退守壽春、無人敢出。這是一封帶有示威與辱敵目的的戰後書信。",
       "anthology": "《三國志》卷七呂布傳裴注引《英雄記》",
+      "excerpt": "布雖無勇，虎步淮南，一時之間，足下鼠竄壽春，無出頭者。",
       "citations": [
         {
           "sourceId": "yingxiongji-xuzhou",
@@ -953,6 +954,7 @@
       "attribution": "呂布名義致琅邪相蕭建，實際執筆者未載",
       "summary": "呂布要求據莒自守、未與自己往來的琅邪相蕭建通好。他以自己誅董後欲西迎獻帝卻不見關東諸將相助為辯解，又強調五原遠在西北，自己無意與徐州東南各方爭地，最後以樂毅、田單之事向蕭建施壓。蕭建收到後遣使致禮並進良馬。",
       "anthology": "《三國志》卷七呂布傳裴注引《英雄記》",
+      "excerpt": "天下舉兵，本以誅董卓爾。布殺卓，來詣關東，欲求兵西迎大駕，光復洛京。",
       "citations": [
         {
           "sourceId": "yingxiongji-xuzhou",
