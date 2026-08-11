@@ -2030,49 +2030,74 @@ td[data-label="資料性質"] > div:last-child {
   color: var(--text-muted);
 }
 
-/* ---------- 手機／中等寬度視窗：收合選單 ---------- */
+/* ---------- 手機／中等寬度視窗：右上角書籤式標籤 + 側邊抽屜 ---------- */
+
+/* 標籤本身視覺上窄（只有兩個直排字），但可點擊範圍要撐大避免在手機上
+   點不準。業界對觸控目標的常見建議大約落在 44px 見方，這裡用 padding
+   把視覺以外的可點擊範圍補足，不是單純把文字放大。 */
 .toc-toggle {
   display: none;
   position: fixed;
-  right: 20px;
-  bottom: 20px;
+  top: 120px;
+  right: 0;
   z-index: 30;
   background: var(--accent);
   color: var(--parchment);
   border: none;
-  border-radius: 999px;
-  padding: 12px 20px;
-  font-family: var(--font-display);
-  font-size: 0.9rem;
+  border-radius: 10px 0 0 10px;
+  padding: 18px 10px;
+  min-width: 44px;
   box-shadow: var(--shadow);
   cursor: pointer;
+}
+
+.toc-toggle-label {
+  writing-mode: vertical-rl;
+  text-orientation: upright;
+  font-family: var(--font-display);
+  font-size: 1rem;
+  letter-spacing: 0.15em;
+  line-height: 1;
 }
 
 .toc-toggle[hidden] {
   display: none !important;
 }
 
+/* 半透明遮罩層，蓋住標籤以外的畫面，點擊遮罩可以關閉抽屜 */
 .toc-overlay {
   display: none;
   position: fixed;
   inset: 0;
   background: rgba(0, 0, 0, 0.5);
   z-index: 40;
-  align-items: flex-end;
 }
 
 .toc-overlay[hidden] {
   display: none !important;
 }
 
+/* 抽屜面板本身：固定在右側，用 transform 做滑入滑出動畫。預設（隱藏時）
+   整個推到畫面外；.toc-overlay 拿掉 hidden 屬性時才滑進來。動畫只動
+   transform，不動 width/right，效能比較好、也比較不會閃爍。 */
 .toc-overlay-panel {
-  width: 100%;
-  max-height: 70vh;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: min(320px, 82vw);
+  max-height: none;
   overflow-y: auto;
   background: var(--bg-2);
-  border-top: 1px solid var(--line);
-  border-radius: 16px 16px 0 0;
-  padding: 20px;
+  border-left: 1px solid var(--line);
+  border-radius: 0;
+  padding: 24px 20px;
+  transform: translateX(100%);
+  transition: transform 0.25s ease;
+}
+
+.toc-overlay:not([hidden]) .toc-overlay-panel {
+  transform: translateX(0);
 }
 
 .toc-overlay .toc-list a {
@@ -2101,14 +2126,14 @@ td[data-label="資料性質"] > div:last-child {
   color: var(--text);
 }
 
-/* 1400px 以下（含中等寬度桌面視窗跟平板、手機）都用收合選單，
+/* 1400px 以下（含中等寬度桌面視窗跟平板、手機）都用書籤標籤，
    跟上面 .toc-panel 的 1399px 斷點對齊，確保任何寬度下永遠只有
-   「懸浮面板」或「收合選單」其中一種出現，不會兩個同時顯示 */
+   「懸浮面板」或「書籤標籤」其中一種出現，不會兩個同時顯示 */
 @media (max-width: 1399px) {
   .toc-toggle {
     display: block;
   }
   .toc-overlay:not([hidden]) {
-    display: flex;
+    display: block;
   }
 }
