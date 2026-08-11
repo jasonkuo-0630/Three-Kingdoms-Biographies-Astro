@@ -1099,18 +1099,6 @@ summary:focus-visible {
   margin-bottom: 18px;
 }
 
-/* ---------- 示範資料徽章 ---------- */
-.demo-badge {
-  display: inline-block;
-  margin: 20px 0 0;
-  padding: 6px 14px;
-  border-radius: 999px;
-  background: var(--accent-soft);
-  border: 1px solid var(--accent-border);
-  color: #e8a99b;
-  font-size: 0.8rem;
-}
-
 /* ---------- 詳細頁：人物頭部 ---------- */
 .avatar-ring {
   display: block;
