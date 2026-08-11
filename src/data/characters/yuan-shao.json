@@ -1,0 +1,1097 @@
+{
+  "schemaVersion": 2,
+  "dataStatus": "reviewed-draft",
+  "published": true,
+  "lastReviewedAt": "2026-08-11",
+  "id": "yuan-shao",
+  "name": "袁紹",
+  "courtesyName": "本初",
+  "childhoodName": null,
+  "artName": null,
+  "otherNames": [],
+  "lifespan": "生年不詳—建安七年五月（202年）",
+  "birthplace": "汝南郡汝陽縣",
+  "primaryIdentity": "東漢末年軍閥、冀州牧、討董聯軍盟主與河北割據勢力領袖",
+  "summary": "袁紹出身汝南袁氏，憑四世公卿的家望與折節下士的聲名聚合豪傑。漢末他參與誅宦官、反對董卓廢立，後以渤海起兵並被推為討董盟主；再據冀州、擊滅公孫瓚，勢力遍及河北四州。官渡之戰敗於曹操後仍一度平定叛郡，建安七年病逝；生前未定繼承人，使袁氏迅速陷入內爭。",
+  "avatar": "images/yuan_shao.png",
+  "overview": {
+    "intro": {
+      "paragraphs": [
+        {
+          "text": "袁紹字本初，汝南汝陽人，出自累世居三公之位的汝南袁氏。至於父系，《後漢書》正文以袁成為父；章懷注引袁山松《書》及《三國志》裴注引《魏書》則稱他是袁逢庶子、出後袁成。早期材料互有差異，因此本檔不把『袁逢親生、袁成嗣子』寫成毫無爭議的定論。",
+          "citations": [
+            {
+              "sourceId": "sgz-yuanshao-main",
+              "locator": "卷六・袁紹傳開篇"
+            },
+            {
+              "sourceId": "weishu-yuanshao-peizhu",
+              "locator": "卷六袁紹傳裴注引《魏書》；袁紹父系"
+            },
+            {
+              "sourceId": "houhanshu-yuanshao",
+              "locator": "卷七十四上・袁紹傳開篇及章懷注"
+            }
+          ]
+        },
+        {
+          "text": "袁紹早年任郎、濮陽長，服喪後居洛陽，以容貌威儀、愛士養名和折節交接士人著稱；其後入何進幕府，任侍御史、虎賁中郎將及西園校尉。中平六年，他參與何進誅除宦官的計畫；何進被殺後又領兵入宮盡誅宦官。董卓入洛陽議廢少帝時，袁紹當面反對，隨即出奔冀州。",
+          "citations": [
+            {
+              "sourceId": "houhanshu-yuanshao",
+              "locator": "卷七十四上・早年任官、誅宦官與反對董卓廢立"
+            },
+            {
+              "sourceId": "sgz-yuanshao-main",
+              "locator": "卷六・袁紹傳開篇至出奔冀州"
+            }
+          ]
+        },
+        {
+          "text": "董卓為安撫袁氏聲望，遙授袁紹渤海太守、封邟鄉侯。初平元年，關東州郡起兵討董，袁紹被推為盟主並自號車騎將軍。聯軍瓦解後，他在初平二年取得冀州，與公孫瓚長期爭奪河北，終於建安四年攻滅公孫瓚，兼有冀、青、幽、并四州，成為當時北方最強大的獨立割據勢力。",
+          "citations": [
+            {
+              "sourceId": "sgz-yuanshao-main",
+              "locator": "卷六・討董、領冀州及攻滅公孫瓚諸段"
+            },
+            {
+              "sourceId": "houhanshu-yuanshao",
+              "locator": "卷七十四上・關東起兵至兼督四州"
+            }
+          ]
+        },
+        {
+          "text": "建安五年官渡之戰，袁紹在糧運與用人決策上連續失誤，烏巢被曹操突襲後主力潰敗。不過他返回河北後仍能重新平定叛郡，並非戰後立即滅亡；建安七年因憂病去世。早期記載一面批評他好謀無決、不能用人、廢長立幼，一面也保存其治政寬和、河北百姓哀悼如喪親的反應，宜分層呈現。",
+          "citations": [
+            {
+              "sourceId": "sgz-yuanshao-main",
+              "locator": "卷六・官渡之戰、戰後平叛、病卒及陳壽評語"
+            },
+            {
+              "sourceId": "xiandi-chunqiu-yuanshao-hhs-note",
+              "locator": "《後漢書》卷七十四上章懷注引；袁紹卒後河北百姓哀悼"
+            }
+          ]
+        }
+      ],
+      "originalTexts": [
+        {
+          "text": "袁紹字本初，汝南汝陽人也。高祖父安，為漢司徒。自安以下四世居三公位，由是勢傾天下。",
+          "sourceId": "sgz-yuanshao-main",
+          "locator": "卷六・袁紹傳開篇"
+        },
+        {
+          "text": "紹有姿貌威容，能折節下士，士多附之，太祖少與交焉。",
+          "sourceId": "sgz-yuanshao-main",
+          "locator": "卷六・袁紹傳開篇"
+        },
+        {
+          "text": "紹為人政寬，百姓德之。河北士女莫不傷怨，市巷揮淚，如或喪親。",
+          "sourceId": "xiandi-chunqiu-yuanshao-hhs-note",
+          "locator": "《後漢書》卷七十四上章懷注引《獻帝春秋》"
+        }
+      ]
+    },
+    "factionTimeline": [
+      {
+        "stageName": "東漢中央任官・何進幕府與西園軍",
+        "personName": "東漢朝廷／何進",
+        "personId": null,
+        "actualFactionId": "yuan-shao-late-han-service",
+        "period": "起始年不詳—中平六年（189年）",
+        "periodUncertain": true,
+        "hideAvatar": true
+      },
+      {
+        "stageName": "渤海起兵・討董聯軍盟主",
+        "personName": "袁紹",
+        "personId": null,
+        "actualFactionId": "yuan-shao-anti-dong-force",
+        "period": "中平六年至初平二年（189—191年）",
+        "periodUncertain": false,
+        "hideAvatar": true
+      },
+      {
+        "stageName": "取得冀州・河北立足",
+        "personName": "袁紹",
+        "personId": null,
+        "actualFactionId": "yuan-shao-faction",
+        "period": "初平二年至初平四年（191—193年）",
+        "periodUncertain": false,
+        "hideAvatar": true
+      },
+      {
+        "stageName": "擴張河北・攻滅公孫瓚",
+        "personName": "袁紹",
+        "personId": null,
+        "actualFactionId": "yuan-shao-faction",
+        "period": "初平四年至建安四年（193—199年）",
+        "periodUncertain": false,
+        "hideAvatar": true
+      },
+      {
+        "stageName": "河北四州領袖・官渡戰前後",
+        "personName": "袁紹",
+        "personId": null,
+        "actualFactionId": "yuan-shao-faction",
+        "period": "建安四年至建安七年（199—202年）",
+        "periodUncertain": false,
+        "hideAvatar": true
+      }
+    ],
+    "relatives": [
+      {
+        "personName": "袁安",
+        "personId": null,
+        "relation": "高祖父",
+        "relationGroup": "ancestor",
+        "natureCategory": "historical",
+        "natureType": "《三國志》正文記載",
+        "note": "《三國志》以袁安為袁紹高祖父，並以袁氏自袁安以下四世居三公說明其家族聲望。",
+        "citations": [
+          {
+            "sourceId": "sgz-yuanshao-main",
+            "locator": "卷六・袁紹傳開篇"
+          }
+        ]
+      },
+      {
+        "personName": "袁成",
+        "personId": null,
+        "relation": "父或嗣父",
+        "relationGroup": "ancestor",
+        "natureCategory": "uncertain",
+        "natureType": "《後漢書》正文與注文異說",
+        "note": "《後漢書》正文直稱袁成為父；章懷注引袁山松《書》及《三國志》裴注引《魏書》則稱袁紹本為袁逢庶子，出後伯父袁成。",
+        "citations": [
+          {
+            "sourceId": "houhanshu-yuanshao",
+            "locator": "卷七十四上・袁紹傳開篇及章懷注"
+          },
+          {
+            "sourceId": "weishu-yuanshao-peizhu",
+            "locator": "卷六袁紹傳裴注引《魏書》"
+          }
+        ]
+      },
+      {
+        "personName": "袁逢",
+        "personId": null,
+        "relation": "生父（異說）",
+        "relationGroup": "ancestor",
+        "natureCategory": "uncertain",
+        "natureType": "裴松之注引《魏書》及《後漢書》注文記載",
+        "note": "兩種注引材料稱袁紹為袁逢庶子並出後袁成；《後漢書》正文則以袁成為父。袁紹究竟為袁逢生子、袁成嗣子，仍應保留異說標記。",
+        "citations": [
+          {
+            "sourceId": "weishu-yuanshao-peizhu",
+            "locator": "卷六袁紹傳裴注引《魏書》"
+          },
+          {
+            "sourceId": "houhanshu-yuanshao",
+            "locator": "卷七十四上章懷注引袁山松《書》"
+          }
+        ]
+      },
+      {
+        "personName": "袁隗",
+        "personId": null,
+        "relation": "叔父",
+        "relationGroup": "ancestor",
+        "natureCategory": "historical",
+        "natureType": "《後漢書》正文記載",
+        "note": "官至太傅；曾因趙忠指責袁紹養士而責問袁紹。袁紹起兵後，董卓殺袁隗及袁氏在京宗族。",
+        "citations": [
+          {
+            "sourceId": "houhanshu-yuanshao",
+            "locator": "卷七十四上・袁紹養士與董卓殺袁氏宗族"
+          }
+        ]
+      },
+      {
+        "personName": "袁術",
+        "personId": null,
+        "relation": "從弟；另有同父異母弟異說",
+        "relationGroup": "sibling",
+        "natureCategory": "uncertain",
+        "natureType": "正史正文與裴注引書互有差異",
+        "note": "《三國志・袁術傳》正文及《後漢書》稱袁術為袁紹從弟；裴注引《魏書》若採袁紹為袁逢庶子之說，兩人便是同父異母兄弟。兩人後因擁立人選與政治利益分裂，並非單純的兄弟私怨。",
+        "citations": [
+          {
+            "sourceId": "sgz-yuanshao-main",
+            "locator": "卷六・袁術傳開篇及袁紹、袁術分裂"
+          },
+          {
+            "sourceId": "weishu-yuanshao-peizhu",
+            "locator": "卷六袁紹傳裴注引《魏書》；袁紹為袁逢庶子"
+          },
+          {
+            "sourceId": "houhanshu-yuanshao",
+            "locator": "卷七十四上・袁術從弟及二袁分裂"
+          }
+        ],
+        "fictionalRelation": {
+          "label": "小說直接稱袁術為袁紹之弟",
+          "natureType": "《三國演義》人物關係簡化",
+          "natureCategory": "literary",
+          "citations": [
+            {
+              "sourceId": "sanguo-yanyi",
+              "locator": "第五回、第七回等處"
+            }
+          ]
+        }
+      },
+      {
+        "personName": "劉氏",
+        "personId": null,
+        "relation": "妻",
+        "relationGroup": "spouse",
+        "natureCategory": "historical",
+        "natureType": "《後漢書》正文及《三國志》裴注記載",
+        "note": "袁紹後妻，寵愛袁尚並支持立袁尚為後。袁紹死後，她殺袁紹所寵五妾；相關殘酷細節在《三國志》主要見裴注引《典論》，《後漢書》正文也有記載。",
+        "citations": [
+          {
+            "sourceId": "houhanshu-yuanshao",
+            "locator": "卷七十四上・袁紹諸子與劉氏"
+          },
+          {
+            "sourceId": "dianlun-yuanshao-family-peizhu",
+            "locator": "卷六袁紹傳裴注引《典論》"
+          }
+        ]
+      },
+      {
+        "personName": "袁紹五妾（姓名不詳）",
+        "personId": null,
+        "relation": "妾",
+        "relationGroup": "spouse",
+        "natureCategory": "historical",
+        "natureType": "裴松之注引《典論》記載",
+        "note": "《典論》稱袁紹所幸五妾在他死後被劉氏殺害；姓名、生卒與家世均未見記載。",
+        "citations": [
+          {
+            "sourceId": "dianlun-yuanshao-family-peizhu",
+            "locator": "卷六袁紹傳裴注引《典論》"
+          }
+        ]
+      },
+      {
+        "personName": "袁譚",
+        "personId": null,
+        "relation": "長子",
+        "relationGroup": "child",
+        "natureCategory": "historical",
+        "natureType": "《三國志》正文記載",
+        "note": "袁紹令其出任青州刺史；袁紹死後未能依長子身分繼位，與袁尚內戰，後為曹操所殺。",
+        "citations": [
+          {
+            "sourceId": "sgz-yuanshao-main",
+            "locator": "卷六・袁紹諸子及袁譚傳"
+          }
+        ]
+      },
+      {
+        "personName": "袁熙",
+        "personId": null,
+        "relation": "子",
+        "relationGroup": "child",
+        "natureCategory": "historical",
+        "natureType": "《三國志》正文記載",
+        "note": "袁紹令其出任幽州刺史；後與袁尚奔遼西，又轉投遼東公孫康，終被公孫康殺害。",
+        "citations": [
+          {
+            "sourceId": "sgz-yuanshao-main",
+            "locator": "卷六・袁紹諸子及袁尚傳"
+          }
+        ]
+      },
+      {
+        "personName": "袁尚",
+        "personId": null,
+        "relation": "少子",
+        "relationGroup": "child",
+        "natureCategory": "historical",
+        "natureType": "《三國志》正文記載",
+        "note": "袁紹因袁尚貌美而偏愛，有意以他為後卻未正式決定。袁紹死後，審配、逢紀等矯袁紹遺命擁立袁尚。",
+        "citations": [
+          {
+            "sourceId": "sgz-yuanshao-main",
+            "locator": "卷六・袁紹傳末與袁尚傳"
+          }
+        ]
+      },
+      {
+        "personName": "袁買",
+        "personId": null,
+        "relation": "子或孫，未詳",
+        "relationGroup": "other",
+        "natureCategory": "uncertain",
+        "natureType": "裴松之注引《吳書》《曹瞞傳》異說",
+        "note": "《吳書》稱袁尚之弟袁買，《曹瞞傳》則稱袁尚兄子袁買。材料互相衝突，不能確定袁買究竟是袁紹之子或孫。",
+        "citations": [
+          {
+            "sourceId": "wushu-yuanmai-peizhu",
+            "locator": "卷六袁紹傳裴注引《吳書》"
+          },
+          {
+            "sourceId": "caoman-zhuan-yuanmai-peizhu",
+            "locator": "卷六袁紹傳裴注引《曹瞞傳》"
+          }
+        ]
+      },
+      {
+        "personName": "高幹",
+        "personId": null,
+        "relation": "外甥",
+        "relationGroup": "other",
+        "natureCategory": "historical",
+        "natureType": "《三國志》正文記載",
+        "note": "袁紹任命高幹為并州刺史。袁氏內戰期間高幹一度降曹，後再反叛。",
+        "citations": [
+          {
+            "sourceId": "sgz-yuanshao-main",
+            "locator": "卷六・袁紹分置諸子與外甥高幹"
+          }
+        ]
+      }
+    ],
+    "titlesAndRanks": [
+      {
+        "title": "郎",
+        "period": "少年時，確切年份不詳",
+        "citations": [
+          {
+            "sourceId": "houhanshu-yuanshao",
+            "locator": "卷七十四上・袁紹早年任官"
+          }
+        ]
+      },
+      {
+        "title": "濮陽長",
+        "period": "早年，遭母喪去官以前；確切年份不詳",
+        "citations": [
+          {
+            "sourceId": "houhanshu-yuanshao",
+            "locator": "卷七十四上・袁紹早年任官"
+          }
+        ]
+      },
+      {
+        "title": "大將軍掾、侍御史、虎賁中郎將",
+        "period": "中平年間，確切授任先後年月不詳",
+        "citations": [
+          {
+            "sourceId": "houhanshu-yuanshao",
+            "locator": "卷七十四上・何進辟署及中央任官"
+          }
+        ]
+      },
+      {
+        "title": "中軍校尉（《後漢書》正文作佐軍校尉）",
+        "period": "中平五年（188年）",
+        "citations": [
+          {
+            "sourceId": "houhanshu-yuanshao",
+            "locator": "卷七十四上・西園八校尉及章懷注校異"
+          }
+        ]
+      },
+      {
+        "title": "司隸校尉",
+        "period": "中平六年（189年）",
+        "citations": [
+          {
+            "sourceId": "sgz-yuanshao-main",
+            "locator": "卷六・何進誅宦官之謀"
+          }
+        ]
+      },
+      {
+        "title": "渤海太守、邟鄉侯",
+        "period": "中平六年（189年）由董卓遙授",
+        "citations": [
+          {
+            "sourceId": "houhanshu-yuanshao",
+            "locator": "卷七十四上・董卓遣授渤海太守、封邟鄉侯"
+          }
+        ]
+      },
+      {
+        "title": "車騎將軍（自號）、兼領司隸校尉",
+        "period": "初平元年（190年）討董聯軍期間",
+        "citations": [
+          {
+            "sourceId": "sgz-yuanshao-main",
+            "locator": "卷六・關東州郡起兵討董"
+          }
+        ]
+      },
+      {
+        "title": "冀州牧",
+        "period": "初平二年至建安七年（191—202年）",
+        "citations": [
+          {
+            "sourceId": "sgz-yuanshao-main",
+            "locator": "卷六・韓馥讓冀州及後續"
+          }
+        ]
+      },
+      {
+        "title": "右將軍",
+        "period": "興平二年（195年）",
+        "citations": [
+          {
+            "sourceId": "houhanshu-yuanshao",
+            "locator": "卷七十四上・獻帝拜袁紹右將軍"
+          }
+        ]
+      },
+      {
+        "title": "太尉、鄴侯（辭讓未受）",
+        "period": "建安元年（196年）",
+        "citations": [
+          {
+            "sourceId": "houhanshu-yuanshao",
+            "locator": "卷七十四上・拜太尉封鄴侯而不受"
+          }
+        ]
+      },
+      {
+        "title": "大將軍、督冀青幽并四州",
+        "period": "建安二年至建安七年（197—202年）",
+        "citations": [
+          {
+            "sourceId": "houhanshu-yuanshao",
+            "locator": "卷七十四上・拜大將軍、賜弓矢節鉞與虎賁"
+          }
+        ]
+      }
+    ],
+    "posthumousTitle": null,
+    "evaluations": {
+      "contemporary": [
+        {
+          "evaluatorName": "沮授",
+          "evaluatorEra": "東漢末袁紹謀士",
+          "context": "初平二年袁紹取得冀州後，為他規畫河北戰略",
+          "textType": "原文與白話並陳",
+          "originalText": "將軍弱冠登朝，則播名海內；值廢立之際，則忠義奮發；單騎出奔，則董卓懷恐；濟河而北，則勃海稽首。振一郡之卒，撮冀州之眾，威震河朔，名重天下。",
+          "paraphrase": "沮授認為袁紹早年已名聞天下，在董卓廢立時表現忠義，出奔後又能使董卓忌憚、渤海歸附；如今取得冀州，已有威震河北、進圖天下的資本。這是一段進策前的高度肯定，也具有幕僚勸進語氣。",
+          "citations": [
+            {
+              "sourceId": "sgz-yuanshao-main",
+              "locator": "卷六・沮授勸袁紹定河北"
+            }
+          ]
+        },
+        {
+          "evaluatorName": "曹操",
+          "evaluatorEra": "東漢末袁紹對手",
+          "context": "評估袁紹是否足以構成長期威脅",
+          "textType": "原文與白話並陳",
+          "originalText": "吾知紹之為人，志大而智小，色厲而膽薄，忌克而少威，兵多而分畫不明，將驕而政令不一，土地雖廣，糧食雖豐，適足以為吾奉也。",
+          "paraphrase": "曹操認為袁紹志向大而智略不足，外表強硬卻膽氣薄弱，軍隊雖多但部署不清、將領驕縱且號令不一；廣土豐糧最後反會成為曹操的資源。這是敵對方的戰略判斷，不能當成中立人物小傳。",
+          "citations": [
+            {
+              "sourceId": "sgz-wudi-main",
+              "locator": "卷一・袁紹兼併河北後曹操評語"
+            }
+          ]
+        },
+        {
+          "evaluatorName": "荀彧",
+          "evaluatorEra": "東漢末曹操謀臣",
+          "context": "勸曹操不必因袁紹強盛而退讓",
+          "textType": "原文與白話並陳",
+          "originalText": "且紹，布衣之雄耳，能聚人而不能用。",
+          "paraphrase": "荀彧承認袁紹有聚集人才的號召力，但認為他不能真正任用人才。這一判斷後來也成為陳壽卷末評語的重要線索。",
+          "citations": [
+            {
+              "sourceId": "sgz-xunyu-main",
+              "locator": "卷十・荀彧論袁紹"
+            }
+          ]
+        },
+        {
+          "evaluatorName": "郭嘉",
+          "evaluatorEra": "東漢末曹操謀臣",
+          "context": "離開袁紹前對其用人與決策能力的判斷",
+          "textType": "原文與白話並陳",
+          "originalText": "袁公徒欲效周公之下士，而未知用人之機。多端寡要，好謀無決，欲與共濟天下大難，定霸王之業，難矣！",
+          "paraphrase": "郭嘉認為袁紹表面仿效周公禮賢，卻不懂掌握用人關鍵；議題很多而缺乏要領，喜歡謀畫卻不能決斷，因此難以與他共成霸王之業。",
+          "citations": [
+            {
+              "sourceId": "sgz-guojia-main",
+              "locator": "卷十四・郭嘉離袁紹"
+            }
+          ]
+        },
+        {
+          "evaluatorName": "河北百姓",
+          "evaluatorEra": "袁紹治下民眾；由《獻帝春秋》記錄",
+          "context": "建安七年袁紹去世後的社會反應",
+          "textType": "原文與白話並陳",
+          "originalText": "紹為人政寬，百姓德之。河北士女莫不傷怨，市巷揮淚，如或喪親。",
+          "paraphrase": "《獻帝春秋》稱袁紹施政寬和、百姓感念其德；去世後河北男女在街巷流淚，如同失去親人。這能補足軍事敗亡敘事以外的地方治理面向，但仍是後來史書所保存的群體反應。",
+          "citations": [
+            {
+              "sourceId": "xiandi-chunqiu-yuanshao-hhs-note",
+              "locator": "《後漢書》卷七十四上章懷注引《獻帝春秋》"
+            }
+          ]
+        }
+      ],
+      "later": [
+        {
+          "evaluatorName": "陳壽",
+          "evaluatorEra": "西晉史家",
+          "context": "《三國志》卷六卷末總評",
+          "textType": "原文與白話並陳",
+          "originalText": "袁紹、劉表咸有威容、器觀，知名當世。表跨蹈漢南，紹鷹揚河朔，然皆外寬內忌，好謀無決，有才而不能用，聞善而不能納，廢嫡立庶，舍禮崇愛，至乃後嗣顛蹙，社稷傾覆，非不幸也。紹之殺田豐，乃甚於羽遠矣！",
+          "paraphrase": "陳壽承認袁紹的威儀、名望與河北霸業，但把其覆亡歸因於外寬內忌、不能決斷、不能用才納諫，以及偏愛少子、破壞繼承秩序；他尤其批評袁紹殺田豐，比古代拒諫者更甚。",
+          "citations": [
+            {
+              "sourceId": "sgz-yuanshao-main",
+              "locator": "卷六卷末評語"
+            }
+          ]
+        },
+        {
+          "evaluatorName": "范曄",
+          "evaluatorEra": "南朝宋史家",
+          "context": "《後漢書・袁紹傳》史論性敘述",
+          "textType": "原文與白話並陳",
+          "originalText": "紹外寬雅有局度，憂喜不形於色，而性矜愎自高，短於從善，故至於敗。",
+          "paraphrase": "范曄認為袁紹外表寬雅、有器度且喜怒不形於色，但性情自矜固執，不善於接受正確意見，終因而敗。",
+          "citations": [
+            {
+              "sourceId": "houhanshu-yuanshao",
+              "locator": "卷七十四上・官渡戰前敘論"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "historicalBio": [
+    {
+      "period": "早年，確切年份不詳",
+      "periodType": "unknown",
+      "title": "服喪養名，折節交接士人",
+      "content": {
+        "paragraphs": [
+          {
+            "text": "袁紹少年任郎、濮陽長，母喪去官後又追行父服；服闋居洛陽，愛士養名、折節交接士人，吸引各地名士與遊俠。宦官對他養士深為忌憚，叔父袁隗雖責問，他仍未改變。",
+            "citations": [
+              {
+                "sourceId": "houhanshu-yuanshao",
+                "locator": "卷七十四上・早年任官、服喪與養士"
+              }
+            ]
+          }
+        ],
+        "originalTexts": [
+          {
+            "text": "紹有姿貌威容，愛士養名。既累世台司，賓客所歸，加傾心折節，莫不爭赴其庭，士無貴賤，與之抗禮。",
+            "sourceId": "houhanshu-yuanshao",
+            "locator": "卷七十四上・袁紹早年"
+          }
+        ]
+      },
+      "uncertaintyNote": "正史未載袁紹出生年，也未提供足以可靠倒推的年齡資訊；常見『154年生』不採。早年服喪與任官的具體年份同樣未載。"
+    },
+    {
+      "period": "中平五年至六年（188—189年）",
+      "periodType": "range",
+      "title": "入西園軍，參與何進誅宦官計畫",
+      "content": {
+        "paragraphs": [
+          {
+            "text": "袁紹先後任何進掾、侍御史、虎賁中郎將，中平五年又成為西園八校尉之一。靈帝死後，他勸何進徵召外軍脅迫何太后同意誅除宦官；何進被殺後，袁紹與袁術領兵攻入宮門，大批誅殺宦官。這項策略也造成外軍入京，為董卓乘勢控制洛陽提供條件。",
+            "citations": [
+              {
+                "sourceId": "houhanshu-yuanshao",
+                "locator": "卷七十四上・西園軍、何進與誅宦官"
+              },
+              {
+                "sourceId": "sgz-yuanshao-main",
+                "locator": "卷六・何進謀誅宦官"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "period": "中平六年（189年）",
+      "periodType": "year",
+      "title": "反對董卓廢立，出奔冀州",
+      "content": {
+        "paragraphs": [
+          {
+            "text": "董卓入洛陽後企圖廢少帝、立陳留王。袁紹當面反對，與董卓言語衝突後懸節於上東門，逃往冀州。董卓顧忌袁氏四世樹恩及袁紹可能聚眾，轉而赦免並遙授他渤海太守、封邟鄉侯。",
+            "citations": [
+              {
+                "sourceId": "houhanshu-yuanshao",
+                "locator": "卷七十四上・反對董卓廢立及受渤海太守"
+              }
+            ]
+          }
+        ],
+        "originalTexts": [
+          {
+            "text": "紹勃然曰：『天下健者，豈惟董公！』橫刀長揖徑出。",
+            "sourceId": "houhanshu-yuanshao",
+            "locator": "卷七十四上・袁紹與董卓爭辯"
+          }
+        ]
+      }
+    },
+    {
+      "period": "初平元年至二年（190—191年）",
+      "periodType": "range",
+      "title": "被推為討董盟主，聯軍旋即分裂",
+      "content": {
+        "paragraphs": [
+          {
+            "text": "關東州郡起兵討董卓時，袁紹被推為盟主，自號車騎將軍。聯軍聲勢龐大，卻因糧運、利益與相互猜忌難以協同行動；曹操進軍失敗後批評眾軍遲疑，袁紹一度與韓馥謀立幽州牧劉虞為帝，也遭曹操反對。董卓西遷長安後，關東聯軍很快轉入內鬥。",
+            "citations": [
+              {
+                "sourceId": "sgz-yuanshao-main",
+                "locator": "卷六・關東州郡起兵及謀立劉虞"
+              },
+              {
+                "sourceId": "sgz-wudi-main",
+                "locator": "卷一・初平元年關東聯軍"
+              }
+            ]
+          }
+        ]
+      },
+      "uncertaintyNote": "盟主推舉、酸棗會盟及各軍起兵時間在不同紀傳中記述角度不一；本檔以初平元年為主，不把小說的單一會盟場面當成完整史實。"
+    },
+    {
+      "period": "初平二年（191年）",
+      "periodType": "year",
+      "title": "取得冀州，建立獨立根據地",
+      "content": {
+        "paragraphs": [
+          {
+            "text": "袁紹兵糧不足，接受逢紀等人建議圖取冀州。他以公孫瓚南下為壓力，又派使者說服冀州牧韓馥讓州。袁紹入鄴領冀州牧，獲得河北人口、糧食與官僚基礎；沮授隨即建議他先定河北，再迎獻帝並號令天下。",
+            "citations": [
+              {
+                "sourceId": "sgz-yuanshao-main",
+                "locator": "卷六・韓馥讓冀州與沮授定河北策"
+              },
+              {
+                "sourceId": "houhanshu-yuanshao",
+                "locator": "卷七十四上・袁紹領冀州"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "period": "初平二年至建安四年（191—199年）",
+      "periodType": "range",
+      "title": "界橋交鋒，長期爭奪河北並攻滅公孫瓚",
+      "content": {
+        "paragraphs": [
+          {
+            "text": "袁紹取得冀州後與公孫瓚決裂，雙方在界橋等地反覆交戰。袁紹曾在敵騎逼近時拒絕退入空垣，仍以強弩應戰；其後又鎮壓黑山軍與地方反抗。建安四年，他圍攻易京，公孫瓚兵敗自殺，袁紹由此兼有冀、青、幽、并四州。",
+            "citations": [
+              {
+                "sourceId": "sgz-yuanshao-main",
+                "locator": "卷六・界橋、薄落津、黑山與易京諸戰"
+              },
+              {
+                "sourceId": "sgz-gongsunzan-main",
+                "locator": "卷八・公孫瓚傳末"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "period": "建安元年至二年（196—197年）",
+      "periodType": "range",
+      "title": "錯失迎奉獻帝，接受大將軍名位",
+      "content": {
+        "paragraphs": [
+          {
+            "text": "獻帝東歸時，沮授建議迎帝至鄴，但袁紹陣營有人擔心迎帝後政令受制，袁紹沒有採納。曹操迎帝都許後，以朝廷名義拜袁紹太尉、封鄴侯；袁紹以位次在曹操之下為恥，辭讓不受。朝廷其後改拜袁紹大將軍，並授節鉞等儀仗，使其督冀、青、幽、并四州。",
+            "citations": [
+              {
+                "sourceId": "xiandi-zhuan-yuanshao-peizhu",
+                "locator": "卷六袁紹傳裴注引《獻帝傳》；沮授迎帝議"
+              },
+              {
+                "sourceId": "houhanshu-yuanshao",
+                "locator": "卷七十四上・太尉、鄴侯及大將軍授命"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "period": "建安四年至五年（199—200年）",
+      "periodType": "range",
+      "title": "南征曹操，官渡決戰",
+      "content": {
+        "paragraphs": [
+          {
+            "text": "攻滅公孫瓚後，袁紹集結大軍南征曹操。田豐、沮授等先後提出持久戰、分兵擾襲或避免急戰的意見，未被完整採納。白馬階段顏良被關羽斬殺，延津撤退時文醜戰死；兩軍後在官渡相持。袁紹派淳于瓊守烏巢糧屯，許攸叛投曹操並洩露情報，曹操突襲焚糧；張郃、高覽又因陣營內部猜忌轉降，袁軍遂潰。",
+            "citations": [
+              {
+                "sourceId": "sgz-yuanshao-main",
+                "locator": "卷六・官渡之戰"
+              },
+              {
+                "sourceId": "sgz-wudi-main",
+                "locator": "卷一・建安五年白馬、延津與官渡"
+              }
+            ]
+          }
+        ]
+      },
+      "uncertaintyNote": "正史各傳對兵力數字與個別責任歸屬不盡一致；本檔不採小說『袁軍七十萬』等固定數字，也不把所有敗因歸於單一人物。"
+    },
+    {
+      "period": "建安六年（201年）",
+      "periodType": "year",
+      "title": "倉亭再敗，仍返回河北平定叛亂",
+      "content": {
+        "paragraphs": [
+          {
+            "text": "官渡敗後，袁紹收合散卒。建安六年曹操揚兵河上，袁紹再度於倉亭交戰失利；河北郡縣也趁勢反叛。袁紹返回後重新攻定叛郡，顯示其地方控制與聲望尚未完全崩解。",
+            "citations": [
+              {
+                "sourceId": "sgz-wudi-main",
+                "locator": "卷一・建安六年揚兵河上、擊袁紹倉亭軍"
+              },
+              {
+                "sourceId": "sgz-yuanshao-main",
+                "locator": "卷六・官渡敗後收合餘眾及平定叛郡"
+              }
+            ]
+          }
+        ]
+      },
+      "uncertaintyNote": "《三國志・武帝紀》僅簡記破倉亭軍；《三國演義》的『十面埋伏』與大段戰術細節不見正史。"
+    },
+    {
+      "period": "建安七年五月（202年）",
+      "periodType": "exact",
+      "title": "憂病去世，繼承危機爆發",
+      "content": {
+        "paragraphs": [
+          {
+            "text": "袁紹自官渡戰敗後發病，建安七年五月去世。他偏愛少子袁尚，卻一直沒有正式確定繼承人；袁紹死後，審配、逢紀等以矯命方式擁立袁尚，郭圖、辛評則支持長子袁譚。袁氏兄弟很快內戰，曹操得以分別擊破。",
+            "citations": [
+              {
+                "sourceId": "sgz-yuanshao-main",
+                "locator": "卷六・袁紹傳末及袁譚袁尚傳"
+              },
+              {
+                "sourceId": "sgz-wudi-main",
+                "locator": "卷一・建安七年五月袁紹薨"
+              }
+            ]
+          }
+        ],
+        "originalTexts": [
+          {
+            "text": "冀州城邑多叛，紹復擊定之。自軍敗後發病，七年，憂死。",
+            "sourceId": "sgz-yuanshao-main",
+            "locator": "卷六・袁紹傳末"
+          }
+        ]
+      },
+      "uncertaintyNote": "可確定卒於建安七年五月；早期史料未記出生年，因此不換算享年。正史稱袁紹有意立袁尚但未顯然決定，不能寫成他留下明確遺詔。"
+    }
+  ],
+  "romanceBio": [
+    {
+      "chapter": "第五回",
+      "eventName": "十八路諸侯會盟，推袁紹為盟主",
+      "content": {
+        "paragraphs": [
+          {
+            "text": "小說把各地討董勢力編成『十八路諸侯』，在酸棗築壇會盟，因袁紹四世三公而推他為盟主。袁紹分派糧草與進兵次序，並成為虎牢關三英戰呂布等名場面的聯軍領袖。",
+            "citations": [
+              {
+                "sourceId": "sanguo-yanyi",
+                "locator": "第五回"
+              }
+            ]
+          }
+        ]
+      },
+      "historicalDifference": {
+        "paragraphs": [
+          {
+            "text": "正史確有關東州郡起兵、袁紹被推為盟主，但沒有固定『十八路』名單，也沒有小說式的單一築壇會盟流程；虎牢關三英戰呂布則不見早期正史。史實中的聯軍分屯多處，指揮鬆散且迅速分裂。",
+            "citations": [
+              {
+                "sourceId": "sgz-yuanshao-main",
+                "locator": "卷六・關東州郡起兵討董"
+              },
+              {
+                "sourceId": "sgz-wudi-main",
+                "locator": "卷一・初平元年關東聯軍"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "chapter": "第六回",
+      "eventName": "因傳國璽與孫堅反目",
+      "content": {
+        "paragraphs": [
+          {
+            "text": "小說寫孫堅在洛陽井中取得傳國璽，卻向袁紹否認並立誓；袁紹召來告密士卒對質，雙方拔劍衝突。孫堅離開後，袁紹又密告荊州刺史劉表，令其截擊孫堅。",
+            "citations": [
+              {
+                "sourceId": "sanguo-yanyi",
+                "locator": "第六回"
+              }
+            ]
+          }
+        ]
+      },
+      "historicalDifference": {
+        "paragraphs": [
+          {
+            "text": "《三國志》裴注保存孫堅得璽與袁術奪璽等互異傳聞，裴松之本人也強烈質疑孫堅私藏傳國璽；沒有可靠正史記載袁紹在盟中當眾逼問孫堅，或密令劉表因玉璽截擊。這段屬小說把多種傳聞重新串連。",
+            "citations": [
+              {
+                "sourceId": "sanguo-yanyi",
+                "locator": "第六回；小說情節"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "chapter": "第七回",
+      "eventName": "設計取冀州，磐河戰公孫瓚",
+      "content": {
+        "paragraphs": [
+          {
+            "text": "小說寫袁紹以共同攻冀州為餌，誘公孫瓚出兵，再搶先接受韓馥讓州；公孫瓚因此問罪，雙方在磐河交戰，並由此帶出趙雲救公孫瓚、戰文醜等情節。",
+            "citations": [
+              {
+                "sourceId": "sanguo-yanyi",
+                "locator": "第七回"
+              }
+            ]
+          }
+        ]
+      },
+      "historicalDifference": {
+        "paragraphs": [
+          {
+            "text": "正史確記袁紹利用公孫瓚南下對韓馥造成壓力，並由說客促成韓馥讓冀州，也確有界橋等戰；但小說把長期河北競爭濃縮為騙州後的直接報復，並增寫趙雲單騎救主與文醜對戰等敘事。",
+            "citations": [
+              {
+                "sourceId": "sgz-yuanshao-main",
+                "locator": "卷六・韓馥讓冀州與界橋戰事"
+              },
+              {
+                "sourceId": "sgz-gongsunzan-main",
+                "locator": "卷八・公孫瓚傳"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "chapter": "第二十二回",
+      "eventName": "命陳琳作檄討曹操",
+      "content": {
+        "paragraphs": [
+          {
+            "text": "袁紹準備南征，命陳琳草擬討曹檄文，歷數曹操家世與罪狀。小說又寫曹操患頭風，讀檄後驚出一身冷汗、病勢頓癒，並稱讚陳琳文才。",
+            "citations": [
+              {
+                "sourceId": "sanguo-yanyi",
+                "locator": "第二十二回"
+              }
+            ]
+          }
+        ]
+      },
+      "historicalDifference": {
+        "paragraphs": [
+          {
+            "text": "陳琳替袁紹撰檄有史料依據，《三國志・袁紹傳》裴注在引錄檄文後明說『此陳琳之辭』；因此檄文屬陳琳作品，不列入袁紹 works。曹操讀檄驚汗而頭風痊癒的戲劇化效果則屬小說增飾。",
+            "citations": [
+              {
+                "sourceId": "weishi-chunqiu-chenlin-peizhu",
+                "locator": "卷六袁紹傳裴注引檄文及『此陳琳之辭』"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "chapter": "第二十五至二十六回",
+      "eventName": "顏良、文醜相繼被關羽斬殺",
+      "content": {
+        "paragraphs": [
+          {
+            "text": "小說寫顏良在白馬連斬曹將，關羽單騎突陣將其斬殺；文醜為顏良報仇，又在延津被關羽追斬。寄居袁紹處的劉備因關羽身份兩度幾乎被袁紹處死。",
+            "citations": [
+              {
+                "sourceId": "sanguo-yanyi",
+                "locator": "第二十五、二十六回"
+              }
+            ]
+          }
+        ]
+      },
+      "historicalDifference": {
+        "paragraphs": [
+          {
+            "text": "正史明載關羽在白馬刺殺顏良，這一核心有史實依據；文醜則是在曹操以輜重誘敵、反擊袁軍時戰死，正文沒有說由關羽所殺。劉備因顏良、文醜之死兩遭袁紹拔劍問罪的連續情節，也不見正史。",
+            "citations": [
+              {
+                "sourceId": "sgz-wudi-main",
+                "locator": "卷一・建安五年白馬與延津"
+              },
+              {
+                "sourceId": "sgz-yuanshao-main",
+                "locator": "卷六・顏良、文醜戰死"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "chapter": "第三十回",
+      "eventName": "官渡相持與烏巢失守",
+      "content": {
+        "paragraphs": [
+          {
+            "text": "小說集中描寫袁紹拒絕許攸襲許都之策、因家書而懷疑許攸，促使許攸投曹；曹操夜襲烏巢，守將淳于瓊醉酒失備，被割去耳鼻手指後送回袁營，袁紹遂殺之。張郃、高覽又因郭圖讒言降曹，袁軍全面潰敗。",
+            "citations": [
+              {
+                "sourceId": "sanguo-yanyi",
+                "locator": "第三十回"
+              }
+            ]
+          }
+        ]
+      },
+      "historicalDifference": {
+        "paragraphs": [
+          {
+            "text": "官渡相持、許攸投曹、烏巢被襲與張郃等轉降皆有史料基礎；但各傳對張郃降曹原因、淳于瓊被擒或被斬等細節並不一致。小說採擇並戲劇化許攸家事、醉酒失守與割鼻示眾，且把兵力固定為誇張數字，不能整段視為正史原貌。",
+            "citations": [
+              {
+                "sourceId": "sgz-yuanshao-main",
+                "locator": "卷六・官渡之戰正文及裴注異說"
+              },
+              {
+                "sourceId": "sgz-wudi-main",
+                "locator": "卷一・建安五年官渡之戰"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "chapter": "第三十一至三十二回",
+      "eventName": "倉亭十面埋伏、吐血病亡與傳位袁尚",
+      "content": {
+        "paragraphs": [
+          {
+            "text": "小說寫袁紹在倉亭遭程昱設計的十面埋伏，大敗後吐血；其後因偏愛袁尚而議改世子。臨終時袁紹已不能言語，只以手指袁尚而點頭，妻劉氏與審配等據此立袁尚，並寫遺囑；袁紹吐血數斗而死。",
+            "citations": [
+              {
+                "sourceId": "sanguo-yanyi",
+                "locator": "第三十一、三十二回"
+              }
+            ]
+          }
+        ]
+      },
+      "historicalDifference": {
+        "paragraphs": [
+          {
+            "text": "正史僅簡記曹操於倉亭擊破袁紹軍，沒有十面埋伏的完整戰術故事。袁紹確實偏愛袁尚，但到死仍未正式決定繼承人；袁尚是由審配、逢紀等矯袁紹遺命擁立，不是袁紹臨終以手勢留下可核實的遺命。袁紹因官渡敗後發病、建安七年五月去世，正史未記『吐血數斗』。",
+            "citations": [
+              {
+                "sourceId": "sgz-wudi-main",
+                "locator": "卷一・建安六年倉亭、七年五月袁紹薨"
+              },
+              {
+                "sourceId": "sgz-yuanshao-main",
+                "locator": "卷六・袁紹傳末及袁譚袁尚傳"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ],
+  "works": [
+    {
+      "title": "與袁術書",
+      "type": "書信／政治論說",
+      "extant": "主要文字見《三國志・袁術傳》裴松之注引《吳書》；是否等同原信全文不能確定",
+      "attribution": "《吳書》明載『紹復與術書曰』，可視為袁紹名義書信；實際執筆者未載",
+      "summary": "袁紹勸袁術不要承認董卓控制下的獻帝，主張在關東另立皇帝，並以袁氏宗族遭董卓屠殺勸袁術不可再向董卓所立朝廷稱臣。袁術回書反對，二袁政治分裂由此加深。",
+      "anthology": "《吳書》佚文；《三國志》卷六裴松之注引",
+      "excerpt": "東立聖君，太平可冀，如何有疑！",
+      "citations": [
+        {
+          "sourceId": "wushu-yuanshao-yuanshu-peizhu",
+          "locator": "《三國志》卷六袁術傳裴注引《吳書》"
+        }
+      ]
+    },
+    {
+      "title": "與公孫瓚書",
+      "type": "書信／軍事政治文書",
+      "extant": "長篇文字見《三國志・公孫瓚傳》裴松之注引《漢晉春秋》；現存引文是否等同原信全文不能確定",
+      "attribution": "《漢晉春秋》以袁紹致公孫瓚書形式保存；屬袁紹名義文書，實際執筆者未載",
+      "summary": "袁紹回顧與公孫瓚由討董盟友轉為河北仇敵的過程，列舉界橋、龍河等戰事，指責公孫瓚反覆失信、殘害幽州，並以漢廷舊京克復為由勸其罷兵修好。文字立場鮮明，是袁紹陣營自我辯護的重要材料。",
+      "anthology": "《漢晉春秋》佚文；《三國志》卷八裴松之注引",
+      "excerpt": "宜釋憾除嫌，敦我舊好。若斯言之玷，皇天是聞。",
+      "citations": [
+        {
+          "sourceId": "hanjin-chunqiu-yuanshao-gongsunzan-peizhu",
+          "locator": "《三國志》卷八公孫瓚傳裴注引《漢晉春秋》"
+        }
+      ]
+    },
+    {
+      "title": "拜烏丸三王為單于版文",
+      "type": "版文／任命文書",
+      "extant": "全文見《三國志・烏丸鮮卑東夷傳》裴松之注引《英雄記》",
+      "attribution": "以袁紹名義承制頒授；屬官署文書，實際執筆者未載",
+      "summary": "袁紹以大將軍、督幽青并、領冀州牧等名義，承制冊封遼西烏丸蹋頓等三王為單于，稱許其協助對抗公孫瓚，並要求約束部落。文書顯示袁紹在河北爭霸時以漢廷官號和承制權整合邊疆勢力。",
+      "anthology": "《英雄記》佚文；《三國志》卷三十裴松之注引",
+      "excerpt": "今遣行謁者楊林，齎單于璽綬車服，以對爾勞。",
+      "citations": [
+        {
+          "sourceId": "yingxiongji-yuanshao-wuhuan-peizhu",
+          "locator": "《三國志》卷三十烏丸傳裴注引《英雄記》"
+        }
+      ]
+    }
+  ],
+  "worksNote": "只收錄可在早期引書中逐字核對、且明確以袁紹名義發出的三篇書信或官署文書；實際執筆者未載者均已明標。〈討曹操檄〉明載為陳琳之辭，不列；〈上書自訟〉另有陳琳集題作〈為袁紹上漢帝書〉的歸屬證據，從嚴不列；〈漳河盟辭〉屬同盟集體誓詞，〈與曹操書〉僅存一句，〈答陳登〉屬史家轉述式答語，亦均不收入。"
+}
