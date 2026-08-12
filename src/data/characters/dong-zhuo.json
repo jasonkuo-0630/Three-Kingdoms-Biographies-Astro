@@ -1,0 +1,1153 @@
+{
+  "schemaVersion": 2,
+  "dataStatus": "reviewed-draft",
+  "published": true,
+  "lastReviewedAt": "2026-08-12",
+  "id": "dong-zhuo",
+  "name": "董卓",
+  "courtesyName": "仲穎",
+  "childhoodName": null,
+  "artName": null,
+  "otherNames": [
+    "董太師"
+  ],
+  "lifespan": "生年不詳—初平三年四月辛巳（192年）",
+  "birthplace": "隴西郡臨洮縣",
+  "primaryIdentity": "東漢末年將領、相國、太師與控制朝廷的軍閥",
+  "summary": "董卓字仲穎，早年以才武、騎射與經營羌胡關係見長，歷任邊郡軍職，於涼州戰事中保全所部。中平六年奉何進召入洛陽後，他兼併京師兵權，廢少帝、立獻帝，進位相國。關東起兵後，董卓強遷天子至長安並焚毀洛陽，後任太師、築郿塢，以嚴刑與軍力控制朝廷。初平三年，王允、士孫瑞聯合呂布將其誅殺。",
+  "avatar": "images/dong_zhuo.png",
+  "overview": {
+    "intro": {
+      "paragraphs": [
+        {
+          "text": "董卓字仲穎，隴西郡臨洮縣人，出生年份未見可靠史籍記載。年少時他喜好任俠，曾遊歷羌人地區，結交多名豪帥；回鄉後有羌豪前來，他殺掉耕牛宴客，對方感念其情誼，合贈雜畜千餘頭。這些材料顯示他早年已善於以豪俠作風經營邊地人脈。",
+          "citations": [
+            {
+              "sourceId": "sgz-dongzhuo-main",
+              "locator": "卷六・董卓傳開篇"
+            },
+            {
+              "sourceId": "houhanshu-dongzhuo-lijue",
+              "locator": "卷七十二・董卓傳開篇"
+            }
+          ]
+        },
+        {
+          "text": "董卓有武藝與膂力，能同時佩帶兩具箭囊，左右馳馬射箭。桓帝末年起，他先後任羽林郎、軍司馬、郎中、地方長吏與邊郡軍職，參與對羌胡及涼州叛軍的戰事。史書一方面記他討黃巾曾戰敗抵罪，另一方面也記他在望垣受圍時設堰迷惑追兵，使同時出征的多軍失敗之際，只有所部完整返回。",
+          "citations": [
+            {
+              "sourceId": "sgz-dongzhuo-main",
+              "locator": "卷六・董卓早年任官與涼州戰事"
+            },
+            {
+              "sourceId": "houhanshu-dongzhuo-lijue",
+              "locator": "卷七十二・羽林郎至斄鄉侯諸段"
+            }
+          ]
+        },
+        {
+          "text": "中平六年，何進為逼迫何太后同意誅除宦官，召董卓率兵入京。何進先被殺後，董卓迎回被宦官劫出的少帝與陳留王，兼併何進、何苗及丁原部眾，掌握洛陽兵權。他隨即廢少帝劉辯、立劉協為獻帝，進位相國，以軍事力量控制朝廷。正史同時記載他曾起用部分名士、恢復黨人名位，但這些措施沒有阻止其後的嚴刑、掠奪與大規模殺害。",
+          "citations": [
+            {
+              "sourceId": "sgz-dongzhuo-main",
+              "locator": "卷六・入洛、併兵、廢立與相國專政諸段"
+            },
+            {
+              "sourceId": "houhanshu-dongzhuo-lijue",
+              "locator": "卷七十二・中平六年入洛至相國專政"
+            }
+          ]
+        },
+        {
+          "text": "初平元年關東諸軍起兵後，董卓毒殺已被廢的弘農王，強遷獻帝與百官至長安，焚毀洛陽宮室、宗廟及民居，並發掘陵墓、掠奪財物。他其後任太師、位在諸侯王上，築郿塢儲糧自守；初平三年四月，王允、士孫瑞與呂布合謀，假借詔命於宮門誅殺董卓。其宗族隨後遭夷滅，董卓控制朝廷的政權也迅速崩解。",
+          "citations": [
+            {
+              "sourceId": "sgz-dongzhuo-main",
+              "locator": "卷六・遷都焚洛陽、長安專政與董卓被誅"
+            },
+            {
+              "sourceId": "houhanshu-dongzhuo-lijue",
+              "locator": "卷七十二・初平元年至三年董卓敗亡"
+            },
+            {
+              "sourceId": "zztj-juan60",
+              "locator": "卷六十・初平二年至三年"
+            }
+          ]
+        }
+      ],
+      "originalTexts": [
+        {
+          "text": "董卓字仲穎，隴西臨洮人也。少好俠，甞游羌中，盡與諸豪帥相結。",
+          "sourceId": "sgz-dongzhuo-main",
+          "locator": "卷六・董卓傳開篇"
+        },
+        {
+          "text": "卓有才武，旅力少比，雙帶兩鞬，左右馳射。",
+          "sourceId": "sgz-dongzhuo-main",
+          "locator": "卷六・早年才武"
+        },
+        {
+          "text": "卓性殘忍不仁，遂以嚴刑脅衆，睚眥之隙必報，人不自保。",
+          "sourceId": "sgz-dongzhuo-main",
+          "locator": "卷六・廢立後專政"
+        }
+      ],
+      "uncertaintyNote": "正史未載董卓出生年；近現代常見的約139年說屬推算，本站不採作確定生年。早年部分官職的先後可核，精確就任年月則多未載。"
+    },
+    "factionTimeline": [
+      {
+        "stageName": "東漢邊郡與中央軍職・羽林郎至前將軍",
+        "personName": "東漢朝廷",
+        "personId": null,
+        "actualFactionId": "dong-zhuo-late-han-service",
+        "period": "桓帝末年至中平五年（約160年代末—188年）",
+        "periodUncertain": true,
+        "hideAvatar": true
+      },
+      {
+        "stageName": "受拜并州牧・保留所部屯河東觀變",
+        "personName": "董卓",
+        "personId": null,
+        "actualFactionId": "dong-zhuo-late-han-service",
+        "period": "中平五年至六年（188—189年）",
+        "periodUncertain": true
+      },
+      {
+        "stageName": "控制洛陽與長安朝廷・相國至太師",
+        "personName": "董卓",
+        "personId": null,
+        "actualFactionId": "dong-zhuo-regime",
+        "period": "中平六年八月至初平三年四月（189—192年）",
+        "periodUncertain": false
+      }
+    ],
+    "relatives": [
+      {
+        "personName": "董君雅",
+        "personId": null,
+        "relation": "父",
+        "relationGroup": "ancestor",
+        "natureCategory": "historical",
+        "natureType": "《三國志》裴注引《英雄記》記載",
+        "note": "《英雄記》稱董君雅曾由微官任潁川綸氏尉，生董擢、董卓與董旻三子。其姓名與官職不見《三國志》正文，應保留注引史料層級。",
+        "citations": [
+          {
+            "sourceId": "yingxiongji-dongzhuo-peizhu",
+            "locator": "《三國志》卷六董卓傳裴注引《英雄記》；董卓家世"
+          }
+        ]
+      },
+      {
+        "personName": "董卓母（姓名不詳）",
+        "personId": null,
+        "relation": "母",
+        "relationGroup": "ancestor",
+        "natureCategory": "historical",
+        "natureType": "《後漢書》正文及《三國志》裴注引史料記載",
+        "note": "董卓掌權後封母為池陽君，置家令與丞；董卓被殺後，其母亦遭殺害。裴注引《英雄記》稱她當時九十歲，但史書未載其姓名與家世。",
+        "citations": [
+          {
+            "sourceId": "sgz-dongzhuo-main",
+            "locator": "卷六・董卓封母為池陽君"
+          },
+          {
+            "sourceId": "yingxiongji-dongzhuo-peizhu",
+            "locator": "《三國志》卷六裴注引《英雄記》；董卓敗亡後宗族被誅"
+          }
+        ]
+      },
+      {
+        "personName": "董擢",
+        "personId": null,
+        "relation": "兄",
+        "relationGroup": "sibling",
+        "natureCategory": "historical",
+        "natureType": "《三國志》裴注引《英雄記》記載",
+        "note": "字孟高，為董君雅長子，早卒。相關姓名、字與排行只見裴注引《英雄記》。",
+        "citations": [
+          {
+            "sourceId": "yingxiongji-dongzhuo-peizhu",
+            "locator": "《三國志》卷六董卓傳裴注引《英雄記》；董卓家世"
+          }
+        ]
+      },
+      {
+        "personName": "董旻",
+        "personId": null,
+        "relation": "弟",
+        "relationGroup": "sibling",
+        "natureCategory": "historical",
+        "natureType": "《三國志》正文及裴注引史料記載",
+        "note": "字叔穎。董卓入洛時，董旻曾與何進部曲將吳匡攻殺何苗；董卓掌權後任董旻為左將軍、封鄠侯。董卓被誅後，董旻與宗族一併被殺。",
+        "citations": [
+          {
+            "sourceId": "sgz-dongzhuo-main",
+            "locator": "卷六・入洛及長安宗族授官"
+          },
+          {
+            "sourceId": "yingxiongji-dongzhuo-peizhu",
+            "locator": "卷六裴注引《英雄記》；董旻字與宗族敗亡"
+          }
+        ]
+      },
+      {
+        "personName": "董卓妻（姓名不詳）",
+        "personId": null,
+        "relation": "妻",
+        "relationGroup": "spouse",
+        "natureCategory": "historical",
+        "natureType": "《後漢書》正文記載",
+        "note": "《後漢書》記董卓赴未央殿前，一名少妻曾因異兆勸阻他出行；董卓死後，其妻與母親、子女一併遭殺。史書未載她的姓氏、本名與家世，也無法確認『少妻』是否為同一名配偶。",
+        "citations": [
+          {
+            "sourceId": "houhanshu-dongzhuo-lijue",
+            "locator": "卷七十二・董卓赴未央殿及宗族被誅"
+          }
+        ]
+      },
+      {
+        "personName": "董卓諸子（姓名不詳）",
+        "personId": null,
+        "relation": "子",
+        "relationGroup": "child",
+        "natureCategory": "historical",
+        "natureType": "《後漢書》正文及《三國志》裴注引史料記載",
+        "note": "史書概稱董卓子孫年幼者亦受封爵，裴注引《英雄記》又稱其侍妾懷抱中的幼子皆被封侯；沒有保存可確定對應的兒子姓名。董卓死後，相關男女子孫一併遭誅。",
+        "citations": [
+          {
+            "sourceId": "houhanshu-dongzhuo-lijue",
+            "locator": "卷七十二・董卓宗族封爵與敗亡"
+          },
+          {
+            "sourceId": "yingxiongji-dongzhuo-peizhu",
+            "locator": "《三國志》卷六裴注引《英雄記》；幼子封侯"
+          }
+        ]
+      },
+      {
+        "personName": "董氏（牛輔妻）",
+        "personId": null,
+        "relation": "女",
+        "relationGroup": "child",
+        "natureCategory": "historical",
+        "natureType": "《三國志》正文與《後漢書》記載",
+        "note": "史書以牛輔為董卓女婿或子婿，可知董卓至少有一女嫁給牛輔，但未記其本名、生卒與事蹟。",
+        "citations": [
+          {
+            "sourceId": "sgz-dongzhuo-main",
+            "locator": "卷六・董卓傳後附牛輔記事"
+          },
+          {
+            "sourceId": "houhanshu-dongzhuo-lijue",
+            "locator": "卷七十二・牛輔為董卓子婿"
+          }
+        ]
+      },
+      {
+        "personName": "董白",
+        "personId": null,
+        "relation": "孫女",
+        "relationGroup": "grandchild",
+        "natureCategory": "historical",
+        "natureType": "《三國志》裴注引《英雄記》記載",
+        "note": "《英雄記》稱董白尚未及笄便被封為渭陽君，並為其舉行隆重授印儀式；其父母姓名未見記載。這是注引佚史，不是《三國志》正文。",
+        "citations": [
+          {
+            "sourceId": "yingxiongji-dongzhuo-peizhu",
+            "locator": "《三國志》卷六董卓傳裴注引《英雄記》；董白受封"
+          }
+        ]
+      },
+      {
+        "personName": "貂蟬（小說人物）",
+        "personId": null,
+        "relation": "正史無親屬關係",
+        "relationGroup": "other",
+        "natureCategory": "literary",
+        "natureType": "《三國演義》虛構人物與虛構關係",
+        "note": "正史沒有貂蟬其人，只記呂布曾與董卓一名姓名不詳的侍婢私通；兩者不能直接視為同一人。本項只為呈現小說中極具代表性的關係，不代表董卓史實親屬。",
+        "citations": [
+          {
+            "sourceId": "sgz-lubu-main",
+            "locator": "卷七・呂布與董卓侍婢私通"
+          }
+        ],
+        "fictionalRelation": {
+          "label": "小說中納為妾",
+          "natureType": "《三國演義》連環計與妻妾設定",
+          "natureCategory": "literary",
+          "citations": [
+            {
+              "sourceId": "sanguo-yanyi",
+              "locator": "第八至九回",
+              "note": "王允先把貂蟬許給呂布，再獻給董卓；貂蟬依計離間二人。整套人物與關係為小說重構。"
+            }
+          ]
+        }
+      }
+    ],
+    "titlesAndRanks": [
+      {
+        "title": "羽林郎",
+        "period": "桓帝末年，確切年份不詳",
+        "citations": [
+          {
+            "sourceId": "sgz-dongzhuo-main",
+            "locator": "卷六・以六郡良家子為羽林郎"
+          }
+        ]
+      },
+      {
+        "title": "軍司馬、郎中",
+        "period": "桓帝末年隨張奐征并州後",
+        "citations": [
+          {
+            "sourceId": "sgz-dongzhuo-main",
+            "locator": "卷六・從張奐征并州有功"
+          },
+          {
+            "sourceId": "houhanshu-dongzhuo-lijue",
+            "locator": "卷七十二・擊漢陽叛羌後拜郎中"
+          }
+        ]
+      },
+      {
+        "title": "廣武令、蜀郡北部都尉、西域戊己校尉",
+        "period": "桓帝末至靈帝初年間，確切年月不詳",
+        "citations": [
+          {
+            "sourceId": "sgz-dongzhuo-main",
+            "locator": "卷六・早年地方與邊郡官職"
+          }
+        ]
+      },
+      {
+        "title": "并州刺史、河東太守",
+        "period": "靈帝年間，中平元年（184年）以前",
+        "citations": [
+          {
+            "sourceId": "sgz-dongzhuo-main",
+            "locator": "卷六・遷并州刺史、河東太守"
+          }
+        ]
+      },
+      {
+        "title": "東中郎將、持節",
+        "period": "中平元年（184年）討黃巾時",
+        "citations": [
+          {
+            "sourceId": "houhanshu-dongzhuo-lijue",
+            "locator": "卷七十二・代盧植擊張角"
+          }
+        ]
+      },
+      {
+        "title": "中郎將、破虜將軍",
+        "period": "中平二年（185年）前後至中平年間涼州戰事",
+        "citations": [
+          {
+            "sourceId": "sgz-dongzhuo-main",
+            "locator": "卷六・西拒韓遂與隨張溫征討"
+          },
+          {
+            "sourceId": "houhanshu-dongzhuo-lijue",
+            "locator": "卷七十二・涼州戰事"
+          }
+        ]
+      },
+      {
+        "title": "前將軍、斄鄉侯",
+        "period": "中平二年至三年（185—186年）間，確切年月不詳",
+        "citations": [
+          {
+            "sourceId": "sgz-dongzhuo-main",
+            "locator": "卷六・望垣脫圍後授官封侯"
+          },
+          {
+            "sourceId": "houhanshu-dongzhuo-lijue",
+            "locator": "卷七十二・全師而還、封斄鄉侯"
+          }
+        ]
+      },
+      {
+        "title": "并州牧",
+        "period": "中平六年（189年）入洛前",
+        "citations": [
+          {
+            "sourceId": "sgz-dongzhuo-main",
+            "locator": "卷六・徵為并州牧"
+          },
+          {
+            "sourceId": "houhanshu-dongzhuo-lijue",
+            "locator": "卷七十二・璽書拜并州牧"
+          }
+        ]
+      },
+      {
+        "title": "司空、太尉、假節鉞虎賁、領前將軍事、郿侯",
+        "period": "中平六年（189年）控制洛陽後",
+        "citations": [
+          {
+            "sourceId": "sgz-dongzhuo-main",
+            "locator": "卷六・掌權後由司空遷太尉、改封郿侯"
+          },
+          {
+            "sourceId": "houhanshu-dongzhuo-lijue",
+            "locator": "卷七十二・廢立前後授官"
+          }
+        ]
+      },
+      {
+        "title": "相國，贊拜不名、劍履上殿",
+        "period": "中平六年（189年）廢立後",
+        "citations": [
+          {
+            "sourceId": "sgz-dongzhuo-main",
+            "locator": "卷六・遷相國"
+          },
+          {
+            "sourceId": "houhanshu-dongzhuo-lijue",
+            "locator": "卷七十二・進相國"
+          }
+        ]
+      },
+      {
+        "title": "太師，位在諸侯王上",
+        "period": "初平二年二月（191年）至初平三年四月（192年）",
+        "citations": [
+          {
+            "sourceId": "houhanshu-dongzhuo-lijue",
+            "locator": "卷七十二・拜太師"
+          },
+          {
+            "sourceId": "zztj-juan60",
+            "locator": "卷六十・初平二年二月丁丑"
+          }
+        ]
+      }
+    ],
+    "posthumousTitle": null,
+    "evaluations": {
+      "contemporary": [
+        {
+          "evaluatorName": "張溫",
+          "evaluatorEra": "東漢車騎將軍",
+          "context": "中平年間孫堅勸張溫誅殺不受節制的董卓時，張溫說明不採納的理由",
+          "textType": "原文與白話並陳",
+          "originalText": "卓有威名，方倚以西行。",
+          "paraphrase": "張溫承認董卓在西北軍中已有威望，朝廷征討涼州仍需倚賴他，因此不願在軍前擅殺。這是董卓掌權以前少見的正面實用評估，也顯示其軍事聲望曾使上級有所顧忌。",
+          "citations": [
+            {
+              "sourceId": "houhanshu-dongzhuo-lijue",
+              "locator": "卷七十二・追敘孫堅勸張溫誅卓"
+            }
+          ]
+        },
+        {
+          "evaluatorName": "孫堅",
+          "evaluatorEra": "東漢末年將領",
+          "context": "隨張溫征涼州時，列舉董卓不受軍令、阻撓進兵與應召稽留三項罪狀",
+          "textType": "原文與白話並陳",
+          "originalText": "觀卓所言，不假明公，輕上無禮，一罪也。章、遂跋扈經年，當以時進討，而卓云未可，沮軍疑衆，二罪也。卓受任無功，應召稽留，而軒昂自高，三罪也。",
+          "paraphrase": "孫堅認為董卓輕慢主帥、動搖軍隊進取之議，又在受命後拖延應召而自負，已顯露難受節制的危險。他勸張溫及早處置，但張溫因仍要倚重董卓在西方的威名而拒絕。",
+          "citations": [
+            {
+              "sourceId": "sgz-sunjian-main",
+              "locator": "卷四十六・孫堅勸張溫斬董卓"
+            }
+          ]
+        },
+        {
+          "evaluatorName": "曹操",
+          "evaluatorEra": "東漢末年討董聯軍將領",
+          "context": "初平年間關東諸軍討董、又有人議另立劉虞為帝時",
+          "textType": "原文與白話並陳",
+          "originalText": "董卓之罪，暴於四海，吾等合大衆、興義兵，而遠近莫不響應，此以義動故也。",
+          "paraphrase": "曹操指出董卓罪行已為天下所知，關東起兵能得到遠近響應，是因討董仍具有奉漢討賊的名義。這段話既是對董卓的公開定性，也是曹操反對另立皇帝、維持聯軍政治正當性的論證。",
+          "citations": [
+            {
+              "sourceId": "sgz-wudi-main",
+              "locator": "卷一・關東諸將議立劉虞時曹操發言"
+            }
+          ]
+        }
+      ],
+      "later": [
+        {
+          "evaluatorName": "陳壽",
+          "evaluatorEra": "西晉史家",
+          "context": "《三國志》卷六卷末總評",
+          "textType": "原文與白話並陳",
+          "originalText": "董卓狼戾賊忍，暴虐不仁，自書契以來，殆未之有也。",
+          "paraphrase": "陳壽以極強烈的語氣把董卓定型為兇狠殘忍、暴虐不仁之人，甚至認為有文字記錄以來幾乎未見其比。這段總評深刻影響後世對董卓的基本歷史形象。",
+          "citations": [
+            {
+              "sourceId": "sgz-dongzhuo-main",
+              "locator": "卷六卷末評語"
+            }
+          ]
+        },
+        {
+          "evaluatorName": "裴松之",
+          "evaluatorEra": "南朝宋史家",
+          "context": "為陳壽卷末評語作注，補論董卓掌權時間與禍害規模",
+          "textType": "原文與白話並陳",
+          "originalText": "董卓自竊權柄，至於隕斃，計其日月，未盈三周，而禍崇山嶽，毒流四海。其殘賊之性，實豺狼不若。",
+          "paraphrase": "裴松之指出董卓從奪取權柄到被殺不足三年，造成的災禍卻已如山嶽般巨大、毒害遍及四海，因此同意陳壽的嚴厲定性。他同時也批評陳壽評語中『賊忍』與『不仁』語義稍嫌重複。",
+          "citations": [
+            {
+              "sourceId": "sgz-dongzhuo-main",
+              "locator": "卷六卷末評語裴松之注"
+            }
+          ]
+        },
+        {
+          "evaluatorName": "范曄",
+          "evaluatorEra": "南朝宋史家",
+          "context": "《後漢書・董卓列傳》篇末論贊",
+          "textType": "原文與白話並陳",
+          "originalText": "董卓初以虓闞為情，因遭崩剝之埶，故得蹈藉彝倫，毀裂畿服。",
+          "paraphrase": "范曄認為董卓本性如怒虎般強猛，又恰逢王朝秩序崩解，才得以踐踏常倫、破壞京畿。他的分析除批判董卓本人，也把其興起放回東漢中央失序的政治條件中。",
+          "citations": [
+            {
+              "sourceId": "houhanshu-dongzhuo-lijue",
+              "locator": "卷七十二篇末論"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "historicalBio": [
+    {
+      "period": "桓帝末年至靈帝初年",
+      "periodType": "approx",
+      "title": "以健俠、騎射與羌中人脈起家",
+      "content": {
+        "paragraphs": [
+          {
+            "text": "董卓年少好俠，曾遊羌中並結交豪帥。回鄉耕作後，有豪帥前來相從，他殺耕牛設宴；眾人感其厚意，回去合送雜畜千餘頭。州郡後來召他為吏，使其監領盜賊，他又出任州兵馬掾、巡守塞下，逐漸以健俠與邊地軍事能力知名。",
+            "citations": [
+              {
+                "sourceId": "sgz-dongzhuo-main",
+                "locator": "卷六・董卓傳開篇及裴注引《吳書》"
+              },
+              {
+                "sourceId": "houhanshu-dongzhuo-lijue",
+                "locator": "卷七十二・早年游羌與州兵馬掾"
+              }
+            ]
+          },
+          {
+            "text": "桓帝末年，董卓以六郡良家子身分任羽林郎，後為軍司馬隨張奐征討，立功拜郎中。他獲賜縑九千匹後全數分給吏士，沒有自留；史書藉此保存了他早年能以財物結納部眾的一面。此後他歷任廣武令、蜀郡北部都尉、西域戊己校尉、并州刺史與河東太守。",
+            "citations": [
+              {
+                "sourceId": "sgz-dongzhuo-main",
+                "locator": "卷六・羽林郎至河東太守"
+              },
+              {
+                "sourceId": "houhanshu-dongzhuo-lijue",
+                "locator": "卷七十二・從張奐征羌及分縑吏士"
+              }
+            ]
+          }
+        ],
+        "originalTexts": [
+          {
+            "text": "卓膂力過人，雙帶兩鞬，左右馳射，為羌胡所畏。",
+            "sourceId": "houhanshu-dongzhuo-lijue",
+            "locator": "卷七十二・董卓早年才武"
+          },
+          {
+            "text": "卓曰：『為者則己，有者則士。』乃悉分與吏兵，無所留。",
+            "sourceId": "houhanshu-dongzhuo-lijue",
+            "locator": "卷七十二・分縑吏士"
+          }
+        ]
+      },
+      "uncertaintyNote": "史書只把這些活動繫於桓帝末年至靈帝年間，沒有提供董卓出生年及多數早期官職的精確年月。"
+    },
+    {
+      "period": "中平元年至五年（184—188年）",
+      "periodType": "range",
+      "title": "討黃巾失利，轉戰涼州並全師脫圍",
+      "content": {
+        "paragraphs": [
+          {
+            "text": "中平元年，董卓任東中郎將、持節，代替盧植攻張角於下曲陽，因作戰失敗而抵罪。涼州邊章、韓遂等勢力擴大後，他復被任為中郎將，參與張溫統率的西征；在美陽之戰中，漢軍利用叛軍見流星而欲退的時機發動攻擊，取得勝利。",
+            "citations": [
+              {
+                "sourceId": "sgz-dongzhuo-main",
+                "locator": "卷六・討黃巾與涼州戰事"
+              },
+              {
+                "sourceId": "houhanshu-dongzhuo-lijue",
+                "locator": "卷七十二・中平元年至美陽之戰"
+              }
+            ]
+          },
+          {
+            "text": "董卓其後率兵三萬討先零羌，在望垣北方遭羌胡數萬人包圍，糧食幾乎斷絕。他假裝築堰捕魚，先使水積滿回程渡口，再暗中從堰下通過，離開後決堰；追兵到達時水深不能渡。當時多路漢軍失敗，董卓所部卻完整返回，因此受拜前將軍、封斄鄉侯。",
+            "citations": [
+              {
+                "sourceId": "sgz-dongzhuo-main",
+                "locator": "卷六・望垣脫圍與封斄鄉侯"
+              },
+              {
+                "sourceId": "houhanshu-dongzhuo-lijue",
+                "locator": "卷七十二・望垣全師而還"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "period": "中平五年至六年（188—189年）",
+      "periodType": "range",
+      "title": "兩度拒絕交出所部，屯河東觀望時局",
+      "content": {
+        "paragraphs": [
+          {
+            "text": "朝廷曾徵董卓為少府，並命他把營中吏士交給皇甫嵩；董卓上書稱涼州未平、部眾攔車挽留，沒有立即赴任。次年朝廷任他為并州牧，又命交出軍隊，他再次以士卒久受自己畜養、願為自己效命為由，請求帶兵前往并州，實際仍駐河東觀察局勢。",
+            "citations": [
+              {
+                "sourceId": "lingdi-ji-dongzhuo-peizhu",
+                "locator": "《三國志》卷六裴注引《靈帝紀》；董卓兩次上書"
+              },
+              {
+                "sourceId": "houhanshu-dongzhuo-lijue",
+                "locator": "卷七十二・中平六年辭少府、受并州牧"
+              }
+            ]
+          },
+          {
+            "text": "董卓表面仍是東漢任命的將領與州牧，卻已能以部眾依附為理由違抗轉隸命令，朝廷也無力強制執行。這批長期由他掌握的涼州軍，是他後來入洛後迅速兼併京師兵權的根本。",
+            "citations": [
+              {
+                "sourceId": "sgz-dongzhuo-main",
+                "locator": "卷六・兩違詔敕、何進召卓"
+              },
+              {
+                "sourceId": "houhanshu-dongzhuo-lijue",
+                "locator": "卷七十二・駐兵河東以觀時變"
+              }
+            ]
+          }
+        ]
+      },
+      "uncertaintyNote": "《三國志》正文、裴注引《靈帝紀》與《後漢書》保存的上書文字互有詳略；事件次序可確定，但各表文是否完整保存及實際執筆者均不明。"
+    },
+    {
+      "period": "中平六年八月至九月（189年）",
+      "periodType": "range",
+      "title": "奉何進召入洛，兼併京師兵權",
+      "content": {
+        "paragraphs": [
+          {
+            "text": "大將軍何進與袁紹謀誅宦官，何太后不同意，何進遂召董卓率兵入京施壓。董卓上書聲討張讓等宦官並向洛陽進軍，但尚未抵達，何進已被宦官殺害；袁紹等攻入宮中後，宦官挾持少帝劉辯與陳留王劉協出逃，董卓率軍在北邙迎回二人。",
+            "citations": [
+              {
+                "sourceId": "sgz-dongzhuo-main",
+                "locator": "卷六・何進召卓與北邙迎帝"
+              },
+              {
+                "sourceId": "houhanshu-dongzhuo-lijue",
+                "locator": "卷七十二・中平六年入洛"
+              }
+            ]
+          },
+          {
+            "text": "董卓初入洛陽時只有步騎約三千，便每隔四五日夜間秘密把軍隊調出城外，翌日再大張旗鼓入城，製造西方援軍不斷抵達的假象。何進與何苗舊部其後歸附董卓，董卓又誘使呂布殺執金吾丁原、兼併其眾，因而取得京師最強的軍事力量。",
+            "citations": [
+              {
+                "sourceId": "sgz-dongzhuo-main",
+                "locator": "卷六・裴注引《九州春秋》及兼併丁原部眾"
+              },
+              {
+                "sourceId": "houhanshu-dongzhuo-lijue",
+                "locator": "卷七十二・虛張兵勢與兼併京兵"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "period": "中平六年九月至年底（189年）",
+      "periodType": "range",
+      "title": "強行廢少帝、立獻帝，進位相國專政",
+      "content": {
+        "paragraphs": [
+          {
+            "text": "董卓控制洛陽後，先取代劉弘為司空，旋遷太尉。他召集群臣，援引伊尹放太甲與霍光廢昌邑王的舊例，企圖廢少帝、立陳留王；盧植反對，認為少帝年幼且並無失德，董卓仍以武力壓服百官，將劉辯廢為弘農王，立九歲的劉協為帝。",
+            "citations": [
+              {
+                "sourceId": "sgz-dongzhuo-main",
+                "locator": "卷六・廢少帝立獻帝"
+              },
+              {
+                "sourceId": "houhanshu-dongzhuo-lijue",
+                "locator": "卷七十二・集議廢立"
+              },
+              {
+                "sourceId": "xiandi-qijuzhu-peizhu",
+                "locator": "《三國志》卷六裴注引《獻帝起居注》廢立策"
+              }
+            ]
+          },
+          {
+            "text": "董卓進位相國，享有入朝不趨、贊拜不名、劍履上殿等非常禮遇，並封母為池陽君。他曾起用周毖、伍瓊等士人，恢復部分黨人名位、拔擢荀爽等名士；但也縱兵掠奪洛陽富戶、姦掠婦女，以嚴刑和報復壓制官民。史書所記的用人措施與暴政並存，不能只取其中一面。",
+            "citations": [
+              {
+                "sourceId": "sgz-dongzhuo-main",
+                "locator": "卷六・相國專政、用人及陽城殺掠"
+              },
+              {
+                "sourceId": "houhanshu-dongzhuo-lijue",
+                "locator": "卷七十二・相國、追理黨人與搜牢暴行"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "period": "中平六年至初平元年（189—190年）",
+      "periodType": "range",
+      "title": "殺何太后與弘農王；關東起兵後強遷長安、焚毀洛陽",
+      "content": {
+        "paragraphs": [
+          {
+            "text": "董卓廢立後又殺何太后與被廢的弘農王劉辯；《三國志》把二人之死接在廢立之後敘述，《後漢書》則將鴆殺弘農王繫於關東起兵、董卓準備遷都之際。袁紹、曹操等關東州郡起兵討董後，董卓不顧公卿反對，強迫獻帝、百官及洛陽居民西遷長安，並處死曾由自己推薦、後被懷疑與關東軍互通的周毖、伍瓊。",
+            "citations": [
+              {
+                "sourceId": "sgz-dongzhuo-main",
+                "locator": "卷六・關東起兵、殺弘農王與遷都"
+              },
+              {
+                "sourceId": "houhanshu-dongzhuo-lijue",
+                "locator": "卷七十二・初平元年遷都前後"
+              }
+            ]
+          },
+          {
+            "text": "董卓軍焚燒洛陽南北宮、宗廟、官府及民居，發掘陵墓並掠取珍寶；富戶財產被沒收，遷徙與殺害造成大量死傷。他又破壞銅人、鐘虡等器物，改鑄無文字、無輪郭的小錢，使貨幣貶值、物價高漲。遷都不是小說獨創，而是史籍明載的強制遷徙與破壞。",
+            "citations": [
+              {
+                "sourceId": "sgz-dongzhuo-main",
+                "locator": "卷六・焚燒洛陽、發掘陵墓與鑄小錢"
+              },
+              {
+                "sourceId": "houhanshu-dongzhuo-lijue",
+                "locator": "卷七十二・遷都、焚毀與貨幣破壞"
+              }
+            ]
+          }
+        ],
+        "originalTexts": [
+          {
+            "text": "初平元年二月，乃徙天子都長安。焚燒洛陽宮室，悉發掘陵墓，取寶物。",
+            "sourceId": "sgz-dongzhuo-main",
+            "locator": "卷六・遷都長安"
+          }
+        ]
+      },
+      "uncertaintyNote": "《三國志》在廢立後即敘董卓殺弘農王與何太后，未標精確日期；《後漢書》則把鴆殺弘農王置於初平元年關東起兵、準備遷都的脈絡。兩書編排不同，因此本項以189—190年的範圍呈現，不強定同日或同月。"
+    },
+    {
+      "period": "初平二年（191年）",
+      "periodType": "year",
+      "title": "為孫堅所敗，撤離洛陽並進位太師",
+      "content": {
+        "paragraphs": [
+          {
+            "text": "孫堅收合敗兵進屯陽人，董卓派胡軫督步騎、呂布為騎督迎戰；胡軫與呂布不和，軍隊混亂，孫堅乘勢大破董軍並斬華雄。董卓曾遣李傕向孫堅求和親，被孫堅拒絕；董卓又親自與孫堅戰於陵墓之間，戰敗退屯澠池，呂布守洛陽亦再被擊退。",
+            "citations": [
+              {
+                "sourceId": "sgz-sunjian-main",
+                "locator": "卷四十六・陽人之戰、斬華雄與進軍洛陽"
+              },
+              {
+                "sourceId": "houhanshu-dongzhuo-lijue",
+                "locator": "卷七十二・孫堅擊破胡軫、呂布與董卓"
+              },
+              {
+                "sourceId": "zztj-juan60",
+                "locator": "卷六十・初平二年二月"
+              }
+            ]
+          },
+          {
+            "text": "董卓在澠池、華陰、安邑及沿線各縣部署董越、段煨、牛輔等部，自己撤回長安。朝廷拜他為太師，地位在諸侯王之上；此後董卓以長安為中心繼續控制獻帝與百官。",
+            "citations": [
+              {
+                "sourceId": "sgz-dongzhuo-main",
+                "locator": "卷六・部署諸將與還長安"
+              },
+              {
+                "sourceId": "houhanshu-dongzhuo-lijue",
+                "locator": "卷七十二・拜太師、引還長安"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "period": "初平二年至三年（191—192年）",
+      "periodType": "range",
+      "title": "築郿塢、厚封宗族，以酷刑維持長安統治",
+      "content": {
+        "paragraphs": [
+          {
+            "text": "董卓任命弟董旻為左將軍、封鄠侯，以兄子董璜任侍中、中軍校尉掌兵，宗族內外廣居官位，幼小子孫亦受封爵。他在郿築塢，規模高厚近似城郭，儲糧足供多年，自稱若成事便雄據天下，若不成也可守塢終老。",
+            "citations": [
+              {
+                "sourceId": "sgz-dongzhuo-main",
+                "locator": "卷六・宗族授官、築郿塢"
+              },
+              {
+                "sourceId": "houhanshu-dongzhuo-lijue",
+                "locator": "卷七十二・宗族封爵與萬歲塢"
+              }
+            ]
+          },
+          {
+            "text": "史書記董卓在宴會中以割舌、斬手足、鑿眼及烹煮等酷刑處置降者，百官驚懼失箸，他卻飲食自若；又藉天變誣稱衛尉張溫與袁術勾連，把張溫笞殺於市。長安政權表面仍以漢廷名義運作，實際上官員需到董卓府中奏事，軍政與生殺均掌握在董卓手中。",
+            "citations": [
+              {
+                "sourceId": "sgz-dongzhuo-main",
+                "locator": "卷六・郿塢宴殺與笞殺張溫"
+              },
+              {
+                "sourceId": "houhanshu-dongzhuo-lijue",
+                "locator": "卷七十二・長安酷刑與專政"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "period": "初平三年四月辛巳（192年）",
+      "periodType": "exact",
+      "title": "王允、士孫瑞聯合呂布誅殺董卓",
+      "content": {
+        "paragraphs": [
+          {
+            "text": "司徒王允、尚書僕射士孫瑞與董卓部將呂布密謀。獻帝病癒後在未央殿集會，士孫瑞等以詔命交給呂布，呂布派李肅及十餘名親兵偽裝衛士守在掖門。董卓抵達時遭李肅等攻擊，身穿內甲而未被刺穿；他呼喊呂布，呂布以『有詔』回應，隨即刺殺董卓。",
+            "citations": [
+              {
+                "sourceId": "sgz-dongzhuo-main",
+                "locator": "卷六・初平三年四月董卓被誅"
+              },
+              {
+                "sourceId": "houhanshu-dongzhuo-lijue",
+                "locator": "卷七十二・未央殿誅董卓"
+              },
+              {
+                "sourceId": "zztj-juan60",
+                "locator": "卷六十・初平三年四月辛巳"
+              }
+            ]
+          },
+          {
+            "text": "董卓被殺後，其宗族在郿塢遭到誅滅，長安官民相互慶賀。董卓屍體被陳於市；《三國志》正文只記董卓被殺及夷三族，裴注引《英雄記》才詳述因其素來肥胖，守屍吏把燈芯置於臍中燃燒、光亮達旦等情節。《後漢書》後來也收入相近敘述，網站應保留兩者史料層級差異。",
+            "citations": [
+              {
+                "sourceId": "sgz-dongzhuo-main",
+                "locator": "卷六・董卓被誅及夷三族"
+              },
+              {
+                "sourceId": "yingxiongji-dongzhuo-peizhu",
+                "locator": "《三國志》卷六裴注引《英雄記》；曝屍與臍中燃火"
+              },
+              {
+                "sourceId": "houhanshu-dongzhuo-lijue",
+                "locator": "卷七十二・董卓死後曝屍"
+              }
+            ]
+          }
+        ],
+        "originalTexts": [
+          {
+            "text": "卓驚呼布所在。布曰『有詔』，遂殺卓，夷三族。",
+            "sourceId": "sgz-dongzhuo-main",
+            "locator": "卷六・董卓被誅"
+          }
+        ]
+      },
+      "uncertaintyNote": "史籍明記初平三年四月辛巳；本檔保留漢代干支紀日與公元年份，不另採不同曆法換算所得的現代月日。"
+    }
+  ],
+  "romanceBio": [
+    {
+      "chapter": "第三回",
+      "eventName": "李肅獻赤兔馬，說呂布殺丁原投董卓",
+      "content": {
+        "paragraphs": [
+          {
+            "text": "小說寫董卓與丁原對峙後忌憚呂布勇猛，李肅自稱與呂布同鄉，主動攜赤兔馬、黃金、明珠及玉帶前往遊說。呂布因厚禮與富貴承諾，當夜殺死義父丁原，提首投奔董卓；董卓收他為義子，封騎都尉、中郎將與都亭侯。",
+            "citations": [
+              {
+                "sourceId": "sanguo-yanyi",
+                "locator": "第三回"
+              }
+            ]
+          }
+        ]
+      },
+      "historicalDifference": {
+        "paragraphs": [
+          {
+            "text": "正史確載董卓誘使呂布殺丁原、兼併其部眾，並與呂布誓為父子；也載呂布稍後任騎都尉、中郎將、封都亭侯。但沒有李肅以同鄉身分獻赤兔馬、金珠玉帶說降的完整過程，也沒有記丁原曾正式收呂布為義子。小說把簡短的利誘與叛殺記載擴寫為具體招降戲。",
+            "citations": [
+              {
+                "sourceId": "sgz-dongzhuo-main",
+                "locator": "卷六・董卓使呂布殺丁原"
+              },
+              {
+                "sourceId": "sgz-lubu-main",
+                "locator": "卷七・殺丁原投董卓"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "chapter": "第三至四回",
+      "eventName": "廢少帝、立獻帝並毒殺何太后與弘農王",
+      "content": {
+        "paragraphs": [
+          {
+            "text": "小說描寫董卓在溫明園當眾提議廢立，與丁原、袁紹等衝突後，以兵威迫使百官接受；劉辯被廢為弘農王、劉協登基。其後董卓命李儒帶毒酒逼何太后、弘農王與唐妃飲下，何太后被推下樓，弘農王亦遭毒死。",
+            "citations": [
+              {
+                "sourceId": "sanguo-yanyi",
+                "locator": "第三至四回"
+              }
+            ]
+          }
+        ]
+      },
+      "historicalDifference": {
+        "paragraphs": [
+          {
+            "text": "廢少帝、立獻帝，以及董卓後來殺何太后與毒殺弘農王，都有《三國志》《後漢書》支持；但小說把不同時點的事件集中為李儒奉命送酒的連續場景，並增加唐妃在場、太后墜樓及臨死歌辭等戲劇細節。史書記何太后與弘農王之死，未保存小說式的完整密室對話與執行過程。",
+            "citations": [
+              {
+                "sourceId": "sgz-dongzhuo-main",
+                "locator": "卷六・廢立、殺何太后與弘農王"
+              },
+              {
+                "sourceId": "houhanshu-dongzhuo-lijue",
+                "locator": "卷七十二・廢少帝與鴆殺弘農王"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "chapter": "第四回",
+      "eventName": "曹操獻七星寶刀行刺董卓",
+      "content": {
+        "paragraphs": [
+          {
+            "text": "小說讓曹操向王允借得七星寶刀，假意親近董卓，準備趁董卓側臥時拔刀行刺；董卓從鏡中看見曹操動作，曹操立刻跪下改稱獻刀，藉試馬之機逃出洛陽。陳宮後來擒獲曹操，又因敬佩其討董志向而放行同行。",
+            "citations": [
+              {
+                "sourceId": "sanguo-yanyi",
+                "locator": "第四回"
+              }
+            ]
+          }
+        ]
+      },
+      "historicalDifference": {
+        "paragraphs": [
+          {
+            "text": "《三國志》只記董卓表曹操為驍騎校尉、想與他共商政事，曹操判斷董卓終將敗亡，便變更姓名逃回鄉里；沒有王允借刀、床前行刺、臨機獻刀或陳宮捉放曹操。曹操途中涉及呂伯奢家的殺人故事也僅見互相衝突的裴注材料，不能與七星寶刀情節合併為正史。",
+            "citations": [
+              {
+                "sourceId": "sgz-wudi-main",
+                "locator": "卷一・董卓表曹操為驍騎校尉、曹操逃歸"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "chapter": "第五至六回",
+      "eventName": "溫酒斬華雄、三英戰呂布與火燒洛陽",
+      "content": {
+        "paragraphs": [
+          {
+            "text": "小說在汜水關安排董卓將領華雄連斬聯軍將校，關羽請戰並在酒尚溫時取回華雄首級；虎牢關前，呂布再連敗諸將，劉備、關羽、張飛三人合戰才迫使他退走。董卓見前線不利，聽李儒建議遷都長安，驅趕百姓、焚燒洛陽，並派人發掘皇陵。",
+            "citations": [
+              {
+                "sourceId": "sanguo-yanyi",
+                "locator": "第五至六回"
+              }
+            ]
+          }
+        ]
+      },
+      "historicalDifference": {
+        "paragraphs": [
+          {
+            "text": "遷都、驅民、焚毀洛陽與發掘陵墓都有史籍根據；但正史記華雄是在陽人之戰中由孫堅軍所斬，沒有關羽溫酒斬華雄。史書也沒有劉備、關羽、張飛在虎牢關合戰呂布；董卓與呂布實際先後被孫堅擊敗。小說把真實的孫堅主攻戰績改編為關羽、張飛與劉備的英雄舞臺。",
+            "citations": [
+              {
+                "sourceId": "sgz-sunjian-main",
+                "locator": "卷四十六・陽人之戰斬華雄"
+              },
+              {
+                "sourceId": "houhanshu-dongzhuo-lijue",
+                "locator": "卷七十二・孫堅擊破胡軫、呂布與董卓"
+              },
+              {
+                "sourceId": "sgz-dongzhuo-main",
+                "locator": "卷六・遷都與焚燒洛陽"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "chapter": "第八至九回",
+      "eventName": "貂蟬連環計、鳳儀亭衝突與董卓被誅",
+      "content": {
+        "paragraphs": [
+          {
+            "text": "小說創造王允府中歌伎貂蟬，讓王允先把她許給呂布，再獻給董卓。貂蟬在兩人之間訴說被迫與委屈，鳳儀亭相會又引發董卓向呂布擲戟；王允趁機激使呂布反董。董卓以為漢帝將禪位給自己，入朝途中遭李肅等伏擊，最後被呂布刺死。",
+            "citations": [
+              {
+                "sourceId": "sanguo-yanyi",
+                "locator": "第八至九回"
+              }
+            ]
+          }
+        ]
+      },
+      "historicalDifference": {
+        "paragraphs": [
+          {
+            "text": "正史沒有貂蟬其名，也沒有王允先許呂布再獻董卓、鳳儀亭或假稱禪位的連環計。史料只記董卓曾因小事向呂布擲手戟，呂布又與董卓一名姓名不詳的侍婢私通而害怕事發；王允、士孫瑞原已密謀誅卓，得知呂布與董卓有隙後才邀他參與。小說將這些分散材料重組為情愛離間計，不能把貂蟬直接當作那名侍婢的史實姓名。",
+            "citations": [
+              {
+                "sourceId": "sgz-lubu-main",
+                "locator": "卷七・董卓擲戟、呂布私通侍婢與王允聯絡呂布"
+              },
+              {
+                "sourceId": "sgz-dongzhuo-main",
+                "locator": "卷六・王允、士孫瑞、呂布共謀誅卓"
+              },
+              {
+                "sourceId": "houhanshu-dongzhuo-lijue",
+                "locator": "卷七十二・未央殿誅董卓"
+              }
+            ]
+          },
+          {
+            "text": "董卓死後曝屍於市、因身體肥胖而被守屍吏在臍中置火燃燒的描述，來源是《三國志》裴注引《英雄記》，不是小說首創，也不是《三國志》正文。《三國演義》沿用並強化了這項報應式敘事。",
+            "citations": [
+              {
+                "sourceId": "yingxiongji-dongzhuo-peizhu",
+                "locator": "《三國志》卷六裴注引《英雄記》；董卓曝屍"
+              },
+              {
+                "sourceId": "sanguo-yanyi",
+                "locator": "第九回"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ],
+  "works": [
+    {
+      "title": "上書辭少府、請留軍中",
+      "type": "上書",
+      "extant": "《三國志・董卓傳》裴注引《靈帝紀》保存的現存上書",
+      "attribution": "董卓名義上書，實際執筆者未載",
+      "summary": "中平五年朝廷徵董卓為少府，命他把營中吏士交給皇甫嵩。董卓以涼州未平、部眾感念朝廷恩賞並攔車挽留為由，表示自己暫時仍以前將軍身分留在軍中。這篇文書表面陳述士卒請留，實際效果是拒絕交出長期掌握的部隊。",
+      "excerpt": "涼州擾亂，鯨鯢未滅，此臣奮發效命之秋。",
+      "anthology": "《三國志》卷六董卓傳裴注引《靈帝紀》",
+      "citations": [
+        {
+          "sourceId": "lingdi-ji-dongzhuo-peizhu",
+          "locator": "卷六董卓傳裴注引《靈帝紀》；中平五年徵少府"
+        }
+      ],
+      "fullText": [
+        "涼州擾亂，鯨鯢未滅，此臣奮發效命之秋。吏士踴躍，戀恩念報，各遮臣車，辭聲懇惻，未得即路也。輒且行前將軍事，盡心慰卹，効力行陣。"
+      ]
+    },
+    {
+      "title": "上書請自將所部赴并州",
+      "type": "上書",
+      "extant": "《三國志・董卓傳》裴注引《靈帝紀》與《後漢書・董卓傳》保存的現存上書",
+      "attribution": "董卓名義上書，實際執筆者未載",
+      "summary": "中平六年董卓受拜并州牧，朝廷再命他把吏兵交給皇甫嵩。董卓聲稱自己統兵十年，與士卒相處已久，部眾感念養育之恩而願為國效死，請求帶他們前往并州邊地。朝廷未能強制其交兵，董卓遂率所部屯駐河東。",
+      "excerpt": "士卒大小相狎彌久，戀臣畜養之恩，樂為國家奮一旦之命。",
+      "anthology": "《三國志》卷六董卓傳裴注引《靈帝紀》；《後漢書》卷七十二",
+      "citations": [
+        {
+          "sourceId": "lingdi-ji-dongzhuo-peizhu",
+          "locator": "卷六董卓傳裴注引《靈帝紀》；中平六年拜并州牧"
+        },
+        {
+          "sourceId": "houhanshu-dongzhuo-lijue",
+          "locator": "卷七十二・中平六年受拜并州牧"
+        }
+      ],
+      "fullText": [
+        "臣掌戎十年，士卒大小相狎彌久，戀臣畜養之恩，樂為國家奮一旦之命，乞將之州，效力邊陲。"
+      ]
+    },
+    {
+      "title": "上書請收張讓等",
+      "type": "上書",
+      "extant": "《後漢書・董卓傳》保存的現存上書傳本",
+      "attribution": "董卓名義上書，實際執筆者未載",
+      "summary": "何進召董卓入京施壓何太后時，董卓上書指控張讓等宦官恃寵擾亂天下，以去薪止沸、割除毒瘡作比，宣稱自己將鳴鐘鼓進入洛陽，請求拘捕張讓等人、清除姦穢。這篇文書為董卓率軍入京提供了奉詔誅宦官的公開名義。",
+      "excerpt": "臣聞揚湯止沸，莫若去薪；潰癕雖痛，勝於內食。",
+      "anthology": "《後漢書》卷七十二董卓傳",
+      "citations": [
+        {
+          "sourceId": "houhanshu-dongzhuo-lijue",
+          "locator": "卷七十二・何進私召董卓入朝"
+        }
+      ],
+      "fullText": [
+        "中常侍張讓等竊倖承寵，濁亂海內。臣聞揚湯止沸，莫若去薪；潰癕雖痛，勝於內食。昔趙鞅興晉陽之甲，以逐君側之惡人。今臣輒鳴鐘鼓如洛陽，請收讓等，以清姦穢。"
+      ]
+    },
+    {
+      "title": "上表陳宦官之害",
+      "type": "表文／上書",
+      "extant": "《三國志・董卓傳》裴注引《典略》保存的同次上書另一傳本",
+      "attribution": "董卓名義上表，實際執筆者未載",
+      "summary": "《典略》保存的傳本更詳細列舉張讓等宦官操弄任命、聚斂土地財貨與激成民變，並稱軍中士卒因糧餉不足，不肯渡河，要求先到京師誅除宦官、索取物資。董卓以滅火去薪、潰癰止患為喻，主張若不立即處置，將來後悔不及。它與《後漢書》所載入京上書應屬同一政治行動的不同文本，本站分列而不強行拼成單一全文。",
+      "excerpt": "臣聞揚湯止沸，不如滅火去薪；潰癕雖痛，勝於養肉。",
+      "anthology": "《三國志》卷六董卓傳裴注引《典略》",
+      "citations": [
+        {
+          "sourceId": "dianlue-dongzhuo-peizhu",
+          "locator": "卷六董卓傳裴注引《典略》；董卓入洛前表文"
+        }
+      ],
+      "fullText": [
+        "臣伏惟天下所以有逆不止者，各由黃門常侍張讓等侮慢天常，操擅王命，父子兄弟並據州郡，一書出門，便獲千金，京畿諸郡數百萬膏腴美田皆屬讓等，至使怨氣上蒸，妖賊蠭起。臣前奉詔討於扶羅，將士饑乏，不肯渡河，皆言欲詣京師先誅閹豎以除民害，從臺閣求乞資直。臣隨慰撫，以至新安。臣聞揚湯止沸，不如滅火去薪，潰癕雖痛，勝於養肉，及溺呼船，悔之無及。"
+      ]
+    }
+  ],
+  "worksNote": "以上四篇均為史書保存的董卓名義上書，實際執筆者未載，不能直接宣稱由董卓親筆。第三、四篇皆與中平六年董卓奉何進召、率兵入洛前後的反宦官上書有關，但《後漢書》正文與《三國志》裴注引《典略》所存文字長短和措辭不同，故依本站『不同傳本分列』規則各自保存，不拼接成一篇假定的完整原稿。"
+}
