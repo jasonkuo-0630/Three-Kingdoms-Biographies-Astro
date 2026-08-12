@@ -127,8 +127,11 @@
               "sourceId": "sanguo-yanyi",
               "locator": "第一回"
             }
-          ]
-        }
+          ],
+          "natureCategory": "literary"
+        },
+        "relationGroup": "sibling",
+        "natureCategory": "historical"
       },
       {
         "personName": "張飛",
@@ -150,8 +153,11 @@
               "sourceId": "sanguo-yanyi",
               "locator": "第一回"
             }
-          ]
-        }
+          ],
+          "natureCategory": "literary"
+        },
+        "relationGroup": "sibling",
+        "natureCategory": "historical"
       },
       {
         "personName": "關平",
