@@ -180,8 +180,11 @@
               "locator": "第十五回",
               "note": "「因結為昆仲，策長瑜兩月，瑜以兄事策」"
             }
-          ]
-        }
+          ],
+          "natureCategory": "literary"
+        },
+        "relationGroup": "sibling",
+        "natureCategory": "historical"
       },
       {
         "personName": "小橋（後世通作小喬）",
