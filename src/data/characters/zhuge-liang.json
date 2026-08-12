@@ -2,7 +2,7 @@
   "schemaVersion": 2,
   "dataStatus": "reviewed-draft",
   "published": true,
-  "lastReviewedAt": "2026-08-05",
+  "lastReviewedAt": "2026-08-12",
   "demoNote": "諸葛亮示範資料。已逐條區分《三國志》正文、裴松之注引文獻、《三國演義》與後世文學；三顧異說、隆中對兩版、白帝城託孤、北伐次數、空城計等爭議均另作說明。古籍文字以目前可核對的通行標點本整理，日後若採用指定校勘本，仍可依版本覆核異文。",
   "id": "zhuge-liang",
   "name": "諸葛亮",
@@ -174,7 +174,9 @@
         "personName": "黃夫人",
         "personId": "huang-furen",
         "relation": "妻",
-        "natureType": "後世傳說",
+        "relationGroup": "spouse",
+        "natureCategory": "historical",
+        "natureType": "裴松之注引《襄陽記》記載",
         "note": "婚姻關係見裴松之注引《襄陽記》：沔南名士黃承彥將女兒許配給諸葛亮，但史料沒有記載她的本名。《三國演義》第一百十七回仍只稱她為黃氏，也沒有使用黃月英。黃月英是後世說書與大眾文化流傳的名字；2003年光榮《真・三國無雙3》以月英塑造角色後更為普及，不能倒推為歷史本名。",
         "citations": [
           {
