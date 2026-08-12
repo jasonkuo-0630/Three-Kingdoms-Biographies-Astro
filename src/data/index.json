@@ -282,5 +282,18 @@
   ],
   "avatar": "images/lu_bu.png",
   "filterGroup": "qunxiong"
+  },
+  {
+  "id": "dong-zhuo",
+  "published": true,
+  "name": "董卓",
+  "courtesyName": "仲穎",
+  "searchTerms": [
+    "董卓",
+    "仲穎",
+    "dong zhuo"
+  ],
+  "avatar": "images/dong_zhuo.png",
+  "filterGroup": "qunxiong"
   }
 ]
