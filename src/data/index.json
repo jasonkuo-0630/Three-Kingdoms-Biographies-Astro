@@ -54,12 +54,13 @@
     "published": true,
     "name": "黃氏",
     "searchTerms": [
+      "黃夫人",
       "黃月英",
       "黃氏",
-      "huang yueying",
-      "huang shi"
-    ], 
-    "avatar": "images/huang_shi.png",
+      "huang furen",
+      "huang yueying"
+    ],
+    "avatar": "images/huang_furen.png",
     "filterGroup": "shu"
   },
   {
@@ -290,9 +291,26 @@
     "searchTerms": [
       "董卓",
       "仲穎",
+      "董太師",
       "dong zhuo"
     ],
     "avatar": "images/dong_zhuo.png",
     "filterGroup": "qunxiong"
+  },
+  {
+    "id": "guan-shi",
+    "published": true,
+    "name": "關氏",
+    "searchTerms": [
+      "關氏",
+      "關羽之女",
+      "關銀屏",
+      "關嫣",
+      "關三小姐",
+      "關氏三姐",
+      "guan yinping"
+    ],
+    "avatar": "images/guan_shi.png",
+    "filterGroup": "shu"
   }
 ]
