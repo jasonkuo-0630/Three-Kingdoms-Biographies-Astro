@@ -122,8 +122,11 @@
               "sourceId": "sanguo-yanyi",
               "locator": "第一回"
             }
-          ]
-        }
+          ],
+          "natureCategory": "literary"
+        },
+        "relationGroup": "sibling",
+        "natureCategory": "historical"
       },
       {
         "personName": "關羽",
@@ -145,8 +148,11 @@
               "sourceId": "sanguo-yanyi",
               "locator": "第一回"
             }
-          ]
-        }
+          ],
+          "natureCategory": "literary"
+        },
+        "relationGroup": "sibling",
+        "natureCategory": "historical"
       },
       {
         "personName": "夏侯氏（本名不詳）",
