@@ -1,0 +1,106 @@
+{
+  "schemaVersion": 2,
+  "dataStatus": "reviewed-draft",
+  "published": true,
+  "lastReviewedAt": "2026-08-12",
+  "demoNote": "關氏是正史明確記載的關羽之女，人物存在與父女關係均屬史實；但《三國志》原文只稱『羽女』，沒有留下她的個人名。本檔以『關氏』作正式顯示名稱，將求婚未成的史實、《三國演義》第七十三回的增飾、澄江地方傳說與現代遊戲形象分層整理。『關銀屏』『關嫣』均不作史料本名。",
+  "id": "guan-shi",
+  "name": "關氏",
+  "courtesyName": null,
+  "childhoodName": null,
+  "artName": null,
+  "otherNames": [
+    "關銀屏（後世傳說與現代大眾文化通稱，非史料本名）",
+    "關嫣（近現代通俗資料所見別稱，早期出處未明）",
+    "關三小姐（澄江地方傳說稱呼）",
+    "關氏三姐（澄江墓碑稱呼）"
+  ],
+  "lifespan": "未見記載",
+  "birthplace": "未見記載",
+  "primaryIdentity": "東漢末年關羽之女；本名未見記載，本站依姓氏稱關氏。",
+  "summary": "關氏是關羽之女，正史僅載孫權曾遣使為子求娶，關羽辱使拒婚，未記她的本名、生卒、母親與後續事蹟。《三國演義》沿用求婚情節，仍未為她命名；後世地方傳說與現代作品另稱她為「關銀屏」「關嫣」或「關三小姐」，並增添婚姻、南征與女將形象，均非正史記載。",
+  "avatar": "images/guan_shi.png",
+  "overview": {
+    "intro": {
+      "paragraphs": [
+        { "text": "關氏是關羽之女，也是正史可以確認存在的歷史人物。陳壽《三國志・關羽傳》在建安二十四年襄樊戰事的敘述中，以『先是』追記孫權曾派使者替自己的兒子求娶關羽之女；關羽辱罵使者並拒絕婚事，孫權因此大怒。原文所記是求婚遭拒，不是兩家曾經成婚。", "citations": [{ "sourceId": "sgz-guanyu-main", "locator": "卷三十六・關羽傳・『權遣使為子索羽女』" }] },
+        { "text": "《三國志》只稱她為『羽女』，沒有留下個人名、母親、生卒、年齡、出生地或後續事蹟。本站以其父姓氏稱作『關氏』，作為這名史實人物的正式顯示名稱；這不表示史書曾記載她的名為『關氏』，也不代表後世所稱『關銀屏』『關嫣』是史料本名。", "citations": [{ "sourceId": "sgz-guanyu-main", "locator": "卷三十六・正文只稱『羽女』" }] }
+      ],
+      "originalTexts": [
+        { "text": "先是，權遣使為子索羽女，羽罵辱其使，不許婚，權大怒。", "sourceId": "sgz-guanyu-main", "locator": "卷三十六・關羽傳" }
+      ],
+      "uncertaintyNote": "正文沒有交代孫權所指的是哪一名兒子，也沒有記錄關氏本人是否參與婚議決定。"
+    },
+    "factionTimeline": [],
+    "relatives": [
+      { "personName": "關羽", "personId": "guan-yu", "relation": "父", "relationGroup": "ancestor", "natureCategory": "historical", "natureType": "《三國志》正文記載", "note": "《關羽傳》以『羽女』明確記載父女關係；史書未載其母。", "citations": [{ "sourceId": "sgz-guanyu-main", "locator": "卷三十六・『權遣使為子索羽女』" }] },
+      { "personName": "關平", "personId": "guan-ping", "relation": "兄弟姊妹（長幼未詳）", "relationGroup": "sibling", "natureCategory": "historical", "natureType": "《三國志》正文記載", "note": "關平同為關羽之子；正文沒有說明二人的長幼及是否同母。", "citations": [{ "sourceId": "sgz-guanyu-main", "locator": "卷三十六・『斬羽及子平』與『索羽女』" }] },
+      { "personName": "關興", "personId": "guan-xing", "relation": "兄弟姊妹（長幼未詳）", "relationGroup": "sibling", "natureCategory": "historical", "natureType": "《三國志》正文記載", "note": "關興同為關羽之子；正文沒有說明二人的長幼及是否同母。", "citations": [{ "sourceId": "sgz-guanyu-main", "locator": "卷三十六・『子興嗣』與『索羽女』" }] },
+      { "personName": "李遺（地方傳說多作李蔚）", "personId": null, "relation": "地方傳說中的夫", "relationGroup": "spouse", "natureCategory": "literary", "natureType": "澄江地方傳說", "note": "《三國志・李恢傳》只記李恢之子李遺承襲爵位，沒有記載李遺或李蔚娶關羽之女。澄江地方敘事及墓碑將關氏三姐與李蔚連為夫妻，故此關係只列為後世傳說。", "citations": [{ "sourceId": "sgz-lihui-main", "locator": "卷四十三・『子遺嗣』" }, { "sourceId": "chengjiang-guansan-tomb", "locator": "關三小姐墓與地方婚姻傳說" }] }
+    ],
+    "titlesAndRanks": [],
+    "posthumousTitle": null,
+    "evaluations": { "contemporary": [], "later": [] }
+  },
+  "historicalBio": [
+    {
+      "period": "建安二十四年（219年）以前或當年", "periodType": "approx", "title": "孫權為子求婚，關羽辱使拒絕",
+      "content": {
+        "paragraphs": [
+          { "text": "關羽北攻襄樊之際，《關羽傳》以『先是』追述孫權曾派使者，想替自己的兒子求娶關羽之女。關羽辱罵來使，不允許這樁婚事，孫權因此大怒。這段正文直接證明關羽有一名女兒，也明確表示婚議沒有成立。", "citations": [{ "sourceId": "sgz-guanyu-main", "locator": "卷三十六・建安二十四年襄樊戰事段" }] },
+          { "text": "正文沒有交代求婚者是哪一名孫權之子、使者是誰、關氏當時年齡，以及她本人對婚事的態度。此後正史亦未再記載她是否另嫁他人或參與任何軍政活動。", "citations": [{ "sourceId": "sgz-guanyu-main", "locator": "卷三十六・原文記載範圍" }] }
+        ],
+        "originalTexts": [{ "text": "先是，權遣使為子索羽女，羽罵辱其使，不許婚，權大怒。", "sourceId": "sgz-guanyu-main", "locator": "卷三十六・關羽傳" }]
+      },
+      "uncertaintyNote": "『先是』只表示此事發生在正文當前敘事以前，無法據此確定婚議的精確日期。"
+    }
+  ],
+  "romanceBio": [
+    {
+      "chapter": "第七十三回", "eventName": "《三國演義》中未具名的關羽之女",
+      "content": {
+        "paragraphs": [
+          { "text": "《三國演義》第七十三回讓諸葛瑾向孫權獻策，稱關羽到荊州後由劉備替他娶妻，先得一子、後生一女，女兒尚幼而且尚未許配。諸葛瑾隨後替孫權世子向關羽求婚，關羽以『吾虎女安肯嫁犬子乎』怒斥並逐走來使。小說仍未替關羽之女取名，也沒有讓她本人出場或說話。", "citations": [{ "sourceId": "sanguo-yanyi", "locator": "第七十三回・玄德進位漢中王，雲長攻拔襄陽郡" }] }
+        ],
+        "originalTexts": [{ "text": "吾虎女安肯嫁犬子乎！", "sourceId": "sanguo-yanyi", "locator": "第七十三回" }]
+      },
+      "historicalDifference": {
+        "paragraphs": [
+          { "text": "《三國志》只記孫權遣使為子求婚、關羽辱使拒婚；沒有說使者是諸葛瑾，也沒有女兒尚幼未字、劉備替關羽娶妻或『虎女』『犬子』台詞。小說所說先子後女也不能用來判定歷史上的排行。", "citations": [{ "sourceId": "sgz-guanyu-main", "locator": "卷三十六・『權遣使為子索羽女』" }, { "sourceId": "sanguo-yanyi", "locator": "第七十三回・小說增飾" }] },
+          { "text": "本回沒有『關銀屏』『關嫣』『關鳳』或『關三小姐』等名稱，因此這些稱呼都不能標作《三國演義》原著角色名。", "citations": [{ "sourceId": "sanguo-yanyi", "locator": "第七十三回・僅稱『一女』與『虎女』" }] }
+        ]
+      }
+    },
+    {
+      "chapter": "澄江地方傳說（形成時間未詳）", "eventName": "關銀屏、關三小姐與南征婚姻傳說",
+      "content": {
+        "paragraphs": [
+          { "text": "『關銀屏』不見於《三國志》與《三國演義》。目前能確定的是，近現代澄江地方文化資料以此名稱指稱關羽之女，現代遊戲也沿用此名；但現有可核材料仍不足以斷定它的最早出處，亦無法證明它最初出自哪一齣地方戲曲。『關嫣』則只見於來源未明的近現代通俗轉述，尚未找到可核的早期文本。", "citations": [{ "sourceId": "chengjiang-guansan-tomb", "locator": "澄江地方文化資料使用『關銀屏』之名" }, { "sourceId": "shin-sangokumusou-7-guanyinping", "locator": "2013年官方角色名『關銀屏』" }] },
+          { "text": "澄江地方敘事稱她為關銀屏、關三小姐或關氏三姐，說她在荊州失守後入蜀，後由諸葛亮作媒，嫁給李恢之子李蔚，隨李恢父子南征；南中平定後定居俞元，向地方百姓傳授耕織與讀書識字。這是一套後世地方英雄傳說，不見於三國時代史籍。", "citations": [{ "sourceId": "chengjiang-guansan-tomb", "locator": "關三小姐墓及地方傳說介紹" }] },
+          { "text": "澄江金蓮山現存關三小姐墓的地方記錄，並提到清宣統二年（1910年）立碑。墓碑稱『關氏三姐』，可用來觀察晚清以後的地方紀念傳統，卻不能單憑晚期墓碑反向證實三國時代的墓主身分、婚姻與南征事蹟。", "citations": [{ "sourceId": "chengjiang-guansan-tomb", "locator": "關三小姐墓與宣統二年立碑記錄" }] }
+        ]
+      },
+      "historicalDifference": {
+        "paragraphs": [
+          { "text": "《三國志・李恢傳》確實記載李恢為建寧俞元人、參與諸葛亮南征，並在去世後由兒子李遺承襲爵位；但沒有記載李遺之妻，更沒有關羽之女參與南征、定居俞元或教化百姓。地方傳說借用了真實人物與事件，婚姻和女將事蹟則沒有早期史料支持。", "citations": [{ "sourceId": "sgz-lihui-main", "locator": "卷四十三・李恢南征及『子遺嗣』" }, { "sourceId": "chengjiang-guansan-tomb", "locator": "地方傳說內容" }] }
+        ],
+        "uncertaintyNote": "『關銀屏』與『關嫣』的確切首見文獻仍待查；本站只將它們列為後世稱呼，不採作史實姓名。"
+      }
+    },
+    {
+      "chapter": "現代遊戲（2013年）", "eventName": "《真・三國無雙7》的關銀屏女將形象",
+      "content": {
+        "paragraphs": [
+          { "text": "光榮《真・三國無雙7》正式以『關銀屏』之名將她塑造成可操作武將，設定為關羽之女及關平、關興、關索的妹妹；她在防身習武時展現天分，具有本人未察覺的驚人怪力，得意武器為雙頭錘。這套年輕而力大無窮的女將形象屬現代遊戲創作。", "citations": [{ "sourceId": "shin-sangokumusou-7-guanyinping", "locator": "官方角色介紹" }] }
+        ]
+      },
+      "historicalDifference": {
+        "paragraphs": [
+          { "text": "正史沒有記載關氏的姓名、排行、武藝、性格與武器；《三國演義》也沒有讓她出場作戰。遊戲所設的手足長幼、怪力與雙頭錘，均不得回填史實親屬表或歷史生平。", "citations": [{ "sourceId": "sgz-guanyu-main", "locator": "卷三十六・原文記載範圍" }, { "sourceId": "sanguo-yanyi", "locator": "第七十三回・女兒未具名且未出場" }, { "sourceId": "shin-sangokumusou-7-guanyinping", "locator": "官方遊戲設定" }] }
+        ]
+      }
+    }
+  ],
+  "works": [],
+  "commonAlias": "關銀屏（後世通稱，非史料本名）"
+}
