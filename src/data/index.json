@@ -50,17 +50,16 @@
     "filterGroup": "shu"
   },
   {
-    "id": "huang-furen",
+    "id": "huang-shi",
     "published": true,
-    "name": "黃夫人",
+    "name": "黃氏",
     "searchTerms": [
-      "黃夫人",
       "黃月英",
       "黃氏",
-      "huang furen",
-      "huang yueying"
-    ],
-    "avatar": "images/huang_furen.png",
+      "huang yueying",
+      "huang shi"
+    ], 
+    "avatar": "images/huang_shi.png",
     "filterGroup": "shu"
   },
   {
@@ -271,29 +270,29 @@
     "filterGroup": "qunxiong"
   },
   {
-  "id": "lu-bu",
-  "published": true,
-  "name": "呂布",
-  "courtesyName": "奉先",
-  "searchTerms": [
-    "呂布",
-    "奉先",
-    "lu bu"
-  ],
-  "avatar": "images/lu_bu.png",
-  "filterGroup": "qunxiong"
+    "id": "lu-bu",
+    "published": true,
+    "name": "呂布",
+    "courtesyName": "奉先",
+    "searchTerms": [
+      "呂布",
+      "奉先",
+      "lu bu"
+    ],
+    "avatar": "images/lu_bu.png",
+    "filterGroup": "qunxiong"
   },
   {
-  "id": "dong-zhuo",
-  "published": true,
-  "name": "董卓",
-  "courtesyName": "仲穎",
-  "searchTerms": [
-    "董卓",
-    "仲穎",
-    "dong zhuo"
-  ],
-  "avatar": "images/dong_zhuo.png",
-  "filterGroup": "qunxiong"
+    "id": "dong-zhuo",
+    "published": true,
+    "name": "董卓",
+    "courtesyName": "仲穎",
+    "searchTerms": [
+      "董卓",
+      "仲穎",
+      "dong zhuo"
+    ],
+    "avatar": "images/dong_zhuo.png",
+    "filterGroup": "qunxiong"
   }
 ]
