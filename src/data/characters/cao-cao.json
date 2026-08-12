@@ -131,7 +131,9 @@
             "sourceId": "sgz-wudi-main",
             "locator": "卷一・武帝紀開篇"
           }
-        ]
+        ],
+        "relationGroup": "ancestor",
+        "natureCategory": "historical"
       },
       {
         "personName": "曹嵩",
@@ -148,7 +150,9 @@
             "sourceId": "caoman-zhuan-caocao-peizhu",
             "locator": "《武帝紀》開篇裴注引《曹瞞傳》《世語》"
           }
-        ]
+        ],
+        "relationGroup": "ancestor",
+        "natureCategory": "historical"
       },
       {
         "personName": "丁夫人",
@@ -161,7 +165,9 @@
             "sourceId": "weilue-dingfuren-peizhu",
             "locator": "卷五・武宣卞皇后傳裴注引《魏略》"
           }
-        ]
+        ],
+        "relationGroup": "spouse",
+        "natureCategory": "historical"
       },
       {
         "personName": "卞夫人",
@@ -178,7 +184,9 @@
             "sourceId": "sgz-wudi-sons",
             "locator": "卷二十・武帝諸子總敘"
           }
-        ]
+        ],
+        "relationGroup": "spouse",
+        "natureCategory": "historical"
       },
       {
         "personName": "劉夫人",
@@ -195,7 +203,9 @@
             "sourceId": "weilue-dingfuren-peizhu",
             "locator": "卷五・卞皇后傳裴注引《魏略》"
           }
-        ]
+        ],
+        "relationGroup": "spouse",
+        "natureCategory": "historical"
       },
       {
         "personName": "環夫人",
@@ -208,7 +218,9 @@
             "sourceId": "sgz-wudi-sons",
             "locator": "卷二十・武帝諸子總敘"
           }
-        ]
+        ],
+        "relationGroup": "spouse",
+        "natureCategory": "historical"
       },
       {
         "personName": "曹昂",
@@ -225,7 +237,9 @@
             "sourceId": "sgz-wudi-sons",
             "locator": "卷二十・豐愍王昂"
           }
-        ]
+        ],
+        "relationGroup": "child",
+        "natureCategory": "historical"
       },
       {
         "personName": "曹丕",
@@ -242,7 +256,9 @@
             "sourceId": "sgz-wendi-yiling",
             "locator": "卷二・文帝紀"
           }
-        ]
+        ],
+        "relationGroup": "child",
+        "natureCategory": "historical"
       },
       {
         "personName": "曹彰",
@@ -255,7 +271,9 @@
             "sourceId": "sgz-rencheng-chensi",
             "locator": "卷十九・任城威王彰傳"
           }
-        ]
+        ],
+        "relationGroup": "child",
+        "natureCategory": "historical"
       },
       {
         "personName": "曹植",
@@ -268,7 +286,9 @@
             "sourceId": "sgz-rencheng-chensi",
             "locator": "卷十九・陳思王植傳"
           }
-        ]
+        ],
+        "relationGroup": "child",
+        "natureCategory": "historical"
       },
       {
         "personName": "曹沖",
@@ -281,7 +301,9 @@
             "sourceId": "sgz-wudi-sons",
             "locator": "卷二十・鄧哀王沖傳"
           }
-        ]
+        ],
+        "relationGroup": "child",
+        "natureCategory": "historical"
       },
       {
         "personName": "曹節",
@@ -294,7 +316,9 @@
             "sourceId": "houhanshu-houfei-xia",
             "locator": "卷十下・獻穆曹皇后紀"
           }
-        ]
+        ],
+        "relationGroup": "child",
+        "natureCategory": "historical"
       },
       {
         "personName": "曹憲、曹華",
@@ -307,7 +331,9 @@
             "sourceId": "houhanshu-houfei-xia",
             "locator": "卷十下・獻穆曹皇后紀"
           }
-        ]
+        ],
+        "relationGroup": "child",
+        "natureCategory": "historical"
       },
       {
         "personName": "其餘妻妾與子女",
@@ -320,7 +346,9 @@
             "sourceId": "sgz-wudi-sons",
             "locator": "卷二十・武帝諸子總敘"
           }
-        ]
+        ],
+        "relationGroup": "other",
+        "natureCategory": "historical"
       },
       {
         "personName": "夏侯惇",
@@ -337,7 +365,9 @@
             "sourceId": "caoman-zhuan-caocao-peizhu",
             "locator": "《武帝紀》開篇裴注引《曹瞞傳》《世語》"
           }
-        ]
+        ],
+        "relationGroup": "other",
+        "natureCategory": "historical"
       },
       {
         "personName": "夏侯淵",
@@ -354,7 +384,9 @@
             "sourceId": "sgz-weishu9-appraisal",
             "locator": "卷九卷末評語"
           }
-        ]
+        ],
+        "relationGroup": "other",
+        "natureCategory": "historical"
       }
     ],
     "titlesAndRanks": [
