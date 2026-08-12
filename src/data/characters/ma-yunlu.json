@@ -2,7 +2,7 @@
   "schemaVersion": 2,
   "dataStatus": "reviewed-draft",
   "published": true,
-  "lastReviewedAt": "2026-08-12",
+  "lastReviewedAt": "2026-08-05",
   "demoNote": "馬雲騄為周大荒《反三國演義》（又名《反三國志》）原創人物，並非《三國志》或《三國演義》人物。本檔所有人物設定與事件均依《反三國演義》逐回整理；historicalBio 依資料規則保持空陣列，不以其他人物史料拼湊史實生平。",
   "id": "ma-yunlu",
   "name": "馬雲騄",
@@ -61,9 +61,7 @@
         "personName": "馬騰",
         "personId": null,
         "relation": "小說設定中的父親",
-        "relationGroup": "parent",
-        "natureCategory": "literary",
-        "natureType": "周大荒《反三國演義》設定",
+        "natureType": "後世文學",
         "note": "《反三國演義》設定馬騰有三子一女，馬雲騄為其女；此女兒身分為小說虛構。",
         "citations": [
           {
@@ -76,9 +74,7 @@
         "personName": "馬超",
         "personId": null,
         "relation": "小說設定中的兄長",
-        "relationGroup": "sibling",
-        "natureCategory": "literary",
-        "natureType": "周大荒《反三國演義》設定",
+        "natureType": "後世文學",
         "note": "小說安排馬雲騄隨馬超起兵入蜀，兩人此後亦多次在軍中會合。",
         "citations": [
           {
@@ -91,9 +87,7 @@
         "personName": "馬鐵",
         "personId": null,
         "relation": "小說設定中的兄長",
-        "relationGroup": "sibling",
-        "natureCategory": "literary",
-        "natureType": "周大荒《反三國演義》設定",
+        "natureType": "後世文學",
         "note": "《反三國演義》第八回列為馬騰次子。",
         "citations": [
           {
@@ -106,9 +100,7 @@
         "personName": "馬休",
         "personId": null,
         "relation": "小說設定中的兄長",
-        "relationGroup": "sibling",
-        "natureCategory": "literary",
-        "natureType": "周大荒《反三國演義》設定",
+        "natureType": "後世文學",
         "note": "《反三國演義》第八回列為馬騰三子。",
         "citations": [
           {
@@ -121,16 +113,16 @@
         "personName": "趙雲",
         "personId": "zhao-yun",
         "relation": "小說設定中的丈夫",
-        "relationGroup": "spouse",
-        "natureCategory": "literary",
-        "natureType": "周大荒《反三國演義》設定",
+        "natureType": "後世文學",
         "note": "成都平定後，劉備主婚，諸葛亮作男媒、法正作女媒，趙雲迎娶馬雲騄。此婚姻只見於《反三國演義》，不是《三國演義》或史實。",
         "citations": [
           {
             "sourceId": "fan-sanguo-yanyi",
             "locator": "第十回・趙馬聯姻"
           }
-        ]
+        ],
+        "relationGroup": "spouse",
+        "natureCategory": "literary"
       }
     ],
     "titlesAndRanks": [
