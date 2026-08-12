@@ -2,7 +2,7 @@
   "schemaVersion": 2,
   "dataStatus": "reviewed-draft",
   "published": true,
-  "lastReviewedAt": "2026-08-05",
+  "lastReviewedAt": "2026-08-12",
   "demoNote": "黃夫人是真實歷史人物，但現存早期記載極少。本檔將裴松之注引《襄陽記》、《三國演義》第一百十七回與現代遊戲塑造分層處理；頁首不用後世通稱『黃月英』冒充本名，也不收錄查無明確可靠出處的木牛流馬等發明傳說。",
   "id": "huang-furen",
   "name": "黃夫人",
@@ -48,22 +48,15 @@
         }
       ]
     },
-    "factionTimeline": [
-      {
-        "stageName": "家庭關係・隨諸葛亮出仕蜀漢",
-        "personName": "劉備",
-        "personId": "liu-bei",
-        "actualFactionId": "liubei-group",
-        "period": "婚年不詳 — 卒年不詳",
-        "periodUncertain": true
-      }
-    ],
+    "factionTimeline": [],
     "relatives": [
       {
         "personName": "黃承彥",
         "personId": null,
         "relation": "父",
-        "natureType": "裴松之注引記載",
+        "relationGroup": "parent",
+        "natureCategory": "historical",
+        "natureType": "裴松之注引《襄陽記》記載",
         "note": "《襄陽記》稱黃承彥高爽開列，為沔南名士，並記載他主動向諸葛亮提議婚配。",
         "citations": [
           {
@@ -76,7 +69,9 @@
         "personName": "諸葛亮",
         "personId": "zhuge-liang",
         "relation": "夫",
-        "natureType": "裴松之注引記載",
+        "relationGroup": "spouse",
+        "natureCategory": "historical",
+        "natureType": "裴松之注引《襄陽記》記載",
         "note": "《襄陽記》記載黃承彥向諸葛亮提親，諸葛亮允婚；史料未記婚年。",
         "citations": [
           {
@@ -89,6 +84,8 @@
         "personName": "諸葛瞻",
         "personId": null,
         "relation": "《三國演義》明文所稱之子",
+        "relationGroup": "child",
+        "natureCategory": "literary",
         "natureType": "演義原文",
         "note": "《三國演義》第一百十七回明稱諸葛瞻『其母黃氏，即黃承彥之女也』。現存《三國志》正文雖記諸葛瞻為諸葛亮之子，沒有在同段明記其生母姓名，因此此處只按演義原文標示，不將母子關係包裝成正文明載。",
         "citations": [
