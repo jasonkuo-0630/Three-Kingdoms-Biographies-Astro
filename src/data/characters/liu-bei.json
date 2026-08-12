@@ -305,8 +305,11 @@
               "locator": "第一回",
               "note": "「桃園結義」情節"
             }
-          ]
-        }
+          ],
+          "natureCategory": "literary"
+        },
+        "relationGroup": "sibling",
+        "natureCategory": "historical"
       },
       {
         "personName": "張飛",
@@ -333,8 +336,11 @@
               "locator": "第一回",
               "note": "「桃園結義」情節"
             }
-          ]
-        }
+          ],
+          "natureCategory": "literary"
+        },
+        "relationGroup": "sibling",
+        "natureCategory": "historical"
       }
     ],
     "titlesAndRanks": [
