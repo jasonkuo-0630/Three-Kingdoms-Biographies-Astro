@@ -3,6 +3,7 @@ import "../../styles/style.css";
 import indexData from "../../data/index.json";
 import factionsData from "../../data/factions.json";
 import sourcesData from "../../data/sources.json";
+import textUnitsData from "../../data/text-units.json";
 
 interface IndexEntry {
   id: string;
@@ -29,6 +30,12 @@ const { character: c } = Astro.props;
 const base = import.meta.env.BASE_URL.replace(/\/?$/, "/"); // 確保結尾一定有一條斜線，BASE_URL 本身不保證
 
 const sourceMap = new Map(sourcesData.map((s: any) => [s.id, s]));
+// 文獻原文可點擊連結：citation 自己有 textUnitId 就優先用它（適合像
+// 《三國演義》這種一個 sourceId 橫跨上百回的共用來源，每則引用各自
+// 指到正確的回目）；沒有的話退回 source 本身的 defaultTextUnitId
+// （適合像人物本傳這種一個 sourceId 永遠對應同一卷的情況）；兩者都
+// 沒有就維持純文字，不產生連結。
+const textUnitMap = new Map((textUnitsData as any[]).map((t) => [t.id, t]));
 const actualFactionsMap = new Map((factionsData.actualFactions || []).map((f: any) => [f.id, f]));
 const personIndexMap = new Map((indexData as IndexEntry[]).map((p) => [p.id, p]));
 
@@ -60,7 +67,17 @@ function citationChipHtml(citation: any) {
   const kind = `<span class="source-kind">${escapeHtml(src.kind)}</span>`;
   const locator = citation.locator ? `<span class="source-locator">${escapeHtml(citation.locator)}</span>` : "";
   const note = citation.note ? `<span class="source-note">${escapeHtml(citation.note)}</span>` : "";
-  return `<span class="source-chip">${kind}<span class="source-title">${escapeHtml(src.title)}</span>${locator}${note}</span>`;
+  const inner = `${kind}<span class="source-title">${escapeHtml(src.title)}</span>${locator}${note}`;
+
+  // 判斷這則引用有沒有連結目標：citation 自己指定的優先，沒有就看
+  // source 有沒有預設的 defaultTextUnitId。
+  const unitId = citation.textUnitId || src.defaultTextUnitId;
+  const unit = unitId ? textUnitMap.get(unitId) : null;
+
+  if (unit && unit.url) {
+    return `<a class="source-chip source-chip--linked" href="${escapeHtml(unit.url)}" target="_blank" rel="noopener noreferrer" title="查看原文：${escapeHtml(unit.label)}">${inner}<span class="source-link-icon" aria-hidden="true">↗</span></a>`;
+  }
+  return `<span class="source-chip">${inner}</span>`;
 }
 
 function citationsHtml(citations: any[] | undefined) {
@@ -282,9 +299,21 @@ function renderRelatives(list: any[] | undefined, sectionId: string) {
         );
       }
       const legacyIsFictionType = (text: string) => /^(演義|後世文學|後世傳說|小說)/.test(text || "");
-      const isFiction = (category: string | undefined, text: string) => (category ? category === "literary" : legacyIsFictionType(text));
+      // 四種史料性質，各自對應不同的畫面樣式：
+      // historical → record（正史記載）、literary → fiction（純屬文學）、
+      // uncertain → uncertain（有來源但不足以直接證實）、
+      // mixed → mixed（真人真事但後世大量加工，難以拆分）。
+      // 沒有明確 natureCategory 的舊資料，退回舊的文字關鍵字猜測機制，
+      // 只能猜出「文學」或「正史」兩種，這是過渡期的權宜之計。
+      const resolveNatureState = (category: string | undefined, text: string) => {
+        if (category === "literary") return "fiction";
+        if (category === "uncertain") return "uncertain";
+        if (category === "mixed") return "mixed";
+        if (category === "historical") return "record";
+        return legacyIsFictionType(text) ? "fiction" : "record";
+      };
       const natureBadgeHtml = (text: string, category: string | undefined) =>
-        `<span class="nature-badge" data-nature="${isFiction(category, text) ? "fiction" : "record"}">${escapeHtml(text)}</span>`;
+        `<span class="nature-badge" data-nature="${resolveNatureState(category, text)}">${escapeHtml(text)}</span>`;
 
       const relationHtml = r.fictionalRelation
         ? `<div class="rel-relation-line">${escapeHtml(r.relation)}</div><div class="rel-relation-line rel-relation-line--fiction">${escapeHtml(r.fictionalRelation.label)}</div>`
