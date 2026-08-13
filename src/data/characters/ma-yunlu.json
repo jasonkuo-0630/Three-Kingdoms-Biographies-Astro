@@ -322,7 +322,11 @@
               },
               {
                 "sourceId": "fan-sanguo-yanyi",
-                "locator": "第四十八、四十九回・封邱與濮陽戰事"
+                "locator": "第四十八回・封邱戰事"
+              },
+              {
+                "sourceId": "fan-sanguo-yanyi",
+                "locator": "第四十九回・濮陽戰事"
               }
             ]
           }
