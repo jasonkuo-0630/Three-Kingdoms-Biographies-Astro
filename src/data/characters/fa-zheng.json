@@ -75,6 +75,21 @@
     ],
     "relatives": [
       {
+        "personName": "法雄",
+        "personId": null,
+        "relation": "曾祖父",
+        "relationGroup": "ancestor",
+        "natureCategory": "historical",
+        "natureType": "《後漢書》記載",
+        "note": "東漢官員，曾任南郡太守，是法正世系中可考的最早一代。部分資料對法雄是法正的曾祖或高祖有些微出入，本站依較常見的曾祖之說呈現。",
+        "citations": [
+          {
+            "sourceId": "houhanshu-fa-xiong",
+            "locator": "卷三十八・法雄傳"
+          }
+        ]
+      },
+      {
         "personName": "法真",
         "personId": null,
         "relation": "祖父",
