@@ -32,7 +32,7 @@
     "kind": "其他史籍",
     "title": "楊戲《季漢輔臣贊》",
     "note": "延熙四年（241年）成篇，陳壽編修《三國志》時收錄；此贊為趙雲、陳到二人合贊，非單獨評價趙雲",
-    "defaultTextUnitId": "sgz-j045"
+    "defaultTextUnitId": "jihan-fuchen-zan-main"
   },
   {
     "id": "sanguo-yanyi",
@@ -238,7 +238,7 @@
     "kind": "裴松之注引",
     "title": "《襄陽記》",
     "note": "習鑿齒所撰，裴松之注《三國志‧諸葛亮傳》等篇時引用；涉及司馬徽論伏龍鳳雛、黃承彥嫁女、諸葛亮身後私祭與立廟等記載",
-    "defaultTextUnitId": "sgz-j035"
+    "defaultTextUnitId": "xiangyang-ji-main"
   },
   {
     "id": "xiandi-chunqiu-zhuge",
@@ -1307,6 +1307,14 @@
     "id": "houhanshu-fa-xiong",
     "kind": "其他史籍",
     "title": "《後漢書‧張法滕馮度楊列傳》法雄傳",
-    "note": "范曄撰，卷三十八；記法雄仕宦事蹟，是法正世系中可考的最早一代。部分後世資料對法雄與法正的確切世代（曾祖或高祖）略有出入，本站依較常見的曾祖之說採用，但不排除仍有討論空間。"
+    "note": "范曄撰，卷三十八；記法雄仕宦事蹟，是法正世系中可考的最早一代。部分後世資料對法雄與法正的確切世代（曾祖或高祖）略有出入，本站依較常見的曾祖之說採用，但不排除仍有討論空間。",
+    "defaultTextUnitId": "houhanshu-j038"
+  },
+  {
+    "id": "houhanshu-fa-zhen",
+    "kind": "其他史籍",
+    "title": "《後漢書‧逸民列傳》法真傳",
+    "note": "范曄撰，卷八十三；記法真清節高名、屢辭徵辟，是法正世系裡可考的祖父輩本傳，比《三國志‧法正傳》開篇一句帶過更完整。",
+    "defaultTextUnitId": "houhanshu-j083"
   }
 ]
