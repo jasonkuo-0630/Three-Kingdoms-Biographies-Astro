@@ -75,6 +75,21 @@
         "natureCategory": "historical"
       },
       {
+        "personName": "蔡氏（名不詳）",
+        "personId": null,
+        "relation": "父親之妻（是否為生母未詳）",
+        "relationGroup": "ancestor",
+        "natureCategory": "uncertain",
+        "natureType": "《襄陽耆舊記》記載",
+        "note": "《襄陽耆舊記》稱蔡諷長女嫁黃承彥為妻，幼女嫁劉表為繼室，蔡瑁為其弟。這段記載只確認蔡氏是黃承彥之妻，沒有明文說她就是黃氏的生母；黃承彥是否另有他室亦未見記載，本站不逕自斷定生母身分。",
+        "citations": [
+          {
+            "sourceId": "xiangyang-ji-zhuge",
+            "locator": "《襄陽記》蔡諷家世條，附見《三國志》卷三十五裴注"
+          }
+        ]
+      },
+      {
         "personName": "諸葛亮",
         "personId": "zhuge-liang",
         "relation": "夫",
