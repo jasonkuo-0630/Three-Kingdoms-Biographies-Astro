@@ -23,7 +23,8 @@
           "citations": [
             {
               "sourceId": "fan-sanguo-yanyi",
-              "locator": "第六十回・作者自述馬雲騄的創作與命名"
+              "locator": "第六十回・作者自述馬雲騄的創作與命名",
+              "textUnitId": "fan-sanguo-yanyi-h060"
             }
           ]
         },
@@ -32,7 +33,8 @@
           "citations": [
             {
               "sourceId": "fan-sanguo-yanyi",
-              "locator": "第八回・人物初登場與守長安"
+              "locator": "第八回・人物初登場與守長安",
+              "textUnitId": "fan-sanguo-yanyi-h008"
             },
             {
               "sourceId": "fan-sanguo-yanyi",
@@ -41,7 +43,8 @@
             },
             {
               "sourceId": "fan-sanguo-yanyi",
-              "locator": "第五十八回・論功封賞"
+              "locator": "第五十八回・論功封賞",
+              "textUnitId": "fan-sanguo-yanyi-h058"
             }
           ]
         }
@@ -67,7 +70,8 @@
         "citations": [
           {
             "sourceId": "fan-sanguo-yanyi",
-            "locator": "第八回・馬氏家世"
+            "locator": "第八回・馬氏家世",
+            "textUnitId": "fan-sanguo-yanyi-h008"
           }
         ]
       },
@@ -80,7 +84,8 @@
         "citations": [
           {
             "sourceId": "fan-sanguo-yanyi",
-            "locator": "第八回"
+            "locator": "第八回",
+            "textUnitId": "fan-sanguo-yanyi-h008"
           },
           {
             "sourceId": "fan-sanguo-yanyi",
@@ -89,7 +94,8 @@
           },
           {
             "sourceId": "fan-sanguo-yanyi",
-            "locator": "第四十回"
+            "locator": "第四十回",
+            "textUnitId": "fan-sanguo-yanyi-h040"
           }
         ]
       },
@@ -102,7 +108,8 @@
         "citations": [
           {
             "sourceId": "fan-sanguo-yanyi",
-            "locator": "第八回・馬氏家世"
+            "locator": "第八回・馬氏家世",
+            "textUnitId": "fan-sanguo-yanyi-h008"
           }
         ]
       },
@@ -115,7 +122,8 @@
         "citations": [
           {
             "sourceId": "fan-sanguo-yanyi",
-            "locator": "第八回・馬氏家世"
+            "locator": "第八回・馬氏家世",
+            "textUnitId": "fan-sanguo-yanyi-h008"
           }
         ]
       },
@@ -143,7 +151,8 @@
         "citations": [
           {
             "sourceId": "fan-sanguo-yanyi",
-            "locator": "第五十八回・論功封賞"
+            "locator": "第五十八回・論功封賞",
+            "textUnitId": "fan-sanguo-yanyi-h058"
           }
         ]
       },
@@ -153,7 +162,8 @@
         "citations": [
           {
             "sourceId": "fan-sanguo-yanyi",
-            "locator": "第五十八回・論功封賞"
+            "locator": "第五十八回・論功封賞",
+            "textUnitId": "fan-sanguo-yanyi-h058"
           }
         ]
       }
@@ -176,7 +186,8 @@
             "citations": [
               {
                 "sourceId": "fan-sanguo-yanyi",
-                "locator": "第八回・馬雲騄初登場、馬氏遇害與守長安"
+                "locator": "第八回・馬雲騄初登場、馬氏遇害與守長安",
+                "textUnitId": "fan-sanguo-yanyi-h008"
               }
             ]
           }
@@ -229,11 +240,13 @@
             "citations": [
               {
                 "sourceId": "fan-sanguo-yanyi",
-                "locator": "第二十一回・鳴鼓催軍追擊呂蒙"
+                "locator": "第二十一回・鳴鼓催軍追擊呂蒙",
+                "textUnitId": "fan-sanguo-yanyi-h021"
               },
               {
                 "sourceId": "fan-sanguo-yanyi",
-                "locator": "第二十四回・率西涼兵援劉封、火攻甘寧"
+                "locator": "第二十四回・率西涼兵援劉封、火攻甘寧",
+                "textUnitId": "fan-sanguo-yanyi-h024"
               }
             ]
           }
@@ -250,7 +263,8 @@
             "citations": [
               {
                 "sourceId": "fan-sanguo-yanyi",
-                "locator": "第二十九回・沔陽戰事"
+                "locator": "第二十九回・沔陽戰事",
+                "textUnitId": "fan-sanguo-yanyi-h029"
               }
             ]
           }
@@ -267,7 +281,8 @@
             "citations": [
               {
                 "sourceId": "fan-sanguo-yanyi",
-                "locator": "第三十回・仙桃鎮至蔡甸戰事"
+                "locator": "第三十回・仙桃鎮至蔡甸戰事",
+                "textUnitId": "fan-sanguo-yanyi-h030"
               }
             ]
           }
@@ -284,7 +299,8 @@
             "citations": [
               {
                 "sourceId": "fan-sanguo-yanyi",
-                "locator": "第四十一回・新蔡守城與擒徐盛"
+                "locator": "第四十一回・新蔡守城與擒徐盛",
+                "textUnitId": "fan-sanguo-yanyi-h041"
               }
             ]
           }
@@ -301,7 +317,8 @@
             "citations": [
               {
                 "sourceId": "fan-sanguo-yanyi",
-                "locator": "第四十三回・尋獲並安葬馬騰遺骸"
+                "locator": "第四十三回・尋獲並安葬馬騰遺骸",
+                "textUnitId": "fan-sanguo-yanyi-h043"
               }
             ]
           }
@@ -318,15 +335,18 @@
             "citations": [
               {
                 "sourceId": "fan-sanguo-yanyi",
-                "locator": "第四十六回・射張郃救趙雲"
+                "locator": "第四十六回・射張郃救趙雲",
+                "textUnitId": "fan-sanguo-yanyi-h046"
               },
               {
                 "sourceId": "fan-sanguo-yanyi",
-                "locator": "第四十八回・封邱戰事"
+                "locator": "第四十八回・封邱戰事",
+                "textUnitId": "fan-sanguo-yanyi-h048"
               },
               {
                 "sourceId": "fan-sanguo-yanyi",
-                "locator": "第四十九回・濮陽戰事"
+                "locator": "第四十九回・濮陽戰事",
+                "textUnitId": "fan-sanguo-yanyi-h049"
               }
             ]
           }
@@ -343,15 +363,18 @@
             "citations": [
               {
                 "sourceId": "fan-sanguo-yanyi",
-                "locator": "第五十三回・領兵屯濡須"
+                "locator": "第五十三回・領兵屯濡須",
+                "textUnitId": "fan-sanguo-yanyi-h053"
               },
               {
                 "sourceId": "fan-sanguo-yanyi",
-                "locator": "第五十四回・所領馬隊轉屯淮北"
+                "locator": "第五十四回・所領馬隊轉屯淮北",
+                "textUnitId": "fan-sanguo-yanyi-h054"
               },
               {
                 "sourceId": "fan-sanguo-yanyi",
-                "locator": "第五十八回・封敦煌公主、揚威將軍"
+                "locator": "第五十八回・封敦煌公主、揚威將軍",
+                "textUnitId": "fan-sanguo-yanyi-h058"
               }
             ]
           }
