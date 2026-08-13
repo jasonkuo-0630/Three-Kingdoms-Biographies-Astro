@@ -62,5 +62,53 @@
     "unitNumber": 45,
     "label": "《三國志》卷四十五・鄧張宗楊傳",
     "url": "https://jasonkuo-0630.github.io/Three-Kingdoms-Reference-Texts/book/sanguozhi/j045/"
+  },
+  {
+    "id": "houhanshu-j038",
+    "workId": "houhanshu",
+    "unitType": "juan",
+    "unitNumber": 38,
+    "label": "《後漢書》卷三十八・張法滕馮度楊列傳",
+    "url": "https://jasonkuo-0630.github.io/Three-Kingdoms-Reference-Texts/book/houhanshu/j038/"
+  },
+  {
+    "id": "houhanshu-j083",
+    "workId": "houhanshu",
+    "unitType": "juan",
+    "unitNumber": 83,
+    "label": "《後漢書》卷八十三・逸民列傳",
+    "url": "https://jasonkuo-0630.github.io/Three-Kingdoms-Reference-Texts/book/houhanshu/j083/"
+  },
+  {
+    "id": "huayang-guozhi-j007",
+    "workId": "huayang-guozhi",
+    "unitType": "juan",
+    "unitNumber": 7,
+    "label": "《華陽國志》卷七・劉後主志",
+    "url": "https://jasonkuo-0630.github.io/Three-Kingdoms-Reference-Texts/book/huayang-guozhi/j007/"
+  },
+  {
+    "id": "fan-sanguo-yanyi-h010",
+    "workId": "fan-sanguo-yanyi",
+    "unitType": "hui",
+    "unitNumber": 10,
+    "label": "《反三國演義》第十回・馬孟起間道入四川　管幼安捐軀蹈東海",
+    "url": "https://jasonkuo-0630.github.io/Three-Kingdoms-Reference-Texts/book/fan-sanguo-yanyi/h010/"
+  },
+  {
+    "id": "jihan-fuchen-zan-main",
+    "workId": "jihan-fuchen-zan",
+    "unitType": "article",
+    "unitNumber": 1,
+    "label": "《季漢輔臣贊》全篇",
+    "url": "https://jasonkuo-0630.github.io/Three-Kingdoms-Reference-Texts/book/jihan-fuchen-zan/main/"
+  },
+  {
+    "id": "xiangyang-ji-main",
+    "workId": "xiangyang-ji",
+    "unitType": "article",
+    "unitNumber": 1,
+    "label": "《襄陽記》輯文",
+    "url": "https://jasonkuo-0630.github.io/Three-Kingdoms-Reference-Texts/book/xiangyang-ji/main/"
   }
 ]
