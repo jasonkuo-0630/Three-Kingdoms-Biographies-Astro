@@ -147,7 +147,9 @@
             "sourceId": "sgz-jiangwei-main",
             "locator": "卷四十四・姜維傳開篇"
           }
-        ]
+        ],
+        "relationGroup": "ancestor",
+        "natureCategory": "historical"
       },
       {
         "personName": "姜氏（名不詳）",
@@ -168,7 +170,9 @@
             "sourceId": "sunsheng-zaji-jiangwei",
             "locator": "《姜維傳》裴注引孫盛《雜記》"
           }
-        ]
+        ],
+        "relationGroup": "ancestor",
+        "natureCategory": "historical"
       },
       {
         "personName": "姜氏配偶（名不詳）",
@@ -185,7 +189,9 @@
             "sourceId": "sgz-jiangwei-main",
             "locator": "卷四十四・成都之亂後『維妻子皆伏誅』"
           }
-        ]
+        ],
+        "relationGroup": "spouse",
+        "natureCategory": "historical"
       },
       {
         "personName": "姜氏子女（姓名、數量不詳）",
@@ -202,7 +208,9 @@
             "sourceId": "sgz-jiangwei-main",
             "locator": "卷四十四・姜維傳末"
           }
-        ]
+        ],
+        "relationGroup": "child",
+        "natureCategory": "historical"
       }
     ],
     "titlesAndRanks": [
@@ -1105,18 +1113,16 @@
     {
       "title": "上表預警鍾會伐蜀",
       "type": "表章／軍事預警",
-      "extant": "《三國志・姜維傳》以「維表後主」引錄此段，文意首尾完整；但史書未保存原表題署與章表格式，亦無其他傳本可供核對，因此無法確定是否與姜維原始奏表全文完全相同",
+      "extant": "主要文字保存於《三國志・姜維傳》正文",
       "attribution": "姜維於景耀六年上表劉禪；傳文以『維表後主』明載",
       "summary": "姜維察覺鍾會在關中整軍、可能進攻蜀漢，建議預先派張翼、廖化分守陽安關口與陰平橋頭。黃皓相信鬼巫，勸劉禪壓下奏章，群臣也未得知；魏軍真正出動後，蜀漢才倉促派援。現存文字足以呈現奏表核心建議，但不確定是否為原表全文。",
       "anthology": "《三國志》卷四十四《蜀書・姜維傳》",
+      "excerpt": "聞鍾會治兵關中，欲規進取，宜並遣張翼、廖化詣督諸軍分護陽安關口、陰平橋頭，以防未然。",
       "citations": [
         {
           "sourceId": "sgz-jiangwei-main",
           "locator": "卷四十四・景耀六年『維表後主』"
         }
-      ],
-      "fullText": [
-        "聞鍾會治兵關中，欲規進取，宜並遣張翼、廖化督諸軍分護陽安關口、陰平橋頭，以防未然。"
       ]
     },
     {
