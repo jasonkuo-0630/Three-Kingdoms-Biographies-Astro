@@ -1392,6 +1392,32 @@ summary:focus-visible {
   padding: 2px 8px;
 }
 
+/* 可點擊連到原文的來源標籤：跟純文字標籤同樣的排版，額外加底線提示
+   可以點擊，hover 時顏色跟連結圖示變亮，給出明確的可互動回饋 */
+.source-chip--linked {
+  cursor: pointer;
+  text-decoration: none;
+  border-bottom: 1px dashed var(--text-faint);
+}
+
+.source-chip--linked:hover {
+  color: var(--accent);
+  border-bottom-color: var(--accent);
+}
+
+.source-chip--linked:hover .source-title {
+  color: var(--accent);
+}
+
+.source-link-icon {
+  font-size: 0.7em;
+  opacity: 0.7;
+}
+
+.source-chip--linked:hover .source-link-icon {
+  opacity: 1;
+}
+
 .source-kind {
   padding: 1px 8px;
   border-radius: 999px;
@@ -1594,6 +1620,20 @@ a.rel-person-cell.is-link:hover span {
   color: #e0a89e;
   border-color: rgba(224, 168, 158, 0.4);
   background: rgba(224, 168, 158, 0.1);
+}
+
+/* uncertain：有來源但不足以直接證實，用琥珀色暗示「保留、待確認」 */
+.nature-badge[data-nature="uncertain"] {
+  color: #c9a961;
+  border-color: rgba(201, 169, 97, 0.4);
+  background: rgba(201, 169, 97, 0.1);
+}
+
+/* mixed：真人真事但後世大量加工難以拆分，用紫色暗示「兩種成分混合」 */
+.nature-badge[data-nature="mixed"] {
+  color: #a893c9;
+  border-color: rgba(168, 147, 201, 0.4);
+  background: rgba(168, 147, 201, 0.1);
 }
 
 /* 一筆親屬同時有「正史關係」與「演義設定」兩層時，分兩行顯示，
