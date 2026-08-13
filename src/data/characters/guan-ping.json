@@ -40,7 +40,7 @@
           "citations": [
             {
               "sourceId": "sanguo-yanyi",
-              "locator": "第二十八回"
+              "locator": "第二十八回・關定收留、劉備薦拜義子"
             },
             {
               "sourceId": "sgz-guanyu-main",
@@ -81,7 +81,7 @@
           },
           {
             "sourceId": "sanguo-yanyi",
-            "locator": "第二十八回"
+            "locator": "第二十八回・關定收留、劉備薦拜義子"
           }
         ],
         "relationGroup": "ancestor",
@@ -93,7 +93,7 @@
           "citations": [
             {
               "sourceId": "sanguo-yanyi",
-              "locator": "第二十八回",
+              "locator": "第二十八回・關定收留、劉備薦拜義子",
               "note": "小說改關平為關定次子，關羽千里尋兄途中收其為義子，正史則明載關平為關羽親子。"
             }
           ]
@@ -140,7 +140,7 @@
         "citations": [
           {
             "sourceId": "sanguo-yanyi",
-            "locator": "第二十八回"
+            "locator": "第二十八回・關定收留、劉備薦拜義子"
           }
         ]
       },
@@ -155,7 +155,7 @@
         "citations": [
           {
             "sourceId": "sanguo-yanyi",
-            "locator": "第二十八回"
+            "locator": "第二十八回・關定收留、劉備薦拜義子"
           }
         ]
       }
@@ -254,7 +254,7 @@
             "citations": [
               {
                 "sourceId": "sanguo-yanyi",
-                "locator": "第七十三回"
+                "locator": "第七十三回・詐敗誘敵，追斬翟元"
               }
             ]
           }
@@ -284,7 +284,7 @@
             "citations": [
               {
                 "sourceId": "sanguo-yanyi",
-                "locator": "第七十六至七十七回"
+                "locator": "第七十六至七十七回・隨父退麥城，突圍被擒"
               }
             ]
           }
@@ -314,7 +314,7 @@
             "citations": [
               {
                 "sourceId": "sanguo-yanyi",
-                "locator": "第七十七回"
+                "locator": "第七十七回・孫權勸降遭拒，父子同遇害"
               }
             ]
           }
