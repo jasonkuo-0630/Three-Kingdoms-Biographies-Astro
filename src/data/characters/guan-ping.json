@@ -85,7 +85,19 @@
           }
         ],
         "relationGroup": "ancestor",
-        "natureCategory": "historical"
+        "natureCategory": "historical",
+        "fictionalRelation": {
+          "label": "義父（演義改為關定次子，後由劉備提議拜關羽為義父）",
+          "natureType": "演義設定",
+          "natureCategory": "literary",
+          "citations": [
+            {
+              "sourceId": "sanguo-yanyi",
+              "locator": "第二十八回",
+              "note": "小說改關平為關定次子，關羽千里尋兄途中收其為義子，正史則明載關平為關羽親子。"
+            }
+          ]
+        }
       },
       {
         "personName": "關興",
@@ -116,6 +128,36 @@
         ],
         "relationGroup": "sibling",
         "natureCategory": "historical"
+      },
+      {
+        "personName": "關定",
+        "personId": null,
+        "relation": "演義中的生父",
+        "relationGroup": "ancestor",
+        "natureCategory": "literary",
+        "natureType": "演義設定",
+        "note": "《三國演義》第二十八回設定的關平生父，史書無此人記載。正史明言關平為關羽親子，不存在另一位生父。",
+        "citations": [
+          {
+            "sourceId": "sanguo-yanyi",
+            "locator": "第二十八回"
+          }
+        ]
+      },
+      {
+        "personName": "關寧",
+        "personId": null,
+        "relation": "演義中的兄長",
+        "relationGroup": "sibling",
+        "natureCategory": "literary",
+        "natureType": "演義設定",
+        "note": "《三國演義》設定為關定長子、關平之兄，史書無此人記載。",
+        "citations": [
+          {
+            "sourceId": "sanguo-yanyi",
+            "locator": "第二十八回"
+          }
+        ]
       }
     ],
     "titlesAndRanks": [],
