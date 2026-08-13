@@ -83,7 +83,9 @@
             "sourceId": "sanguo-yanyi",
             "locator": "第二十八回"
           }
-        ]
+        ],
+        "relationGroup": "ancestor",
+        "natureCategory": "historical"
       },
       {
         "personName": "關興",
@@ -96,7 +98,9 @@
             "sourceId": "sgz-guanyu-main",
             "locator": "卷三十六・關羽傳末"
           }
-        ]
+        ],
+        "relationGroup": "sibling",
+        "natureCategory": "historical"
       },
       {
         "personName": "關氏（名不詳）",
@@ -109,7 +113,9 @@
             "sourceId": "sgz-guanyu-main",
             "locator": "卷三十六・孫權為子索羽女"
           }
-        ]
+        ],
+        "relationGroup": "sibling",
+        "natureCategory": "historical"
       }
     ],
     "titlesAndRanks": [],
