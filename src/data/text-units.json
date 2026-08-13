@@ -1,0 +1,66 @@
+[
+  {
+    "id": "sgz-j028",
+    "workId": "sanguozhi",
+    "unitType": "juan",
+    "unitNumber": 28,
+    "label": "《三國志》卷二十八・王毌丘諸葛鄧鍾傳",
+    "url": "https://jasonkuo-0630.github.io/Three-Kingdoms-Reference-Texts/book/sanguozhi/j028/"
+  },
+  {
+    "id": "sgz-j032",
+    "workId": "sanguozhi",
+    "unitType": "juan",
+    "unitNumber": 32,
+    "label": "《三國志》卷三十二・先主傳",
+    "url": "https://jasonkuo-0630.github.io/Three-Kingdoms-Reference-Texts/book/sanguozhi/j032/"
+  },
+  {
+    "id": "sgz-j033",
+    "workId": "sanguozhi",
+    "unitType": "juan",
+    "unitNumber": 33,
+    "label": "《三國志》卷三十三・後主傳",
+    "url": "https://jasonkuo-0630.github.io/Three-Kingdoms-Reference-Texts/book/sanguozhi/j033/"
+  },
+  {
+    "id": "sgz-j035",
+    "workId": "sanguozhi",
+    "unitType": "juan",
+    "unitNumber": 35,
+    "label": "《三國志》卷三十五・諸葛亮傳",
+    "url": "https://jasonkuo-0630.github.io/Three-Kingdoms-Reference-Texts/book/sanguozhi/j035/"
+  },
+  {
+    "id": "sgz-j036",
+    "workId": "sanguozhi",
+    "unitType": "juan",
+    "unitNumber": 36,
+    "label": "《三國志》卷三十六・關張馬黃趙傳",
+    "url": "https://jasonkuo-0630.github.io/Three-Kingdoms-Reference-Texts/book/sanguozhi/j036/"
+  },
+  {
+    "id": "sgz-j037",
+    "workId": "sanguozhi",
+    "unitType": "juan",
+    "unitNumber": 37,
+    "label": "《三國志》卷三十七・龐統法正傳",
+    "url": "https://jasonkuo-0630.github.io/Three-Kingdoms-Reference-Texts/book/sanguozhi/j037/"
+  },
+  {
+    "id": "sgz-j044",
+    "workId": "sanguozhi",
+    "unitType": "juan",
+    "unitNumber": 44,
+    "label": "《三國志》卷四十四・蔣琬費禕姜維傳",
+    "url": "https://jasonkuo-0630.github.io/Three-Kingdoms-Reference-Texts/book/sanguozhi/j044/"
+  },
+  {
+    "id": "sgz-j045",
+    "workId": "sanguozhi",
+    "unitType": "juan",
+    "unitNumber": 45,
+    "label": "《三國志》卷四十五・鄧張宗楊傳",
+    "url": "https://jasonkuo-0630.github.io/Three-Kingdoms-Reference-Texts/book/sanguozhi/j045/"
+  }
+]
