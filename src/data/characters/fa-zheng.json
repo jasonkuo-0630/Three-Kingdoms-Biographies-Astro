@@ -99,6 +99,10 @@
           {
             "sourceId": "sgz-fazheng-main",
             "locator": "卷三十七・法正傳開篇"
+          },
+          {
+            "sourceId": "houhanshu-fa-zhen",
+            "locator": "卷八十三・法真傳"
           }
         ],
         "relationGroup": "ancestor",
