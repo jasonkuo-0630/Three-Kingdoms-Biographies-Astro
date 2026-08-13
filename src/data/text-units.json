@@ -110,5 +110,125 @@
     "unitNumber": 1,
     "label": "《襄陽記》輯文",
     "url": "https://jasonkuo-0630.github.io/Three-Kingdoms-Reference-Texts/book/xiangyang-ji/main/"
+  },
+  {
+    "id": "fan-sanguo-yanyi-h008",
+    "workId": "fan-sanguo-yanyi",
+    "unitType": "hui",
+    "unitNumber": 8,
+    "label": "第八回",
+    "url": "https://jasonkuo-0630.github.io/Three-Kingdoms-Reference-Texts/book/fan-sanguo-yanyi/h008/"
+  },
+  {
+    "id": "fan-sanguo-yanyi-h021",
+    "workId": "fan-sanguo-yanyi",
+    "unitType": "hui",
+    "unitNumber": 21,
+    "label": "第二十一回",
+    "url": "https://jasonkuo-0630.github.io/Three-Kingdoms-Reference-Texts/book/fan-sanguo-yanyi/h021/"
+  },
+  {
+    "id": "fan-sanguo-yanyi-h024",
+    "workId": "fan-sanguo-yanyi",
+    "unitType": "hui",
+    "unitNumber": 24,
+    "label": "第二十四回",
+    "url": "https://jasonkuo-0630.github.io/Three-Kingdoms-Reference-Texts/book/fan-sanguo-yanyi/h024/"
+  },
+  {
+    "id": "fan-sanguo-yanyi-h029",
+    "workId": "fan-sanguo-yanyi",
+    "unitType": "hui",
+    "unitNumber": 29,
+    "label": "第二十九回",
+    "url": "https://jasonkuo-0630.github.io/Three-Kingdoms-Reference-Texts/book/fan-sanguo-yanyi/h029/"
+  },
+  {
+    "id": "fan-sanguo-yanyi-h030",
+    "workId": "fan-sanguo-yanyi",
+    "unitType": "hui",
+    "unitNumber": 30,
+    "label": "第三十回",
+    "url": "https://jasonkuo-0630.github.io/Three-Kingdoms-Reference-Texts/book/fan-sanguo-yanyi/h030/"
+  },
+  {
+    "id": "fan-sanguo-yanyi-h040",
+    "workId": "fan-sanguo-yanyi",
+    "unitType": "hui",
+    "unitNumber": 40,
+    "label": "第四十回",
+    "url": "https://jasonkuo-0630.github.io/Three-Kingdoms-Reference-Texts/book/fan-sanguo-yanyi/h040/"
+  },
+  {
+    "id": "fan-sanguo-yanyi-h041",
+    "workId": "fan-sanguo-yanyi",
+    "unitType": "hui",
+    "unitNumber": 41,
+    "label": "第四十一回",
+    "url": "https://jasonkuo-0630.github.io/Three-Kingdoms-Reference-Texts/book/fan-sanguo-yanyi/h041/"
+  },
+  {
+    "id": "fan-sanguo-yanyi-h043",
+    "workId": "fan-sanguo-yanyi",
+    "unitType": "hui",
+    "unitNumber": 43,
+    "label": "第四十三回",
+    "url": "https://jasonkuo-0630.github.io/Three-Kingdoms-Reference-Texts/book/fan-sanguo-yanyi/h043/"
+  },
+  {
+    "id": "fan-sanguo-yanyi-h046",
+    "workId": "fan-sanguo-yanyi",
+    "unitType": "hui",
+    "unitNumber": 46,
+    "label": "第四十六回",
+    "url": "https://jasonkuo-0630.github.io/Three-Kingdoms-Reference-Texts/book/fan-sanguo-yanyi/h046/"
+  },
+  {
+    "id": "fan-sanguo-yanyi-h048",
+    "workId": "fan-sanguo-yanyi",
+    "unitType": "hui",
+    "unitNumber": 48,
+    "label": "第四十八回",
+    "url": "https://jasonkuo-0630.github.io/Three-Kingdoms-Reference-Texts/book/fan-sanguo-yanyi/h048/"
+  },
+  {
+    "id": "fan-sanguo-yanyi-h049",
+    "workId": "fan-sanguo-yanyi",
+    "unitType": "hui",
+    "unitNumber": 49,
+    "label": "第四十九回",
+    "url": "https://jasonkuo-0630.github.io/Three-Kingdoms-Reference-Texts/book/fan-sanguo-yanyi/h049/"
+  },
+  {
+    "id": "fan-sanguo-yanyi-h053",
+    "workId": "fan-sanguo-yanyi",
+    "unitType": "hui",
+    "unitNumber": 53,
+    "label": "第五十三回",
+    "url": "https://jasonkuo-0630.github.io/Three-Kingdoms-Reference-Texts/book/fan-sanguo-yanyi/h053/"
+  },
+  {
+    "id": "fan-sanguo-yanyi-h054",
+    "workId": "fan-sanguo-yanyi",
+    "unitType": "hui",
+    "unitNumber": 54,
+    "label": "第五十四回",
+    "url": "https://jasonkuo-0630.github.io/Three-Kingdoms-Reference-Texts/book/fan-sanguo-yanyi/h054/"
+  },
+  {
+    "id": "fan-sanguo-yanyi-h058",
+    "workId": "fan-sanguo-yanyi",
+    "unitType": "hui",
+    "unitNumber": 58,
+    "label": "第五十八回",
+    "url": "https://jasonkuo-0630.github.io/Three-Kingdoms-Reference-Texts/book/fan-sanguo-yanyi/h058/"
+  },
+  {
+    "id": "fan-sanguo-yanyi-h060",
+    "workId": "fan-sanguo-yanyi",
+    "unitType": "hui",
+    "unitNumber": 60,
+    "label": "第六十回",
+    "url": "https://jasonkuo-0630.github.io/Three-Kingdoms-Reference-Texts/book/fan-sanguo-yanyi/h060/"
   }
 ]
