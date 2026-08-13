@@ -89,6 +89,21 @@
         "natureCategory": "literary"
       },
       {
+        "personName": "趙雲兄（姓名不詳）",
+        "personId": null,
+        "relation": "兄",
+        "relationGroup": "sibling",
+        "natureCategory": "historical",
+        "natureType": "裴松之注引《雲別傳》記載",
+        "note": "《雲別傳》載趙雲效力公孫瓚期間，因兄長去世，向公孫瓚請辭暫歸奔喪；劉備因此得知趙雲此去恐不再回，仍握手相送。史料未載這位兄長的姓名與生平。",
+        "citations": [
+          {
+            "sourceId": "yun-biezhuan",
+            "locator": "《三國志》卷三十六裴注引《雲別傳》；『雲以兄喪，辭瓚暫歸』"
+          }
+        ]
+      },
+      {
         "personName": "趙統",
         "personId": null,
         "relation": "長子",
