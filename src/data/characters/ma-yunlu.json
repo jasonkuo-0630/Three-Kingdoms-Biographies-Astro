@@ -36,7 +36,8 @@
             },
             {
               "sourceId": "fan-sanguo-yanyi",
-              "locator": "第十回・成都之戰與趙馬聯姻"
+              "locator": "第十回・成都之戰與趙馬聯姻",
+              "textUnitId": "fan-sanguo-yanyi-h010"
             },
             {
               "sourceId": "fan-sanguo-yanyi",
@@ -79,7 +80,16 @@
         "citations": [
           {
             "sourceId": "fan-sanguo-yanyi",
-            "locator": "第八、十、四十回"
+            "locator": "第八回"
+          },
+          {
+            "sourceId": "fan-sanguo-yanyi",
+            "locator": "第十回",
+            "textUnitId": "fan-sanguo-yanyi-h010"
+          },
+          {
+            "sourceId": "fan-sanguo-yanyi",
+            "locator": "第四十回"
           }
         ]
       },
@@ -118,7 +128,8 @@
         "citations": [
           {
             "sourceId": "fan-sanguo-yanyi",
-            "locator": "第十回・趙馬聯姻"
+            "locator": "第十回・趙馬聯姻",
+            "textUnitId": "fan-sanguo-yanyi-h010"
           }
         ],
         "relationGroup": "spouse",
@@ -182,7 +193,8 @@
             "citations": [
               {
                 "sourceId": "fan-sanguo-yanyi",
-                "locator": "第十回・馬雲騄戰劉瑰、初遇趙雲"
+                "locator": "第十回・馬雲騄戰劉瑰、初遇趙雲",
+                "textUnitId": "fan-sanguo-yanyi-h010"
               }
             ]
           }
@@ -199,7 +211,8 @@
             "citations": [
               {
                 "sourceId": "fan-sanguo-yanyi",
-                "locator": "第十回・趙馬聯姻"
+                "locator": "第十回・趙馬聯姻",
+                "textUnitId": "fan-sanguo-yanyi-h010"
               }
             ]
           }
