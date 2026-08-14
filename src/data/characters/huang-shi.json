@@ -38,7 +38,8 @@
             },
             {
               "sourceId": "sanguo-yanyi",
-              "locator": "第一百一十七回・僅稱『黃氏』"
+              "locator": "第一百一十七回・僅稱『黃氏』",
+              "textUnitId": "sanguo-yanyi-h117"
             },
             {
               "sourceId": "shin-sangokumusou-3-yueying",
@@ -113,7 +114,8 @@
         "citations": [
           {
             "sourceId": "sanguo-yanyi",
-            "locator": "第一百一十七回・諸葛瞻出場"
+            "locator": "第一百一十七回・諸葛瞻出場",
+            "textUnitId": "sanguo-yanyi-h117"
           },
           {
             "sourceId": "sgz-zhuge-main",
@@ -179,7 +181,8 @@
             "citations": [
               {
                 "sourceId": "sanguo-yanyi",
-                "locator": "第一百一十七回・鄧士載偷度陰平，諸葛瞻戰死綿竹"
+                "locator": "第一百一十七回・鄧士載偷度陰平，諸葛瞻戰死綿竹",
+                "textUnitId": "sanguo-yanyi-h117"
               }
             ]
           }
@@ -188,12 +191,14 @@
           {
             "text": "其母黃氏，即黃承彥之女也。母貌甚陋，而有奇才。",
             "sourceId": "sanguo-yanyi",
-            "locator": "第一百一十七回・鄧艾破綿竹，諸葛瞻戰死段（黃氏背景介紹）"
+            "locator": "第一百一十七回・鄧艾破綿竹，諸葛瞻戰死段（黃氏背景介紹）",
+            "textUnitId": "sanguo-yanyi-h117"
           },
           {
             "text": "武侯之學，夫人多所贊助焉。",
             "sourceId": "sanguo-yanyi",
-            "locator": "第一百一十七回・鄧艾破綿竹，諸葛瞻戰死段（黃氏背景介紹）"
+            "locator": "第一百一十七回・鄧艾破綿竹，諸葛瞻戰死段（黃氏背景介紹）",
+            "textUnitId": "sanguo-yanyi-h117"
           }
         ]
       },
@@ -208,7 +213,8 @@
               },
               {
                 "sourceId": "sanguo-yanyi",
-                "locator": "第一百一十七回・小說增飾"
+                "locator": "第一百一十七回・小說增飾",
+                "textUnitId": "sanguo-yanyi-h117"
               }
             ]
           },
@@ -217,7 +223,8 @@
             "citations": [
               {
                 "sourceId": "sanguo-yanyi",
-                "locator": "第一百一十七回・鄧艾破綿竹，諸葛瞻戰死段（黃氏背景介紹）"
+                "locator": "第一百一十七回・鄧艾破綿竹，諸葛瞻戰死段（黃氏背景介紹）",
+                "textUnitId": "sanguo-yanyi-h117"
               }
             ]
           }
@@ -252,7 +259,8 @@
               },
               {
                 "sourceId": "sanguo-yanyi",
-                "locator": "第一百一十七回・僅稱黃氏"
+                "locator": "第一百一十七回・僅稱黃氏",
+                "textUnitId": "sanguo-yanyi-h117"
               }
             ]
           }
