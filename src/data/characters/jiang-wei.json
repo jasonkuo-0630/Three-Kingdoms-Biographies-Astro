@@ -918,7 +918,13 @@
             "citations": [
               {
                 "sourceId": "sanguo-yanyi",
-                "locator": "第九十二至九十三回・天水設伏退趙雲，為孔明所降"
+                "locator": "第九十二回・天水設伏退趙雲",
+                "textUnitId": "sanguo-yanyi-h092"
+              },
+              {
+                "sourceId": "sanguo-yanyi",
+                "locator": "第九十三回・為孔明所降",
+                "textUnitId": "sanguo-yanyi-h093"
               }
             ]
           }
@@ -952,7 +958,13 @@
             "citations": [
               {
                 "sourceId": "sanguo-yanyi",
-                "locator": "第九十三回、第一百零四回・孔明傳兵法與臨終托付"
+                "locator": "第九十三回・孔明傳兵法",
+                "textUnitId": "sanguo-yanyi-h093"
+              },
+              {
+                "sourceId": "sanguo-yanyi",
+                "locator": "第一百零四回・臨終托付",
+                "textUnitId": "sanguo-yanyi-h104"
               }
             ]
           }
@@ -982,7 +994,8 @@
             "citations": [
               {
                 "sourceId": "sanguo-yanyi",
-                "locator": "第一百零七至一百一十五回；第一百一十五回明言『吾今八次伐魏』"
+                "locator": "第一百零七至一百一十五回；第一百一十五回明言『吾今八次伐魏』",
+                "textUnitId": "sanguo-yanyi-h107"
               }
             ]
           }
@@ -1016,7 +1029,8 @@
             "citations": [
               {
                 "sourceId": "sanguo-yanyi",
-                "locator": "第一百一十五回・託屯田姜維避禍"
+                "locator": "第一百一十五回・託屯田姜維避禍",
+                "textUnitId": "sanguo-yanyi-h115"
               }
             ]
           }
@@ -1050,7 +1064,18 @@
             "citations": [
               {
                 "sourceId": "sanguo-yanyi",
-                "locator": "第一百一十六至一百一十八回・堅守劍閣，蜀漢覆滅"
+                "locator": "第一百一十六回・堅守劍閣",
+                "textUnitId": "sanguo-yanyi-h116"
+              },
+              {
+                "sourceId": "sanguo-yanyi",
+                "locator": "第一百一十七回・蜀漢覆滅前夕",
+                "textUnitId": "sanguo-yanyi-h117"
+              },
+              {
+                "sourceId": "sanguo-yanyi",
+                "locator": "第一百一十八回・蜀漢覆滅",
+                "textUnitId": "sanguo-yanyi-h118"
               }
             ]
           }
@@ -1080,7 +1105,8 @@
             "citations": [
               {
                 "sourceId": "sanguo-yanyi",
-                "locator": "第一百一十九回・假投降巧計成虛話"
+                "locator": "第一百一十九回・假投降巧計成虛話",
+                "textUnitId": "sanguo-yanyi-h119"
               }
             ]
           }
