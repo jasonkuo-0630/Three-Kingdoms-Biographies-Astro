@@ -40,7 +40,8 @@
           "citations": [
             {
               "sourceId": "sanguo-yanyi",
-              "locator": "第二十八回・關定收留、劉備薦拜義子"
+              "locator": "第二十八回・關定收留、劉備薦拜義子",
+              "textUnitId": "sanguo-yanyi-h028"
             },
             {
               "sourceId": "sgz-guanyu-main",
@@ -81,7 +82,8 @@
           },
           {
             "sourceId": "sanguo-yanyi",
-            "locator": "第二十八回・關定收留、劉備薦拜義子"
+            "locator": "第二十八回・關定收留、劉備薦拜義子",
+            "textUnitId": "sanguo-yanyi-h028"
           }
         ],
         "relationGroup": "ancestor",
@@ -94,7 +96,8 @@
             {
               "sourceId": "sanguo-yanyi",
               "locator": "第二十八回・關定收留、劉備薦拜義子",
-              "note": "小說改關平為關定次子，關羽千里尋兄途中收其為義子，正史則明載關平為關羽親子。"
+              "note": "小說改關平為關定次子，關羽千里尋兄途中收其為義子，正史則明載關平為關羽親子。",
+              "textUnitId": "sanguo-yanyi-h028"
             }
           ]
         }
@@ -140,7 +143,8 @@
         "citations": [
           {
             "sourceId": "sanguo-yanyi",
-            "locator": "第二十八回・關定收留、劉備薦拜義子"
+            "locator": "第二十八回・關定收留、劉備薦拜義子",
+            "textUnitId": "sanguo-yanyi-h028"
           }
         ]
       },
@@ -155,7 +159,8 @@
         "citations": [
           {
             "sourceId": "sanguo-yanyi",
-            "locator": "第二十八回・關定收留、劉備薦拜義子"
+            "locator": "第二十八回・關定收留、劉備薦拜義子",
+            "textUnitId": "sanguo-yanyi-h028"
           }
         ]
       }
@@ -224,7 +229,8 @@
             "citations": [
               {
                 "sourceId": "sanguo-yanyi",
-                "locator": "第二十八回・關定命關平拜父"
+                "locator": "第二十八回・關定命關平拜父",
+                "textUnitId": "sanguo-yanyi-h028"
               }
             ]
           }
@@ -254,7 +260,8 @@
             "citations": [
               {
                 "sourceId": "sanguo-yanyi",
-                "locator": "第七十三回・詐敗誘敵，追斬翟元"
+                "locator": "第七十三回・詐敗誘敵，追斬翟元",
+                "textUnitId": "sanguo-yanyi-h073"
               }
             ]
           }
@@ -284,7 +291,13 @@
             "citations": [
               {
                 "sourceId": "sanguo-yanyi",
-                "locator": "第七十六至七十七回・隨父退麥城，突圍被擒"
+                "locator": "第七十六回・隨父退麥城",
+                "textUnitId": "sanguo-yanyi-h076"
+              },
+              {
+                "sourceId": "sanguo-yanyi",
+                "locator": "第七十七回・突圍被擒",
+                "textUnitId": "sanguo-yanyi-h077"
               }
             ]
           }
@@ -314,7 +327,8 @@
             "citations": [
               {
                 "sourceId": "sanguo-yanyi",
-                "locator": "第七十七回・孫權勸降遭拒，父子同遇害"
+                "locator": "第七十七回・孫權勸降遭拒，父子同遇害",
+                "textUnitId": "sanguo-yanyi-h077"
               }
             ]
           }
