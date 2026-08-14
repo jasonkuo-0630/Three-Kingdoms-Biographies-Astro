@@ -622,7 +622,8 @@
             "citations": [
               {
                 "sourceId": "sanguo-yanyi",
-                "locator": "第七回・磐河之戰助公孫瓚，與劉備相識"
+                "locator": "第七回・磐河之戰助公孫瓚，與劉備相識",
+                "textUnitId": "sanguo-yanyi-h007"
               }
             ]
           }
@@ -652,7 +653,8 @@
             "citations": [
               {
                 "sourceId": "sanguo-yanyi",
-                "locator": "第四十一回・長坂坡七進七出救阿斗"
+                "locator": "第四十一回・長坂坡七進七出救阿斗",
+                "textUnitId": "sanguo-yanyi-h041"
               }
             ]
           }
@@ -681,7 +683,8 @@
             "citations": [
               {
                 "sourceId": "sanguo-yanyi",
-                "locator": "第六十一回・截江奪阿斗"
+                "locator": "第六十一回・截江奪阿斗",
+                "textUnitId": "sanguo-yanyi-h061"
               }
             ]
           }
