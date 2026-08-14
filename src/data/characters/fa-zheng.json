@@ -541,7 +541,8 @@
             "citations": [
               {
                 "sourceId": "sanguo-yanyi",
-                "locator": "第六十回・張松獻圖，法正奉命使荊州"
+                "locator": "第六十回・張松獻圖，法正奉命使荊州",
+                "textUnitId": "sanguo-yanyi-h060"
               }
             ]
           }
@@ -571,7 +572,8 @@
             "citations": [
               {
                 "sourceId": "sanguo-yanyi",
-                "locator": "第六十五回前後・入劉備幕僚，平蜀後理政務"
+                "locator": "第六十五回前後・入劉備幕僚，平蜀後理政務",
+                "textUnitId": "sanguo-yanyi-h065"
               }
             ]
           }
@@ -601,7 +603,8 @@
             "citations": [
               {
                 "sourceId": "sanguo-yanyi",
-                "locator": "第七十一回・定軍山獻策，助黃忠斬夏侯淵"
+                "locator": "第七十一回・定軍山獻策，助黃忠斬夏侯淵",
+                "textUnitId": "sanguo-yanyi-h071"
               }
             ]
           }
@@ -631,7 +634,8 @@
             "citations": [
               {
                 "sourceId": "sanguo-yanyi",
-                "locator": "第八十一回・諸葛亮嘆法正若在可止東征"
+                "locator": "第八十一回・諸葛亮嘆法正若在可止東征",
+                "textUnitId": "sanguo-yanyi-h081"
               }
             ]
           }
